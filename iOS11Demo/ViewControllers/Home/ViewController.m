@@ -9,7 +9,6 @@
 #import "ViewController.h"
 
 #import "PDFKitViewController.h"
-#import "iOS11ActionsListModels.h"
 
 @interface ViewController ()
 <
@@ -17,9 +16,6 @@ UITableViewDelegate,
 UITableViewDataSource,
 UITableViewDataSourcePrefetching
 >
-{
-    NSArray *_actions;
-}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @end
@@ -30,10 +26,6 @@ UITableViewDataSourcePrefetching
     [super viewDidLoad];
     
     self.navigationController.navigationBar.prefersLargeTitles = YES;
-    
-//    NSString *actionsPath = [[NSBundle mainBundle] pathForResource:@"actionsList" ofType:@"plist"];
-//    _actions = [[NSArray alloc] initWithContentsOfFile:actionsPath];
-    _actions = [iOS11ActionsListModels modelObjectsForActionsList];
 }
 
 #pragma mark - UITableViewDelegate start
@@ -43,7 +35,7 @@ UITableViewDataSourcePrefetching
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return [_actions count];
+    return [iOS11DemoAppActionsList count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -58,10 +50,12 @@ UITableViewDataSourcePrefetching
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     NSInteger row = indexPath.row;
-    iOS11ActionsListModels *actionInfo = [_actions objectAtIndex:row];
+    iOS11ActionsListModels *actionKey = [iOS11DemoAppActionsList objectAtIndex:row];
+    NSString *pagekey     = actionKey.key;
+    iOS11ActionsListModels *actionInfo = [iOS11DemoAppVCsList objectForKey:pagekey];
     if (actionInfo) {
         NSString *pageName      = actionInfo.name;
-        NSInteger pageStatus    = actionInfo.status;
+        NSInteger pageStatus    = actionKey.status;
         [cell.textLabel setText:pageName];
         if (pageStatus == iOS11DemoActionStatusNotStarted) {
             [cell.detailTextLabel setText:@"未开始"];
@@ -79,7 +73,9 @@ UITableViewDataSourcePrefetching
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     NSInteger row = indexPath.row;
-    iOS11ActionsListModels *actionInfo = [_actions objectAtIndex:row];
+    iOS11ActionsListModels *actionKey = [iOS11DemoAppActionsList objectAtIndex:row];
+    NSString *pagekey     = actionKey.key;
+    iOS11ActionsListModels *actionInfo = [iOS11DemoAppVCsList objectForKey:pagekey];
     if (actionInfo) {
         NSString *className = actionInfo.className;
         NSString *pageName = actionInfo.name;

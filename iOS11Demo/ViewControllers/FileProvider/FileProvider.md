@@ -6,9 +6,12 @@
 使用UIDocumentBrowserViewController，这个视图控制并不包含返回按钮，所以用于创建基于系统提供的 UI 的文档浏览器的应用‘；
 需要在 Info.plist中添加 UISupportsDocumentBrowser
 
+UIDocumentBrowserViewController应用，应该使用UIDocumentBrowserViewController作为 RootViewController
 
 2：仅仅选取 Document
 UIDocumentPickerViewController
+
+You must enable iCloud document support before you can use the document picker. For more information, see iCloud Design Guide.
 
 
 

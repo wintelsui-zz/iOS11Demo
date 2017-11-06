@@ -5,126 +5,54 @@
 	<dict>
 		<key>key</key>
 		<string>PDFKit</string>
-		<key>name</key>
-		<string>PDFKit</string>
-		<key>class</key>
-		<string>PDFKitViewController</string>
-		<key>storyboard</key>
-		<string>main</string>
-		<key>storyboardid</key>
-		<string>PDFKitViewController</string>
 		<key>status</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>IdentityLookup</string>
-		<key>name</key>
-		<string>IdentityLookup(Message Filter)</string>
-		<key>class</key>
-		<string>IdentityLookupViewController</string>
-		<key>storyboard</key>
-		<string>main</string>
-		<key>storyboardid</key>
-		<string>IdentityLookupViewController</string>
 		<key>status</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>DeviceCheck</string>
-		<key>name</key>
-		<string>DeviceCheck</string>
-		<key>class</key>
-		<string>DeviceCheckViewController</string>
-		<key>storyboard</key>
-		<string>main</string>
-		<key>storyboardid</key>
-		<string>DeviceCheckViewController</string>
 		<key>status</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>FileProvider</string>
-		<key>name</key>
-		<string>FileProvider</string>
-		<key>class</key>
-		<string>FileProviderViewController</string>
-		<key>storyboard</key>
-		<string>main</string>
-		<key>storyboardid</key>
-		<string>FileProviderViewController</string>
-		<key>status</key>
-		<integer>2</integer>
-	</dict>
-	<dict>
-		<key>key</key>
-		<string>DragAndDrop</string>
-		<key>name</key>
-		<string>Drag And Drop</string>
-		<key>class</key>
-		<string>DragAndDropViewController</string>
-		<key>storyboard</key>
-		<string>main</string>
-		<key>storyboardid</key>
-		<string>DragAndDropViewController</string>
 		<key>status</key>
 		<integer>0</integer>
 	</dict>
 	<dict>
 		<key>key</key>
+		<string>DragAndDrop</string>
+		<key>status</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>key</key>
 		<string>CoreNFC</string>
-		<key>name</key>
-		<string>Core NFC</string>
-		<key>class</key>
-		<string>CoreNFCViewController</string>
-		<key>storyboard</key>
-		<string>main</string>
-		<key>storyboardid</key>
-		<string>CoreNFCViewController</string>
 		<key>status</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>AutoFill</string>
-		<key>name</key>
-		<string>Auto Fill</string>
-		<key>class</key>
-		<string>AutoFillViewController</string>
-		<key>storyboard</key>
-		<string>main</string>
-		<key>storyboardid</key>
-		<string>AutoFillViewController</string>
 		<key>status</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>CoreML</string>
-		<key>name</key>
-		<string>Core ML</string>
-		<key>class</key>
-		<string>CoreMLViewController</string>
-		<key>storyboard</key>
-		<string>main</string>
-		<key>storyboardid</key>
-		<string>CoreMLViewController</string>
 		<key>status</key>
 		<integer>0</integer>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>ARKit</string>
-		<key>name</key>
-		<string>AR Kit</string>
-		<key>class</key>
-		<string>ARKitViewController</string>
-		<key>storyboard</key>
-		<string>main</string>
-		<key>storyboardid</key>
-		<string>ARKitViewController</string>
 		<key>status</key>
 		<integer>0</integer>
 	</dict>

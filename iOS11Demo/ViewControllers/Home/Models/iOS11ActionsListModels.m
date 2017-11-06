@@ -123,20 +123,4 @@ NSString *const kiOS11ActionsListModelsStatus = @"status";
     
     return copy;
 }
-
-+ (NSArray *)modelObjectsForActionsList{
-    NSString *actionsPath = [[NSBundle mainBundle] pathForResource:@"actionsList" ofType:@"plist"];
-    NSArray *actions = [[NSArray alloc] initWithContentsOfFile:actionsPath];
-    NSMutableArray *actionsMulti = [[NSMutableArray alloc] init];
-    for (NSDictionary *action in actions) {
-        iOS11ActionsListModels *actionModel = [iOS11ActionsListModels modelObjectWithDictionary:action];
-        if (actionModel) {
-            NSInteger pageStatus    = actionModel.status;
-            if (pageStatus != iOS11DemoActionStatusNotStarted) {
-                [actionsMulti addObject:actionModel];
-            }
-        }
-    }
-    return actionsMulti;
-}
 @end

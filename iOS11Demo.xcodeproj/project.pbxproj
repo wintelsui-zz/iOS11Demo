@@ -26,6 +26,10 @@
 		FC0DC10A1F8B64BC003BC858 /* Sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC0DC1081F8B5A6D003BC858 /* Sample.pdf */; };
 		FC0DC10C1F8B65FE003BC858 /* actionsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC0DC10B1F8B65FE003BC858 /* actionsList.plist */; };
 		FC15D14E1F95F42C0003D308 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC15D1501F95F42C0003D308 /* Localizable.strings */; };
+		FC1C7C861FB04CAB00FB5B36 /* viewControllersList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC1C7C851FB04CAB00FB5B36 /* viewControllersList.plist */; };
+		FC1C7C891FB050A600FB5B36 /* iOS11DemoActionsAndVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1C7C881FB050A600FB5B36 /* iOS11DemoActionsAndVCManager.m */; };
+		FC1C7C921FB0609000FB5B36 /* SimpleViewDragAndDropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1C7C911FB0609000FB5B36 /* SimpleViewDragAndDropViewController.m */; };
+		FC1C7C951FB060B400FB5B36 /* SimpleViewDragAndDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC1C7C941FB060B400FB5B36 /* SimpleViewDragAndDrop.storyboard */; };
 		FC1D5D4D1F9D9566004238AC /* UIViewController+Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1D5D4C1F9D9566004238AC /* UIViewController+Expansion.m */; };
 		FC2DF7161FA0395C00A9FCFA /* ARKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2DF7151FA0395C00A9FCFA /* ARKitViewController.m */; };
 		FC2DF71C1FA0673B00A9FCFA /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2DF71B1FA0672E00A9FCFA /* ARKit.framework */; };
@@ -33,6 +37,7 @@
 		FC816AA01F987C120032F680 /* iOS11DemoPublicString.m in Sources */ = {isa = PBXBuildFile; fileRef = FC816A9F1F987C120032F680 /* iOS11DemoPublicString.m */; };
 		FC816AA11F987CCC0032F680 /* iOS11DemoPublicString.m in Sources */ = {isa = PBXBuildFile; fileRef = FC816A9F1F987C120032F680 /* iOS11DemoPublicString.m */; };
 		FC8B32681F8F43A50018C530 /* WTDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8B32671F8F43A50018C530 /* WTDeviceInfo.m */; };
+		FCA73E851FB03D1A00C01030 /* DragAndDrop.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA73E841FB03D1A00C01030 /* DragAndDrop.png */; };
 		FCA9AFFD1F7BA34600438D01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA9AFFC1F7BA34600438D01 /* AppDelegate.m */; };
 		FCA9B0001F7BA34600438D01 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA9AFFF1F7BA34600438D01 /* ViewController.m */; };
 		FCA9B0031F7BA34600438D01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA9B0011F7BA34600438D01 /* Main.storyboard */; };
@@ -159,6 +164,12 @@
 		FC15D14B1F95F3B70003D308 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		FC15D14F1F95F42C0003D308 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FC15D1511F95F42D0003D308 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FC1C7C851FB04CAB00FB5B36 /* viewControllersList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = viewControllersList.plist; sourceTree = "<group>"; };
+		FC1C7C871FB050A600FB5B36 /* iOS11DemoActionsAndVCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS11DemoActionsAndVCManager.h; sourceTree = "<group>"; };
+		FC1C7C881FB050A600FB5B36 /* iOS11DemoActionsAndVCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS11DemoActionsAndVCManager.m; sourceTree = "<group>"; };
+		FC1C7C901FB0609000FB5B36 /* SimpleViewDragAndDropViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleViewDragAndDropViewController.h; sourceTree = "<group>"; };
+		FC1C7C911FB0609000FB5B36 /* SimpleViewDragAndDropViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleViewDragAndDropViewController.m; sourceTree = "<group>"; };
+		FC1C7C941FB060B400FB5B36 /* SimpleViewDragAndDrop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleViewDragAndDrop.storyboard; sourceTree = "<group>"; };
 		FC1D5D4B1F9D9566004238AC /* UIViewController+Expansion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Expansion.h"; sourceTree = "<group>"; };
 		FC1D5D4C1F9D9566004238AC /* UIViewController+Expansion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Expansion.m"; sourceTree = "<group>"; };
 		FC1D5D531F9DC2C4004238AC /* CoreNFC.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CoreNFC.md; sourceTree = "<group>"; };
@@ -175,6 +186,8 @@
 		FC8B32661F8F43A50018C530 /* WTDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDeviceInfo.h; sourceTree = "<group>"; };
 		FC8B32671F8F43A50018C530 /* WTDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTDeviceInfo.m; sourceTree = "<group>"; };
 		FC8B32691F8F440C0018C530 /* iOS11Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS11Utils.h; sourceTree = "<group>"; };
+		FCA73E841FB03D1A00C01030 /* DragAndDrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DragAndDrop.png; sourceTree = "<group>"; };
+		FCA73E871FB03E6400C01030 /* iOS11Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS11Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		FCA9AFF81F7BA34600438D01 /* iOS11Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS11Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA9AFFB1F7BA34600438D01 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FCA9AFFC1F7BA34600438D01 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -323,6 +336,7 @@
 				FC120DB11FA1E26E0012E457 /* DragAndDrop.md */,
 				2B6185541F9B4676003E8EFD /* DragAndDropViewController.h */,
 				2B6185551F9B4676003E8EFD /* DragAndDropViewController.m */,
+				FC1C7C931FB0609600FB5B36 /* SimpleViewDragAndDrop */,
 			);
 			path = DragAndDrop;
 			sourceTree = "<group>";
@@ -399,7 +413,9 @@
 		FC0DC1071F8B5A5B003BC858 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FCA73E861FB03D1D00C01030 /* Document */,
 				FC0DC10B1F8B65FE003BC858 /* actionsList.plist */,
+				FC1C7C851FB04CAB00FB5B36 /* viewControllersList.plist */,
 				FCBCD5361F999B380063BF75 /* DeviceCheck.html */,
 				FC0DC1081F8B5A6D003BC858 /* Sample.pdf */,
 				FCFBEACA1FA07CE70025AD96 /* media.scnassets */,
@@ -417,6 +433,25 @@
 				FC8B32651F8F43A50018C530 /* WTDeviceInfo */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		FC1C7C8A1FB050C200FB5B36 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FC1C7C871FB050A600FB5B36 /* iOS11DemoActionsAndVCManager.h */,
+				FC1C7C881FB050A600FB5B36 /* iOS11DemoActionsAndVCManager.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FC1C7C931FB0609600FB5B36 /* SimpleViewDragAndDrop */ = {
+			isa = PBXGroup;
+			children = (
+				FC1C7C901FB0609000FB5B36 /* SimpleViewDragAndDropViewController.h */,
+				FC1C7C911FB0609000FB5B36 /* SimpleViewDragAndDropViewController.m */,
+				FC1C7C941FB060B400FB5B36 /* SimpleViewDragAndDrop.storyboard */,
+			);
+			path = SimpleViewDragAndDrop;
 			sourceTree = "<group>";
 		};
 		FC1D5D4A1F9D950B004238AC /* Categorys */ = {
@@ -443,6 +478,7 @@
 			children = (
 				FCA9AFFE1F7BA34600438D01 /* ViewController.h */,
 				FCA9AFFF1F7BA34600438D01 /* ViewController.m */,
+				FC1C7C8A1FB050C200FB5B36 /* Utils */,
 				2B6185681F9CECF5003E8EFD /* Models */,
 				FC00B4841FA30D730004FE02 /* Views */,
 			);
@@ -474,6 +510,14 @@
 				FC8B32671F8F43A50018C530 /* WTDeviceInfo.m */,
 			);
 			path = WTDeviceInfo;
+			sourceTree = "<group>";
+		};
+		FCA73E861FB03D1D00C01030 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				FCA73E841FB03D1A00C01030 /* DragAndDrop.png */,
+			);
+			path = Document;
 			sourceTree = "<group>";
 		};
 		FCA9AFEF1F7BA34600438D01 = {
@@ -516,6 +560,7 @@
 				FCA9B0411F7BBB4100438D01 /* ViewControllers */,
 				FC816AAC1F98B2000032F680 /* AppDelegate */,
 				FCA9B0011F7BA34600438D01 /* Main.storyboard */,
+				FCA73E871FB03E6400C01030 /* iOS11Demo-Bridging-Header.h */,
 				FCA9B0041F7BA34600438D01 /* Assets.xcassets */,
 				FCA9B0061F7BA34600438D01 /* LaunchScreen.storyboard */,
 				FCA9B0091F7BA34600438D01 /* Info.plist */,
@@ -779,6 +824,7 @@
 					};
 					FCA9AFF71F7BA34600438D01 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -861,8 +907,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC0DC10C1F8B65FE003BC858 /* actionsList.plist in Resources */,
+				FC1C7C861FB04CAB00FB5B36 /* viewControllersList.plist in Resources */,
 				FC15D14E1F95F42C0003D308 /* Localizable.strings in Resources */,
 				FCBCD5371F999B390063BF75 /* DeviceCheck.html in Resources */,
+				FC1C7C951FB060B400FB5B36 /* SimpleViewDragAndDrop.storyboard in Resources */,
+				FCA73E851FB03D1A00C01030 /* DragAndDrop.png in Resources */,
 				FCD25A611FA330D400CA6704 /* iOS11DemoIcons.xcassets in Resources */,
 				FC0DC10A1F8B64BC003BC858 /* Sample.pdf in Resources */,
 				FCFBEACB1FA07CE70025AD96 /* media.scnassets in Resources */,
@@ -985,8 +1034,10 @@
 				2B61855E1F9B46C2003E8EFD /* AutoFillViewController.m in Sources */,
 				2B6185561F9B4676003E8EFD /* DragAndDropViewController.m in Sources */,
 				FC00B4831FA30D6F0004FE02 /* WTSuspensionBall.m in Sources */,
+				FC1C7C921FB0609000FB5B36 /* SimpleViewDragAndDropViewController.m in Sources */,
 				2B3EC6F41F9900FB002FC16B /* DeviceCheckViewController.m in Sources */,
 				FCF4B3D21F94B5730047B72A /* PDFWatermarkPage.m in Sources */,
+				FC1C7C891FB050A600FB5B36 /* iOS11DemoActionsAndVCManager.m in Sources */,
 				FCBCD5341F9992490063BF75 /* WTWebViewController.m in Sources */,
 				FCA9AFFD1F7BA34600438D01 /* AppDelegate.m in Sources */,
 			);
@@ -1261,6 +1312,7 @@
 			baseConfigurationReference = 5D71A56EF115987BDC48D2AE /* Pods-iOS11Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iOS11Demo/iOS11Demo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ER82ALNC99;
@@ -1269,6 +1321,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = orz.wintelsui.test.iOS11Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS11Demo/ViewControllers/DragAndDrop/iOS11Demo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1278,6 +1333,7 @@
 			baseConfigurationReference = 95D53B47AC2F73328FDEC8A2 /* Pods-iOS11Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iOS11Demo/iOS11Demo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ER82ALNC99;
@@ -1286,6 +1342,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = orz.wintelsui.test.iOS11Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS11Demo/ViewControllers/DragAndDrop/iOS11Demo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

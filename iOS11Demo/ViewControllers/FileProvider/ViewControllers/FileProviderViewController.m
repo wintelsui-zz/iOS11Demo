@@ -106,17 +106,20 @@ UIDocumentPickerDelegate
 - (void)documentPickerButtonPressed:(id)sender{
     UIDocumentPickerViewController *picker = [[UIDocumentPickerViewController alloc] initWithDocumentTypes:UTIContentTypes inMode:UIDocumentPickerModeOpen];
     picker.delegate = self;
+    picker.allowsMultipleSelection = YES;
+    picker.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:picker animated:YES completion:nil];
 }
 
 #pragma mark - -- Document Picker Delegate Start --
 
 - (void)documentPicker:(UIDocumentPickerViewController *)controller didPickDocumentsAtURLs:(NSArray <NSURL *>*)urls{
-    
+    //选择文件
+    NSLog(@"urls:%@",urls);
 }
 
 - (void)documentPickerWasCancelled:(UIDocumentPickerViewController *)controller{
-    
+    //取消选择
 }
 
 #pragma mark - -- Document Picker Delegate End --

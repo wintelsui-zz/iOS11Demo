@@ -72,7 +72,8 @@ UIWebViewDelegate
     if (urlString) {
         NSURL *url;
         if ([urlString hasPrefix:@"http"] || [urlString hasPrefix:@"ftp"]) {
-            url = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+//            url = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            url = [NSURL URLWithString:[urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"?!@#$^&%*+,:;='\"`<>()[]{}/\\| "]]];
         }else{
             url = [NSURL fileURLWithPath:urlString];
         }

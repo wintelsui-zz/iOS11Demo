@@ -64,7 +64,8 @@
             }];
         });
     }else{
-        [[[UIAlertView alloc] initWithTitle:@"generateToken" message:@"设备不支持DCDevice" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        [self showSimpleAlertTitle:@"generateToken" body:@"设备不支持DCDevice" cancel:@"OK"];
+//        [[[UIAlertView alloc] initWithTitle:@"generateToken" message:@"设备不支持DCDevice" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     }
 }
 - (void)didReceiveMemoryWarning {

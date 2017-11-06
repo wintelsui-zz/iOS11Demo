@@ -27,6 +27,5 @@ typedef enum : NSUInteger {
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 - (NSDictionary *)dictionaryRepresentation;
 
-+ (NSArray *)modelObjectsForActionsList;
 
 @end

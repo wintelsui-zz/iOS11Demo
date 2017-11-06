@@ -8,7 +8,21 @@
 
 #import "DragAndDropViewController.h"
 
+
+static NSString * const actionSimple = @"SimpleViewDragAndDrop";
+static NSString * const actionTable = @"SimpleViewDragAndDrop";
+static NSString * const actionCollection = @"SimpleViewDragAndDrop";
+
 @interface DragAndDropViewController ()
+<
+UITableViewDataSource,
+UITableViewDelegate
+>
+{
+    NSArray *_actions;
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
 
 @end
 
@@ -16,22 +30,75 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    _actions = @[actionSimple];
+}
+
+
+#pragma mark - UITableViewDelegate start
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return [_actions count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 64;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row = indexPath.row;
+    static NSString *cellIdentifier = @"cellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    NSString *key = [_actions objectAtIndex:row];
+    [cell.textLabel setText:NSLocalizedString(key, nil)];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row = indexPath.row;
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSString *key = [_actions objectAtIndex:row];
+    [self actionWithKey:key];
+}
+
+#pragma mark - UITableViewDelegate end
+
+- (void)actionWithKey:(NSString *)key{
+    if (key != nil && key.length > 0) {
+        iOS11ActionsListModels *actionInfo = [iOS11DemoAppVCsList objectForKey:key];
+        if (actionInfo) {
+            NSString *className = actionInfo.className;
+            NSString *pageName = actionInfo.name;
+            
+            UIStoryboard *storyboard = [self storyboardByMyName:actionInfo.storyboard];
+            UIViewController *page;
+            if (storyboard && actionInfo.storyboardid) {
+                page = [self.storyboard instantiateViewControllerWithIdentifier:actionInfo.storyboardid];
+            }
+            if (!page) {
+                page = [[NSClassFromString(className) alloc] init];
+            }
+            page.title = pageName;
+            [self.navigationController pushViewController:page animated:YES];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
