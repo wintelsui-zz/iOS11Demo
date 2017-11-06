@@ -44,7 +44,7 @@
         if ([name isEqualToString:@"main"]) {
             return self.storyboard;
         }else{
-            return [UIStoryboard storyboardWithName:name bundle:[NSBundle mainBundle]];
+            return [UIStoryboard storyboardWithName:name bundle:nil];
         }
     }
     return nil;

@@ -67,11 +67,8 @@ static iOS11DemoActionsAndVCManager * _instance;
         for (NSDictionary *action in [actions allValues]) {
             iOS11ActionsListModels *actionModel = [iOS11ActionsListModels modelObjectWithDictionary:action];
             if (actionModel) {
-                NSInteger pageStatus    = actionModel.status;
-                if (pageStatus != iOS11DemoActionStatusNotStarted) {
-                    NSString *key = actionModel.key;
-                    [actionsMulti setObject:actionModel forKey:key];
-                }
+                NSString *key = actionModel.key;
+                [actionsMulti setObject:actionModel forKey:key];
             }
         }
         _viewControllers = actionsMulti;

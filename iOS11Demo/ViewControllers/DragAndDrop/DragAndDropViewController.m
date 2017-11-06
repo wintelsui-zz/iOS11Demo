@@ -86,7 +86,7 @@ UITableViewDelegate
             UIStoryboard *storyboard = [self storyboardByMyName:actionInfo.storyboard];
             UIViewController *page;
             if (storyboard && actionInfo.storyboardid) {
-                page = [self.storyboard instantiateViewControllerWithIdentifier:actionInfo.storyboardid];
+                page = [storyboard instantiateViewControllerWithIdentifier:actionInfo.storyboardid];
             }
             if (!page) {
                 page = [[NSClassFromString(className) alloc] init];

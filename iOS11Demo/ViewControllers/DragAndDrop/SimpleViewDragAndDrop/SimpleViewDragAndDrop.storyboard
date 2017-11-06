@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2mx-qh-khW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tzI-p8-i16">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,28 +10,28 @@
     </dependencies>
     <scenes>
         <!--Simple View Drag And Drop View Controller-->
-        <scene sceneID="c5J-io-x0r">
+        <scene sceneID="9AA-XQ-3sC">
             <objects>
-                <viewController storyboardIdentifier="SimpleViewDragAndDropViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2mx-qh-khW" customClass="SimpleViewDragAndDropViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="epI-RO-Iqi">
+                <viewController storyboardIdentifier="SimpleViewDragAndDropViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tzI-p8-i16" customClass="SimpleViewDragAndDropViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bRw-3c-nQe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5IU-3l-5JE">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmo-SS-aPa">
                                 <rect key="frame" x="20" y="40" width="335" height="100"/>
-                                <color key="backgroundColor" red="0.64705884456634521" green="0.39215686917304993" blue="0.92156863212585449" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.64705884459999996" green="0.39215686919999998" blue="0.92156863209999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="ira-rU-7ze"/>
+                                    <constraint firstAttribute="height" constant="100" id="5yl-LR-ak9"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jxO-Yk-Aoc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wh7-DK-OIy">
                                 <rect key="frame" x="20" y="160" width="335" height="100"/>
-                                <color key="backgroundColor" red="0.47450980544090271" green="0.84705883264541626" blue="0.79607844352722168" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.47450980539999998" green="0.84705883260000003" blue="0.79607844350000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Ac3-rg-N8y"/>
+                                    <constraint firstAttribute="height" constant="100" id="07O-7t-oI7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -39,21 +39,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="39K-2h-ZHI" firstAttribute="trailing" secondItem="5IU-3l-5JE" secondAttribute="trailing" constant="20" id="6R5-sI-PNB"/>
-                            <constraint firstItem="jxO-Yk-Aoc" firstAttribute="top" secondItem="5IU-3l-5JE" secondAttribute="bottom" constant="20" id="GYm-y2-DmL"/>
-                            <constraint firstItem="5IU-3l-5JE" firstAttribute="leading" secondItem="39K-2h-ZHI" secondAttribute="leading" constant="20" id="LSq-A3-KpF"/>
-                            <constraint firstItem="jxO-Yk-Aoc" firstAttribute="leading" secondItem="39K-2h-ZHI" secondAttribute="leading" constant="20" id="QfE-Mt-IXN"/>
-                            <constraint firstItem="5IU-3l-5JE" firstAttribute="top" secondItem="39K-2h-ZHI" secondAttribute="top" constant="20" id="kzr-GR-rKA"/>
-                            <constraint firstItem="39K-2h-ZHI" firstAttribute="trailing" secondItem="jxO-Yk-Aoc" secondAttribute="trailing" constant="20" id="yLy-rQ-ocN"/>
+                            <constraint firstItem="vmo-SS-aPa" firstAttribute="top" secondItem="MUW-YP-1r1" secondAttribute="top" constant="20" id="0Vq-1W-C2x"/>
+                            <constraint firstItem="MUW-YP-1r1" firstAttribute="trailing" secondItem="vmo-SS-aPa" secondAttribute="trailing" constant="20" id="Ev0-dg-D2F"/>
+                            <constraint firstItem="vmo-SS-aPa" firstAttribute="leading" secondItem="MUW-YP-1r1" secondAttribute="leading" constant="20" id="PuJ-pZ-wjl"/>
+                            <constraint firstItem="Wh7-DK-OIy" firstAttribute="top" secondItem="vmo-SS-aPa" secondAttribute="bottom" constant="20" id="dIr-Vr-U7q"/>
+                            <constraint firstItem="Wh7-DK-OIy" firstAttribute="leading" secondItem="MUW-YP-1r1" secondAttribute="leading" constant="20" id="g0s-3x-Ekx"/>
+                            <constraint firstItem="MUW-YP-1r1" firstAttribute="trailing" secondItem="Wh7-DK-OIy" secondAttribute="trailing" constant="20" id="otr-5C-0Sp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="39K-2h-ZHI"/>
+                        <viewLayoutGuide key="safeArea" id="MUW-YP-1r1"/>
                     </view>
                     <connections>
-                        <outlet property="textField" destination="5IU-3l-5JE" id="mmA-SJ-VSJ"/>
-                        <outlet property="textView" destination="jxO-Yk-Aoc" id="Cfe-Qd-lJq"/>
+                        <outlet property="myTextField" destination="vmo-SS-aPa" id="P7h-is-dnT"/>
+                        <outlet property="myTextView" destination="Wh7-DK-OIy" id="zMP-iY-yPd"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eXS-a8-UEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPL-LI-lxB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-532" y="-42.728635682158924"/>
         </scene>
