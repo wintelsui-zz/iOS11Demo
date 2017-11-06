@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "设置过滤号码"; ObjectID = "Lti-G3-OcI"; */
+"Lti-G3-OcI.normalTitle" = "设置过滤号码";
+
+/* Class = "UINavigationItem"; title = "iOS 11 Demo"; ObjectID = "VeW-0S-QEb"; */
+"VeW-0S-QEb.title" = "iOS 11 Demo";
+
+/* Class = "UILabel"; text = "当前设置号码："; ObjectID = "hZZ-p1-GKq"; */
+"hZZ-p1-GKq.text" = "当前设置号码：";
+
+/* Class = "UITextField"; placeholder = "输入需要过滤的号码"; ObjectID = "rKQ-Gm-5uk"; */
+"rKQ-Gm-5uk.placeholder" = "输入需要过滤的号码";
+
+/* Class = "UIButton"; normalTitle = "Contact Picker"; ObjectID = "z78-r1-Im6"; */
+"z78-r1-Im6.normalTitle" = "联系人选择";

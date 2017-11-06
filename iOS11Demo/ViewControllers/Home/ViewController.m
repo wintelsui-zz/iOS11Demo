@@ -1,0 +1,110 @@
+//
+//  ViewController.m
+//  iOS11Demo
+//
+//  Created by wintel on 2017/9/27.
+//  Copyright © 2017年 wintel. All rights reserved.
+//
+
+#import "ViewController.h"
+
+#import "PDFKitViewController.h"
+#import "iOS11ActionsListModels.h"
+
+@interface ViewController ()
+<
+UITableViewDelegate,
+UITableViewDataSource,
+UITableViewDataSourcePrefetching
+>
+{
+    NSArray *_actions;
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.navigationController.navigationBar.prefersLargeTitles = YES;
+    
+//    NSString *actionsPath = [[NSBundle mainBundle] pathForResource:@"actionsList" ofType:@"plist"];
+//    _actions = [[NSArray alloc] initWithContentsOfFile:actionsPath];
+    _actions = [iOS11ActionsListModels modelObjectsForActionsList];
+}
+
+#pragma mark - UITableViewDelegate start
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return [_actions count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 66;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellIdentifier = @"cellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    }
+    NSInteger row = indexPath.row;
+    iOS11ActionsListModels *actionInfo = [_actions objectAtIndex:row];
+    if (actionInfo) {
+        NSString *pageName      = actionInfo.name;
+        NSInteger pageStatus    = actionInfo.status;
+        [cell.textLabel setText:pageName];
+        if (pageStatus == iOS11DemoActionStatusNotStarted) {
+            [cell.detailTextLabel setText:@"未开始"];
+        }else if (pageStatus == iOS11DemoActionStatusDeveloped) {
+            [cell.detailTextLabel setText:@"完成"];
+        }else if (pageStatus == iOS11DemoActionStatusDeveloping) {
+            [cell.detailTextLabel setText:@"开发中"];
+        }
+    }
+    [cell.textLabel setTextColor:[UIColor colorNamed:@"ColorMyPink"]];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSInteger row = indexPath.row;
+    iOS11ActionsListModels *actionInfo = [_actions objectAtIndex:row];
+    if (actionInfo) {
+        NSString *className = actionInfo.className;
+        NSString *pageName = actionInfo.name;
+        
+        UIStoryboard *storyboard = [self storyboardByMyName:actionInfo.storyboard];
+        UIViewController *page;
+        if (storyboard && actionInfo.storyboardid) {
+            page = [self.storyboard instantiateViewControllerWithIdentifier:actionInfo.storyboardid];
+        }
+        if (!page) {
+           page = [[NSClassFromString(className) alloc] init];
+        }
+        page.title = pageName;
+        [self.navigationController pushViewController:page animated:YES];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView prefetchRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths{
+    
+}
+#pragma mark - UITableViewDelegate end
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+
+@end

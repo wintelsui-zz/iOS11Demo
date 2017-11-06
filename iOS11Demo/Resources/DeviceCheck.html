@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DeviceCheck Info</title>
+	</head>
+	<body>
+		DeviceCheck允许通过自己的服务器与Apple服务器通讯，并为单个设备设置(per Device、per Developer)两个bit的数据。<br>
+		1.在App内使用DeviceCheck APIs获取一个临时的token来标志该设备(有时效)。<br>
+		2.将token传递给后端服务器，随后后端服务器使用该token和认证后的key值(来自Apple的证书请求模块)请求Apple服务器，来更新或查询该设备的值。<br>
+		3.Apple服务器返回后端服务器信息，获取该设备之前存储的信息，包含bits信息和最后一次修改的时间戳。<br>
+
+		服务端，需要使用Http Post请求来查询和更新信息，每个请求对应的header应该包含认证后的来自Apple的key值(JWT，JSON web token)。要获取该token，可以使用类似Apple推送服务(APNs)的类似流程来操作，具体流程可以参考<a href="https://developer.apple.com/documentation/devicecheck/accessing_and_modifying_per_device_data?changes=latest_minor">Communicate with APNs using authentication tokens</a>。<br>
+
+		Apple API地址：<br>
+		开发环境：<a href="https://api.development.devicecheck.apple.com">https://api.development.devicecheck.apple.com</a><br>
+		线上环境：<a href="https://api.devicecheck.apple.com">https://api.devicecheck.apple.com</a><br>
+	</body>
+</html>
