@@ -8,11 +8,16 @@
 
 #import "SimpleViewDragAndDropViewController.h"
 
+#import "FaceView.h"
+
 @interface SimpleViewDragAndDropViewController ()
 <
 UITextDragDelegate,
 UITextDropDelegate
 >
+{
+    FaceView *_faceview;
+}
 
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
 @property (weak, nonatomic) IBOutlet UITextView *myTextView;
@@ -52,6 +57,21 @@ UITextDropDelegate
     
     _myTextView.textDragDelegate = self;
     _myTextView.textDropDelegate = self;
+    
+    [self setupFaceView];
+}
+
+- (void)setupFaceView{
+    __weak typeof(self)weakself = self;
+    
+    _faceview = [[FaceView alloc] initWithFrame:CGRectMake(0, 0, 200, 120)];
+    [self.view addSubview:_faceview];
+    
+    [_faceview mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_equalTo((0 - IPHONEX_HEIGHT_SAFE_BOTTOM_VERTICAL));
+        make.width.height.mas_equalTo(120);
+        make.centerX.equalTo(weakself.view);
+    }];
 }
 
 #pragma mark - -- UITextDragDelegate Start --
