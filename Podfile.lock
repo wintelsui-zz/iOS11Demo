@@ -7,9 +7,9 @@ PODS:
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
   - ReactiveObjC (3.0.0)
-  - SDWebImage (4.1.2):
-    - SDWebImage/Core (= 4.1.2)
-  - SDWebImage/Core (4.1.2)
+  - SDWebImage (4.2.1):
+    - SDWebImage/Core (= 4.2.1)
+  - SDWebImage/Core (4.2.1)
 
 DEPENDENCIES:
   - BFPaperButton
@@ -27,8 +27,8 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
-  SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
+  SDWebImage: 1fa4c9edf525b744f002db89f3f5a38b3cd4c541
 
-PODFILE CHECKSUM: 39d4abc0becac69e76fc794b2c324e1e0be3a924
+PODFILE CHECKSUM: 6c8bae99bef5e664fb81a53dbd040c66091fdf1b
 
 COCOAPODS: 1.2.0

@@ -1,5 +1,6 @@
 platform :ios, '11.0'
 inhibit_all_warnings!
+use_frameworks!
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'iOS11Demo' do

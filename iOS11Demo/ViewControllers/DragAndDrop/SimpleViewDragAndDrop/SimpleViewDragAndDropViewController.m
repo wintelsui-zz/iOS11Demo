@@ -26,6 +26,8 @@ UITextDropDelegate
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    
+    [self.view endEditing:YES];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -46,6 +48,7 @@ UITextDropDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.prefersLargeTitles = YES;
     
     _myTextField.textDragDelegate = self;
     _myTextField.textDropDelegate = self;
@@ -68,7 +71,7 @@ UITextDropDelegate
     params.backgroundColor = [UIColor clearColor];
     
     UITargetedDragPreview* preview = [[UITargetedDragPreview alloc] initWithView:textDraggableView parameters:params];
-    
+    [preview.view setBackgroundColor:RGB(155, 89, 182)];
     return preview;
 }
 
@@ -119,6 +122,7 @@ UITextDropDelegate
 - (nullable UITargetedDragPreview *)textDroppableView:(UIView<UITextDroppable> *)textDroppableView previewForDroppingAllItemsWithDefault:(UITargetedDragPreview *)defaultPreview{
     NSLog(@"textDroppableView:%@,previewForDroppingAllItemsWithDefault:",textDroppableView);
     //自定义预览
+    [defaultPreview.view setBackgroundColor:RGB(192, 57, 43)];
     return defaultPreview;
 }
 
@@ -154,6 +158,11 @@ UITextDropDelegate
 #pragma mark - Setter
 
 #pragma mark - Others
+
+- (IBAction)endEditingPressed:(id)sender {
+    [self.view endEditing:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

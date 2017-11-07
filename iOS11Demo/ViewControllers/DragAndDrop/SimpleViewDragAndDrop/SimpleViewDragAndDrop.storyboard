@@ -17,33 +17,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmo-SS-aPa">
-                                <rect key="frame" x="20" y="40" width="335" height="100"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="one text field" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmo-SS-aPa">
+                                <rect key="frame" x="20" y="40" width="335" height="64"/>
                                 <color key="backgroundColor" red="0.64705884459999996" green="0.39215686919999998" blue="0.92156863209999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="5yl-LR-ak9"/>
+                                    <constraint firstAttribute="height" constant="64" id="5yl-LR-ak9"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wh7-DK-OIy">
-                                <rect key="frame" x="20" y="160" width="335" height="100"/>
+                                <rect key="frame" x="20" y="124" width="335" height="64"/>
                                 <color key="backgroundColor" red="0.47450980539999998" green="0.84705883260000003" blue="0.79607844350000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="07O-7t-oI7"/>
+                                    <constraint firstAttribute="height" constant="64" id="07O-7t-oI7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rw-Ew-o6o" customClass="BFPaperButton">
+                                <rect key="frame" x="137.5" y="198" width="100" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="46P-L3-amV"/>
+                                    <constraint firstAttribute="width" constant="100" id="5fr-8R-qtR"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="End Editing">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="loweredShadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="loweredShadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="loweredShadowOffset">
+                                        <size key="value" width="1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="liftedShadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="liftedShadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="liftedShadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="touchDownAnimationDuration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="touchUpAnimationDuration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tapCircleDiameterStartValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tapCircleDiameter">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tapCircleBurstAmount">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="1" green="0.0" blue="1" alpha="0.39091930650684931" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tapCircleColor">
+                                        <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="endEditingPressed:" destination="tzI-p8-i16" eventType="touchUpInside" id="wl4-6R-2d6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vmo-SS-aPa" firstAttribute="top" secondItem="MUW-YP-1r1" secondAttribute="top" constant="20" id="0Vq-1W-C2x"/>
                             <constraint firstItem="MUW-YP-1r1" firstAttribute="trailing" secondItem="vmo-SS-aPa" secondAttribute="trailing" constant="20" id="Ev0-dg-D2F"/>
                             <constraint firstItem="vmo-SS-aPa" firstAttribute="leading" secondItem="MUW-YP-1r1" secondAttribute="leading" constant="20" id="PuJ-pZ-wjl"/>
+                            <constraint firstItem="5Rw-Ew-o6o" firstAttribute="centerX" secondItem="MUW-YP-1r1" secondAttribute="centerX" id="cti-Oh-hOJ"/>
                             <constraint firstItem="Wh7-DK-OIy" firstAttribute="top" secondItem="vmo-SS-aPa" secondAttribute="bottom" constant="20" id="dIr-Vr-U7q"/>
                             <constraint firstItem="Wh7-DK-OIy" firstAttribute="leading" secondItem="MUW-YP-1r1" secondAttribute="leading" constant="20" id="g0s-3x-Ekx"/>
+                            <constraint firstItem="5Rw-Ew-o6o" firstAttribute="top" secondItem="Wh7-DK-OIy" secondAttribute="bottom" constant="10" id="n10-5P-eCh"/>
                             <constraint firstItem="MUW-YP-1r1" firstAttribute="trailing" secondItem="Wh7-DK-OIy" secondAttribute="trailing" constant="20" id="otr-5C-0Sp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MUW-YP-1r1"/>

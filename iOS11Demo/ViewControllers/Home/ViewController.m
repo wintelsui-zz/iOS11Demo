@@ -26,6 +26,7 @@ UITableViewDataSourcePrefetching
     [super viewDidLoad];
     
     self.navigationController.navigationBar.prefersLargeTitles = YES;
+    self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAutomatic;
 }
 
 #pragma mark - UITableViewDelegate start
