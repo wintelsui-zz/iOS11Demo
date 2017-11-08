@@ -8,7 +8,7 @@
 
 #import "SimpleViewDragAndDropViewController.h"
 
-#import "FaceView.h"
+#import <Lottie/Lottie.h>
 
 @interface SimpleViewDragAndDropViewController ()
 <
@@ -16,7 +16,9 @@ UITextDragDelegate,
 UITextDropDelegate
 >
 {
-    FaceView *_faceview;
+    UIView *_dropView;
+    LOTAnimationView *_scanAnimationView;
+    LOTAnimationView *_checkAnimationView;
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
@@ -61,20 +63,61 @@ UITextDropDelegate
     _myTextView.textDragDelegate = self;
     _myTextView.textDropDelegate = self;
     
-    [self setupFaceView];
+    [self setupDropView];
 }
 
-- (void)setupFaceView{
+- (void)setupDropView{
     __weak typeof(self)weakself = self;
+    _dropView = ({
+        UIView *view = [[UIView alloc] init];
+        [view setBackgroundColor:RGBA(158, 221, 218, 0.5)];
+        view.layer.cornerRadius = 5.0f;
+        view.layer.borderColor = RGBA(43, 150, 245, 0.5).CGColor;
+        view.layer.borderWidth = 1.0f;
+        
+        [weakself.view addSubview:view];
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(200);
+            make.height.mas_equalTo(100);
+            make.bottom.mas_equalTo(0 - 10 - IPHONEX_HEIGHT_SAFE_BOTTOM_VERTICAL);
+            make.centerX.equalTo(weakself.view);
+        }];
+        
+        view;
+    });
     
-    _faceview = [[FaceView alloc] initWithFrame:CGRectMake(0, 0, 200, 120)];
-    [self.view addSubview:_faceview];
+    _scanAnimationView = ({
+        LOTAnimationView *animationView = [LOTAnimationView animationNamed:@"AnimationScan"];
+        animationView.loopAnimation = YES;
+        [_dropView addSubview:animationView];
+        
+        
+        [animationView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(80);
+            make.height.mas_equalTo(80);
+            make.center.equalTo(_dropView);
+        }];
+        
+        animationView;
+    });
+    [_scanAnimationView setHidden:NO];
+    [_scanAnimationView play];
     
-    [_faceview mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo((0 - IPHONEX_HEIGHT_SAFE_BOTTOM_VERTICAL));
-        make.width.height.mas_equalTo(120);
-        make.centerX.equalTo(weakself.view);
-    }];
+    _checkAnimationView = ({
+        LOTAnimationView *animationView = [LOTAnimationView animationNamed:@"AnimationCheck"];
+        animationView.loopAnimation = YES;
+        [_dropView addSubview:animationView];
+        
+        
+        [animationView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(80);
+            make.height.mas_equalTo(80);
+            make.center.equalTo(_dropView);
+        }];
+        
+        animationView;
+    });
+    [_scanAnimationView setHidden:YES];
 }
 
 #pragma mark - -- UITextDragDelegate Start --
@@ -182,6 +225,24 @@ UITextDropDelegate
 - (IBAction)endEditingPressed:(id)sender {
     [self.view endEditing:YES];
 }
+
+- (void)showSuccessAnimation{
+    [_scanAnimationView stop];
+    [_scanAnimationView setHidden:YES];
+    [_checkAnimationView setHidden:NO];
+    [_checkAnimationView play];
+    
+    [self performSelector:@selector(refreshAnimation) withObject:nil afterDelay:2];
+}
+
+- (void)refreshAnimation{
+    [_checkAnimationView setHidden:NO];
+    [_checkAnimationView stop];
+    [_scanAnimationView play];
+    [_scanAnimationView setHidden:NO];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -22,7 +22,6 @@
 		2B6185631F9B4700003E8EFD /* CoreMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6185621F9B4700003E8EFD /* CoreMLViewController.m */; };
 		2B6185671F9CECE8003E8EFD /* iOS11ActionsListModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6185661F9CECE7003E8EFD /* iOS11ActionsListModels.m */; };
 		CD40060A4AF4EE7E02EE00F9 /* Pods_iOS11Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7C45A4266247DB54463335 /* Pods_iOS11Demo.framework */; };
-		2B9A46C21FB1F5E70050A18A /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9A46C11FB1F5E70050A18A /* FaceView.m */; };
 		FC00B4831FA30D6F0004FE02 /* WTSuspensionBall.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00B4821FA30D6F0004FE02 /* WTSuspensionBall.m */; };
 		FC0DC10A1F8B64BC003BC858 /* Sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC0DC1081F8B5A6D003BC858 /* Sample.pdf */; };
 		FC0DC10C1F8B65FE003BC858 /* actionsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC0DC10B1F8B65FE003BC858 /* actionsList.plist */; };
@@ -57,6 +56,14 @@
 		FCBAF6A81F95DAC3002A6B5C /* IdentityLookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBAF6A71F95DAC3002A6B5C /* IdentityLookupViewController.m */; };
 		FCBCD5341F9992490063BF75 /* WTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBCD5331F9992480063BF75 /* WTWebViewController.m */; };
 		FCBCD5371F999B390063BF75 /* DeviceCheck.html in Resources */ = {isa = PBXBuildFile; fileRef = FCBCD5361F999B380063BF75 /* DeviceCheck.html */; };
+		FCBFA41C1FB3070C003241C5 /* AnimationCavoi.json in Resources */ = {isa = PBXBuildFile; fileRef = FCBFA4141FB3070C003241C5 /* AnimationCavoi.json */; };
+		FCBFA41D1FB3070C003241C5 /* AnimationCheck.json in Resources */ = {isa = PBXBuildFile; fileRef = FCBFA4151FB3070C003241C5 /* AnimationCheck.json */; };
+		FCBFA41E1FB3070C003241C5 /* AnimationDownload.json in Resources */ = {isa = PBXBuildFile; fileRef = FCBFA4161FB3070C003241C5 /* AnimationDownload.json */; };
+		FCBFA41F1FB3070C003241C5 /* AnimationLike.json in Resources */ = {isa = PBXBuildFile; fileRef = FCBFA4171FB3070C003241C5 /* AnimationLike.json */; };
+		FCBFA4201FB3070C003241C5 /* AnimationPulse_loader.json in Resources */ = {isa = PBXBuildFile; fileRef = FCBFA4181FB3070C003241C5 /* AnimationPulse_loader.json */; };
+		FCBFA4211FB3070C003241C5 /* AnimationRadar.json in Resources */ = {isa = PBXBuildFile; fileRef = FCBFA4191FB3070C003241C5 /* AnimationRadar.json */; };
+		FCBFA4221FB3070C003241C5 /* AnimationScan.json in Resources */ = {isa = PBXBuildFile; fileRef = FCBFA41A1FB3070C003241C5 /* AnimationScan.json */; };
+		FCBFA4231FB3070C003241C5 /* AnimationTriangle_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = FCBFA41B1FB3070C003241C5 /* AnimationTriangle_loading.json */; };
 		FCD25A611FA330D400CA6704 /* iOS11DemoIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD25A601FA330D400CA6704 /* iOS11DemoIcons.xcassets */; };
 		FCF4B3D21F94B5730047B72A /* PDFWatermarkPage.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF4B3D11F94B5730047B72A /* PDFWatermarkPage.m */; };
 		FCFBEAC91FA07B6C0025AD96 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFBEAC81FA07B5F0025AD96 /* QuartzCore.framework */; };
@@ -147,8 +154,6 @@
 		2B6185621F9B4700003E8EFD /* CoreMLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreMLViewController.m; sourceTree = "<group>"; };
 		2B6185651F9CECE7003E8EFD /* iOS11ActionsListModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOS11ActionsListModels.h; sourceTree = "<group>"; };
 		2B6185661F9CECE7003E8EFD /* iOS11ActionsListModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOS11ActionsListModels.m; sourceTree = "<group>"; };
-		2B9A46C01FB1F5E70050A18A /* FaceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceView.h; sourceTree = "<group>"; };
-		2B9A46C11FB1F5E70050A18A /* FaceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
 		5D71A56EF115987BDC48D2AE /* Pods-iOS11Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS11Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS11Demo/Pods-iOS11Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		6B7C45A4266247DB54463335 /* Pods_iOS11Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS11Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D53B47AC2F73328FDEC8A2 /* Pods-iOS11Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS11Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS11Demo/Pods-iOS11Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,6 +232,14 @@
 		FCBCD5321F9992480063BF75 /* WTWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTWebViewController.h; sourceTree = "<group>"; };
 		FCBCD5331F9992480063BF75 /* WTWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTWebViewController.m; sourceTree = "<group>"; };
 		FCBCD5361F999B380063BF75 /* DeviceCheck.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = DeviceCheck.html; sourceTree = "<group>"; };
+		FCBFA4141FB3070C003241C5 /* AnimationCavoi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimationCavoi.json; sourceTree = "<group>"; };
+		FCBFA4151FB3070C003241C5 /* AnimationCheck.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimationCheck.json; sourceTree = "<group>"; };
+		FCBFA4161FB3070C003241C5 /* AnimationDownload.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimationDownload.json; sourceTree = "<group>"; };
+		FCBFA4171FB3070C003241C5 /* AnimationLike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimationLike.json; sourceTree = "<group>"; };
+		FCBFA4181FB3070C003241C5 /* AnimationPulse_loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimationPulse_loader.json; sourceTree = "<group>"; };
+		FCBFA4191FB3070C003241C5 /* AnimationRadar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimationRadar.json; sourceTree = "<group>"; };
+		FCBFA41A1FB3070C003241C5 /* AnimationScan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimationScan.json; sourceTree = "<group>"; };
+		FCBFA41B1FB3070C003241C5 /* AnimationTriangle_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimationTriangle_loading.json; sourceTree = "<group>"; };
 		FCD25A601FA330D400CA6704 /* iOS11DemoIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iOS11DemoIcons.xcassets; sourceTree = "<group>"; };
 		FCF4B3D01F94B5730047B72A /* PDFWatermarkPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFWatermarkPage.h; sourceTree = "<group>"; };
 		FCF4B3D11F94B5730047B72A /* PDFWatermarkPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFWatermarkPage.m; sourceTree = "<group>"; };
@@ -385,8 +398,6 @@
 		2B9A46BF1FB1F5920050A18A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2B9A46C01FB1F5E70050A18A /* FaceView.h */,
-				2B9A46C11FB1F5E70050A18A /* FaceView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -424,6 +435,7 @@
 		FC0DC1071F8B5A5B003BC858 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FCBFA4131FB3070C003241C5 /* LottieAnimation */,
 				FCA73E861FB03D1D00C01030 /* Document */,
 				FC0DC10B1F8B65FE003BC858 /* actionsList.plist */,
 				FC1C7C851FB04CAB00FB5B36 /* viewControllersList.plist */,
@@ -689,6 +701,21 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		FCBFA4131FB3070C003241C5 /* LottieAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				FCBFA4141FB3070C003241C5 /* AnimationCavoi.json */,
+				FCBFA4151FB3070C003241C5 /* AnimationCheck.json */,
+				FCBFA4161FB3070C003241C5 /* AnimationDownload.json */,
+				FCBFA4171FB3070C003241C5 /* AnimationLike.json */,
+				FCBFA4181FB3070C003241C5 /* AnimationPulse_loader.json */,
+				FCBFA4191FB3070C003241C5 /* AnimationRadar.json */,
+				FCBFA41A1FB3070C003241C5 /* AnimationScan.json */,
+				FCBFA41B1FB3070C003241C5 /* AnimationTriangle_loading.json */,
+			);
+			path = LottieAnimation;
+			sourceTree = "<group>";
+		};
 		FCF4B3D31F94B57D0047B72A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -919,17 +946,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC0DC10C1F8B65FE003BC858 /* actionsList.plist in Resources */,
+				FCBFA4221FB3070C003241C5 /* AnimationScan.json in Resources */,
+				FCBFA41C1FB3070C003241C5 /* AnimationCavoi.json in Resources */,
 				FC1C7C861FB04CAB00FB5B36 /* viewControllersList.plist in Resources */,
+				FCBFA4211FB3070C003241C5 /* AnimationRadar.json in Resources */,
 				FC15D14E1F95F42C0003D308 /* Localizable.strings in Resources */,
 				FCBCD5371F999B390063BF75 /* DeviceCheck.html in Resources */,
 				FC1C7C951FB060B400FB5B36 /* SimpleViewDragAndDrop.storyboard in Resources */,
 				FCD25A611FA330D400CA6704 /* iOS11DemoIcons.xcassets in Resources */,
+				FCBFA41E1FB3070C003241C5 /* AnimationDownload.json in Resources */,
 				FC0DC10A1F8B64BC003BC858 /* Sample.pdf in Resources */,
 				FCFBEACB1FA07CE70025AD96 /* media.scnassets in Resources */,
+				FCBFA4201FB3070C003241C5 /* AnimationPulse_loader.json in Resources */,
 				FCA9B0081F7BA34600438D01 /* LaunchScreen.storyboard in Resources */,
 				FCAF1D821FA705FB00550BF7 /* CreateDefaultTXT.txt in Resources */,
+				FCBFA41D1FB3070C003241C5 /* AnimationCheck.json in Resources */,
 				FCA9B0051F7BA34600438D01 /* Assets.xcassets in Resources */,
+				FCBFA4231FB3070C003241C5 /* AnimationTriangle_loading.json in Resources */,
 				FCA9B0031F7BA34600438D01 /* Main.storyboard in Resources */,
+				FCBFA41F1FB3070C003241C5 /* AnimationLike.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1039,7 +1074,6 @@
 				FCAF1D7D1FA6F33400550BF7 /* Document.m in Sources */,
 				2B6185631F9B4700003E8EFD /* CoreMLViewController.m in Sources */,
 				FCAF1D801FA6F5EF00550BF7 /* DocumentViewController.m in Sources */,
-				2B9A46C21FB1F5E70050A18A /* FaceView.m in Sources */,
 				FCA9B0001F7BA34600438D01 /* ViewController.m in Sources */,
 				FCA9B00B1F7BA34600438D01 /* main.m in Sources */,
 				FCA9B0451F7BBB9700438D01 /* PDFKitViewController.m in Sources */,
