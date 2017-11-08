@@ -12,5 +12,6 @@ pod 'FMDB'
 pod 'KVOController'
 pod 'ReactiveObjC'
 pod 'BFPaperButton'
+pod 'Lottie'
 
 end
