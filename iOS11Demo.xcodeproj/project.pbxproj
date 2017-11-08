@@ -21,7 +21,12 @@
 		2B61855E1F9B46C2003E8EFD /* AutoFillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B61855D1F9B46C2003E8EFD /* AutoFillViewController.m */; };
 		2B6185631F9B4700003E8EFD /* CoreMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6185621F9B4700003E8EFD /* CoreMLViewController.m */; };
 		2B6185671F9CECE8003E8EFD /* iOS11ActionsListModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6185661F9CECE7003E8EFD /* iOS11ActionsListModels.m */; };
+<<<<<<< HEAD
 		CD40060A4AF4EE7E02EE00F9 /* Pods_iOS11Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7C45A4266247DB54463335 /* Pods_iOS11Demo.framework */; };
+=======
+		2B9A46C21FB1F5E70050A18A /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9A46C11FB1F5E70050A18A /* FaceView.m */; };
+		D3137E93607D305231359AD3 /* libPods-iOS11Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1967440B1DD86C6ED456A4FC /* libPods-iOS11Demo.a */; };
+>>>>>>> origin/master
 		FC00B4831FA30D6F0004FE02 /* WTSuspensionBall.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00B4821FA30D6F0004FE02 /* WTSuspensionBall.m */; };
 		FC0DC10A1F8B64BC003BC858 /* Sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC0DC1081F8B5A6D003BC858 /* Sample.pdf */; };
 		FC0DC10C1F8B65FE003BC858 /* actionsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC0DC10B1F8B65FE003BC858 /* actionsList.plist */; };
@@ -146,6 +151,8 @@
 		2B6185621F9B4700003E8EFD /* CoreMLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreMLViewController.m; sourceTree = "<group>"; };
 		2B6185651F9CECE7003E8EFD /* iOS11ActionsListModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOS11ActionsListModels.h; sourceTree = "<group>"; };
 		2B6185661F9CECE7003E8EFD /* iOS11ActionsListModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOS11ActionsListModels.m; sourceTree = "<group>"; };
+		2B9A46C01FB1F5E70050A18A /* FaceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceView.h; sourceTree = "<group>"; };
+		2B9A46C11FB1F5E70050A18A /* FaceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
 		5D71A56EF115987BDC48D2AE /* Pods-iOS11Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS11Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS11Demo/Pods-iOS11Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		6B7C45A4266247DB54463335 /* Pods_iOS11Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS11Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D53B47AC2F73328FDEC8A2 /* Pods-iOS11Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS11Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS11Demo/Pods-iOS11Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -379,6 +386,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2B9A46BF1FB1F5920050A18A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B9A46C01FB1F5E70050A18A /* FaceView.h */,
+				2B9A46C11FB1F5E70050A18A /* FaceView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		98685DECEFA0D94170570249 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -556,6 +572,7 @@
 				FC1D5D4A1F9D950B004238AC /* Categorys */,
 				FC816A9D1F987B390032F680 /* Common */,
 				FC0DC1121F8B795B003BC858 /* Utils */,
+				2B9A46BF1FB1F5920050A18A /* Views */,
 				FCA9B0411F7BBB4100438D01 /* ViewControllers */,
 				FC816AAC1F98B2000032F680 /* AppDelegate */,
 				FCA9B0011F7BA34600438D01 /* Main.storyboard */,
@@ -1026,6 +1043,7 @@
 				FCAF1D7D1FA6F33400550BF7 /* Document.m in Sources */,
 				2B6185631F9B4700003E8EFD /* CoreMLViewController.m in Sources */,
 				FCAF1D801FA6F5EF00550BF7 /* DocumentViewController.m in Sources */,
+				2B9A46C21FB1F5E70050A18A /* FaceView.m in Sources */,
 				FCA9B0001F7BA34600438D01 /* ViewController.m in Sources */,
 				FCA9B00B1F7BA34600438D01 /* main.m in Sources */,
 				FCA9B0451F7BBB9700438D01 /* PDFKitViewController.m in Sources */,
