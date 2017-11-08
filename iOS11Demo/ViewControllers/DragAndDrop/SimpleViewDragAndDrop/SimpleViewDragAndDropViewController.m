@@ -19,6 +19,7 @@ UITextDropDelegate
     UIView *_dropView;
     LOTAnimationView *_scanAnimationView;
     LOTAnimationView *_checkAnimationView;
+    LOTAnimationView *_loadingAnimationView;
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
@@ -64,6 +65,8 @@ UITextDropDelegate
     _myTextView.textDropDelegate = self;
     
     [self setupDropView];
+    
+    [self showSuccessAnimation:@2];
 }
 
 - (void)setupDropView{
@@ -74,6 +77,7 @@ UITextDropDelegate
         view.layer.cornerRadius = 5.0f;
         view.layer.borderColor = RGBA(43, 150, 245, 0.5).CGColor;
         view.layer.borderWidth = 1.0f;
+        [view setUserInteractionEnabled:YES];
         
         [weakself.view addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -89,6 +93,7 @@ UITextDropDelegate
     _scanAnimationView = ({
         LOTAnimationView *animationView = [LOTAnimationView animationNamed:@"AnimationScan"];
         animationView.loopAnimation = YES;
+        [animationView setUserInteractionEnabled:NO];
         [_dropView addSubview:animationView];
         
         
@@ -106,6 +111,7 @@ UITextDropDelegate
     _checkAnimationView = ({
         LOTAnimationView *animationView = [LOTAnimationView animationNamed:@"AnimationCheck"];
         animationView.loopAnimation = YES;
+        [animationView setUserInteractionEnabled:NO];
         [_dropView addSubview:animationView];
         
         
@@ -117,7 +123,24 @@ UITextDropDelegate
         
         animationView;
     });
-    [_scanAnimationView setHidden:YES];
+    [_checkAnimationView setHidden:YES];
+    
+    _loadingAnimationView = ({
+        LOTAnimationView *animationView = [LOTAnimationView animationNamed:@"AnimationTriangle_loading"];
+        animationView.loopAnimation = YES;
+        [animationView setUserInteractionEnabled:NO];
+        [_dropView addSubview:animationView];
+        
+        
+        [animationView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(80);
+            make.height.mas_equalTo(80);
+            make.center.equalTo(_dropView);
+        }];
+        
+        animationView;
+    });
+    [_loadingAnimationView setHidden:YES];
 }
 
 #pragma mark - -- UITextDragDelegate Start --
@@ -226,26 +249,50 @@ UITextDropDelegate
     [self.view endEditing:YES];
 }
 
-- (void)showSuccessAnimation{
-    [_scanAnimationView stop];
-    [_scanAnimationView setHidden:YES];
-    [_checkAnimationView setHidden:NO];
-    [_checkAnimationView play];
-    
-    [self performSelector:@selector(refreshAnimation) withObject:nil afterDelay:2];
+- (void)showSuccessAnimation:(NSNumber *)mode{
+    if ([mode isEqualToNumber:@0]) {
+        //Scaning
+        [_loadingAnimationView setHidden:YES];
+        [_loadingAnimationView stop];
+        
+        [_checkAnimationView setHidden:YES];
+        [_checkAnimationView stop];
+        
+        [_scanAnimationView setHidden:NO];
+        [_scanAnimationView play];
+    }else if ([mode isEqualToNumber:@1]) {
+        //Loading
+        [_checkAnimationView setHidden:YES];
+        [_checkAnimationView stop];
+        
+        [_scanAnimationView setHidden:YES];
+        [_scanAnimationView stop];
+        
+        [_loadingAnimationView setHidden:NO];
+        [_loadingAnimationView play];
+    }else if ([mode isEqualToNumber:@2]) {
+        //Success
+        [_loadingAnimationView setHidden:YES];
+        [_loadingAnimationView stop];
+        
+        [_scanAnimationView setHidden:YES];
+        [_scanAnimationView stop];
+        
+        [_checkAnimationView setHidden:NO];
+        [_checkAnimationView play];
+    }
 }
-
-- (void)refreshAnimation{
-    [_checkAnimationView setHidden:NO];
-    [_checkAnimationView stop];
-    [_scanAnimationView play];
-    [_scanAnimationView setHidden:NO];
-}
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+- (void)dealloc{
+    _myTextField.textDragDelegate = nil;
+    _myTextField.textDropDelegate = nil;
+    
+    _myTextView.textDragDelegate = nil;
+    _myTextView.textDropDelegate = nil;
+    
+}
 @end
