@@ -21,12 +21,8 @@
 		2B61855E1F9B46C2003E8EFD /* AutoFillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B61855D1F9B46C2003E8EFD /* AutoFillViewController.m */; };
 		2B6185631F9B4700003E8EFD /* CoreMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6185621F9B4700003E8EFD /* CoreMLViewController.m */; };
 		2B6185671F9CECE8003E8EFD /* iOS11ActionsListModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6185661F9CECE7003E8EFD /* iOS11ActionsListModels.m */; };
-<<<<<<< HEAD
 		CD40060A4AF4EE7E02EE00F9 /* Pods_iOS11Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7C45A4266247DB54463335 /* Pods_iOS11Demo.framework */; };
-=======
 		2B9A46C21FB1F5E70050A18A /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9A46C11FB1F5E70050A18A /* FaceView.m */; };
-		D3137E93607D305231359AD3 /* libPods-iOS11Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1967440B1DD86C6ED456A4FC /* libPods-iOS11Demo.a */; };
->>>>>>> origin/master
 		FC00B4831FA30D6F0004FE02 /* WTSuspensionBall.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00B4821FA30D6F0004FE02 /* WTSuspensionBall.m */; };
 		FC0DC10A1F8B64BC003BC858 /* Sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC0DC1081F8B5A6D003BC858 /* Sample.pdf */; };
 		FC0DC10C1F8B65FE003BC858 /* actionsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC0DC10B1F8B65FE003BC858 /* actionsList.plist */; };
