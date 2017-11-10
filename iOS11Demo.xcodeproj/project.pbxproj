@@ -34,6 +34,18 @@
 		FC2DF7161FA0395C00A9FCFA /* ARKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2DF7151FA0395C00A9FCFA /* ARKitViewController.m */; };
 		FC2DF71C1FA0673B00A9FCFA /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2DF71B1FA0672E00A9FCFA /* ARKit.framework */; };
 		FC2DF71D1FA0674000A9FCFA /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2DF71A1FA0672800A9FCFA /* SceneKit.framework */; };
+		FC45651C1FB54323004808EC /* Aragaki_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4565101FB54323004808EC /* Aragaki_1.jpg */; };
+		FC45651D1FB54323004808EC /* Aragaki_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4565111FB54323004808EC /* Aragaki_10.jpg */; };
+		FC45651E1FB54323004808EC /* Aragaki_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4565121FB54323004808EC /* Aragaki_11.jpg */; };
+		FC45651F1FB54323004808EC /* Aragaki_12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4565131FB54323004808EC /* Aragaki_12.jpg */; };
+		FC4565201FB54323004808EC /* Aragaki_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4565141FB54323004808EC /* Aragaki_2.jpg */; };
+		FC4565211FB54323004808EC /* Aragaki_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4565151FB54323004808EC /* Aragaki_3.jpg */; };
+		FC4565221FB54323004808EC /* Aragaki_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4565161FB54323004808EC /* Aragaki_4.jpg */; };
+		FC4565231FB54323004808EC /* Aragaki_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4565171FB54323004808EC /* Aragaki_5.jpg */; };
+		FC4565241FB54323004808EC /* Aragaki_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4565181FB54323004808EC /* Aragaki_6.jpg */; };
+		FC4565251FB54323004808EC /* Aragaki_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4565191FB54323004808EC /* Aragaki_7.jpg */; };
+		FC4565261FB54323004808EC /* Aragaki_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC45651A1FB54323004808EC /* Aragaki_8.jpg */; };
+		FC4565271FB54323004808EC /* Aragaki_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC45651B1FB54323004808EC /* Aragaki_9.jpg */; };
 		FC816AA01F987C120032F680 /* iOS11DemoPublicString.m in Sources */ = {isa = PBXBuildFile; fileRef = FC816A9F1F987C120032F680 /* iOS11DemoPublicString.m */; };
 		FC816AA11F987CCC0032F680 /* iOS11DemoPublicString.m in Sources */ = {isa = PBXBuildFile; fileRef = FC816A9F1F987C120032F680 /* iOS11DemoPublicString.m */; };
 		FC8B32681F8F43A50018C530 /* WTDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8B32671F8F43A50018C530 /* WTDeviceInfo.m */; };
@@ -187,6 +199,18 @@
 		FC2DF71A1FA0672800A9FCFA /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		FC2DF71B1FA0672E00A9FCFA /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		FC30FF4D1F90A1AE00D6EEE7 /* iOS11Demo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = iOS11Demo.md; sourceTree = "<group>"; };
+		FC4565101FB54323004808EC /* Aragaki_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_1.jpg; sourceTree = "<group>"; };
+		FC4565111FB54323004808EC /* Aragaki_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_10.jpg; sourceTree = "<group>"; };
+		FC4565121FB54323004808EC /* Aragaki_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_11.jpg; sourceTree = "<group>"; };
+		FC4565131FB54323004808EC /* Aragaki_12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_12.jpg; sourceTree = "<group>"; };
+		FC4565141FB54323004808EC /* Aragaki_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_2.jpg; sourceTree = "<group>"; };
+		FC4565151FB54323004808EC /* Aragaki_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_3.jpg; sourceTree = "<group>"; };
+		FC4565161FB54323004808EC /* Aragaki_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_4.jpg; sourceTree = "<group>"; };
+		FC4565171FB54323004808EC /* Aragaki_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_5.jpg; sourceTree = "<group>"; };
+		FC4565181FB54323004808EC /* Aragaki_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_6.jpg; sourceTree = "<group>"; };
+		FC4565191FB54323004808EC /* Aragaki_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_7.jpg; sourceTree = "<group>"; };
+		FC45651A1FB54323004808EC /* Aragaki_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_8.jpg; sourceTree = "<group>"; };
+		FC45651B1FB54323004808EC /* Aragaki_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_9.jpg; sourceTree = "<group>"; };
 		FC70F1751F9EE20E00BCD66E /* FileProvider.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FileProvider.md; sourceTree = "<group>"; };
 		FC70F17B1F9F371E00BCD66E /* AutoFill.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AutoFill.md; sourceTree = "<group>"; };
 		FC816A9E1F987C120032F680 /* iOS11DemoPublicString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS11DemoPublicString.h; sourceTree = "<group>"; };
@@ -435,6 +459,7 @@
 		FC0DC1071F8B5A5B003BC858 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FC45650F1FB54323004808EC /* Aragaki */,
 				FCBFA4131FB3070C003241C5 /* LottieAnimation */,
 				FCA73E861FB03D1D00C01030 /* Document */,
 				FC0DC10B1F8B65FE003BC858 /* actionsList.plist */,
@@ -494,6 +519,25 @@
 				FC2DF7151FA0395C00A9FCFA /* ARKitViewController.m */,
 			);
 			path = ARKit;
+			sourceTree = "<group>";
+		};
+		FC45650F1FB54323004808EC /* Aragaki */ = {
+			isa = PBXGroup;
+			children = (
+				FC4565101FB54323004808EC /* Aragaki_1.jpg */,
+				FC4565111FB54323004808EC /* Aragaki_10.jpg */,
+				FC4565121FB54323004808EC /* Aragaki_11.jpg */,
+				FC4565131FB54323004808EC /* Aragaki_12.jpg */,
+				FC4565141FB54323004808EC /* Aragaki_2.jpg */,
+				FC4565151FB54323004808EC /* Aragaki_3.jpg */,
+				FC4565161FB54323004808EC /* Aragaki_4.jpg */,
+				FC4565171FB54323004808EC /* Aragaki_5.jpg */,
+				FC4565181FB54323004808EC /* Aragaki_6.jpg */,
+				FC4565191FB54323004808EC /* Aragaki_7.jpg */,
+				FC45651A1FB54323004808EC /* Aragaki_8.jpg */,
+				FC45651B1FB54323004808EC /* Aragaki_9.jpg */,
+			);
+			path = Aragaki;
 			sourceTree = "<group>";
 		};
 		FC7E5AB91F8CCE96004262E7 /* Home */ = {
@@ -946,25 +990,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC0DC10C1F8B65FE003BC858 /* actionsList.plist in Resources */,
+				FC45651D1FB54323004808EC /* Aragaki_10.jpg in Resources */,
 				FCBFA4221FB3070C003241C5 /* AnimationScan.json in Resources */,
 				FCBFA41C1FB3070C003241C5 /* AnimationCavoi.json in Resources */,
+				FC4565271FB54323004808EC /* Aragaki_9.jpg in Resources */,
+				FC4565221FB54323004808EC /* Aragaki_4.jpg in Resources */,
 				FC1C7C861FB04CAB00FB5B36 /* viewControllersList.plist in Resources */,
 				FCBFA4211FB3070C003241C5 /* AnimationRadar.json in Resources */,
 				FC15D14E1F95F42C0003D308 /* Localizable.strings in Resources */,
+				FC45651E1FB54323004808EC /* Aragaki_11.jpg in Resources */,
 				FCBCD5371F999B390063BF75 /* DeviceCheck.html in Resources */,
+				FC4565251FB54323004808EC /* Aragaki_7.jpg in Resources */,
+				FC45651C1FB54323004808EC /* Aragaki_1.jpg in Resources */,
 				FC1C7C951FB060B400FB5B36 /* SimpleViewDragAndDrop.storyboard in Resources */,
 				FCD25A611FA330D400CA6704 /* iOS11DemoIcons.xcassets in Resources */,
 				FCBFA41E1FB3070C003241C5 /* AnimationDownload.json in Resources */,
 				FC0DC10A1F8B64BC003BC858 /* Sample.pdf in Resources */,
 				FCFBEACB1FA07CE70025AD96 /* media.scnassets in Resources */,
+				FC4565201FB54323004808EC /* Aragaki_2.jpg in Resources */,
 				FCBFA4201FB3070C003241C5 /* AnimationPulse_loader.json in Resources */,
 				FCA9B0081F7BA34600438D01 /* LaunchScreen.storyboard in Resources */,
 				FCAF1D821FA705FB00550BF7 /* CreateDefaultTXT.txt in Resources */,
 				FCBFA41D1FB3070C003241C5 /* AnimationCheck.json in Resources */,
 				FCA9B0051F7BA34600438D01 /* Assets.xcassets in Resources */,
 				FCBFA4231FB3070C003241C5 /* AnimationTriangle_loading.json in Resources */,
+				FC4565211FB54323004808EC /* Aragaki_3.jpg in Resources */,
+				FC4565231FB54323004808EC /* Aragaki_5.jpg in Resources */,
 				FCA9B0031F7BA34600438D01 /* Main.storyboard in Resources */,
+				FC4565261FB54323004808EC /* Aragaki_8.jpg in Resources */,
 				FCBFA41F1FB3070C003241C5 /* AnimationLike.json in Resources */,
+				FC45651F1FB54323004808EC /* Aragaki_12.jpg in Resources */,
+				FC4565241FB54323004808EC /* Aragaki_6.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

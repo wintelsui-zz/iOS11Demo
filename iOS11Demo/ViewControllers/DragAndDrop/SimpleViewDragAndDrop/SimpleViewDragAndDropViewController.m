@@ -9,6 +9,7 @@
 #import "SimpleViewDragAndDropViewController.h"
 
 #import <Lottie/Lottie.h>
+#import "BFPaperButton.h"
 
 @interface SimpleViewDragAndDropViewController ()
 <
@@ -24,6 +25,7 @@ UIDropInteractionDelegate
     LOTAnimationView *_loadingAnimationView;
     
     UIImageView *_dropAndDragView;
+    BFPaperButton *_resetImageButton;
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
@@ -84,6 +86,7 @@ UIDropInteractionDelegate
         UIImageView *imageview = [[UIImageView alloc] init];
         [imageview setBackgroundColor:[UIColor lightGrayColor]];
         imageview.userInteractionEnabled = YES;
+        imageview.contentMode = UIViewContentModeScaleAspectFit;
         
         [weakself.view addSubview:imageview];
         [imageview mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -100,6 +103,42 @@ UIDropInteractionDelegate
         
         imageview;
     });
+    
+    _resetImageButton = ({
+        BFPaperButton *btn = [BFPaperButton buttonWithType:UIButtonTypeCustom];
+        [btn setBackgroundColor:RGBA(43, 150, 245,0.7)];
+        btn.titleLabel.font = [UIFont systemFontOfSize:17.0f];
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [btn setTitle:@"设置照片" forState:UIControlStateNormal];
+        [btn setImage:nil forState:UIControlStateNormal];
+        
+        btn.cornerRadius = 22.0f;
+        btn.loweredShadowRadius = 22.0f;
+        btn.liftedShadowRadius = 22.0f;
+        btn.liftedShadowOffset = CGSizeMake(1, 1);
+        btn.loweredShadowOffset = CGSizeMake(1, 1);
+        
+        [self.view addSubview:btn];
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(_dropAndDragView.mas_top).mas_offset(-10);
+            make.width.mas_equalTo(100.0f);
+            make.height.mas_equalTo(44.0f);
+            make.centerX.equalTo(weakself.view);
+        }];
+        
+        btn;
+    });
+    [[_resetImageButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        NSInteger number = arc4random() % 11 + 1;
+        NSString *imageName = [NSString stringWithFormat:@"Aragaki_%ld.jpg",(long)number];
+        NSString *imagePath = [[NSBundle mainBundle] pathForResource:imageName ofType:@""];
+        UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+        if (image) {
+            [_dropAndDragView setImage:image];
+        }
+    }];
+    
+    
 }
 
 /**
@@ -353,7 +392,6 @@ UIDropInteractionDelegate
     NSLog(@"session:didEndWithOperation:");
     
     [UIView animateWithDuration:0.25 animations:^{
-        //        _dropAndDragView.center = [session locationInView:self.view];
         _dropAndDragView.alpha = 1;
     } completion:^(BOOL finished) {
         
