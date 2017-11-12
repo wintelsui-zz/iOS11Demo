@@ -341,7 +341,7 @@ UIDropInteractionDelegate
  如果返回 nil，则不会发生任何拖拽事件
  */
 - (nonnull NSArray<UIDragItem *> *)dragInteraction:(nonnull UIDragInteraction *)interaction itemsForBeginningSession:(nonnull id<UIDragSession>)session {
-    NSLog(@"itemsForBeginningSession");
+    NSLog(@"dragInteraction:%@ itemsForBeginningSession:%@",interaction,session);
     // 该方法进行提供数据
     NSItemProvider *provider = [[NSItemProvider alloc] initWithObject:_dropAndDragView.image];
     UIDragItem *dragItem = [[UIDragItem alloc] initWithItemProvider:provider];
@@ -356,7 +356,7 @@ UIDropInteractionDelegate
  */
 - (nullable UITargetedDragPreview *)dragInteraction:(UIDragInteraction *)interaction previewForLiftingItem:(UIDragItem *)item session:(id<UIDragSession>)session {
     
-    NSLog(@"previewForLiftingItem");
+    NSLog(@"dragInteraction:%@ previewForLiftingItem:%@ session:%@",interaction,item,session);
     
     UIDragPreviewParameters *previewParameters = [[UIDragPreviewParameters alloc] init];
     previewParameters.visiblePath = [UIBezierPath bezierPathWithRoundedRect:_dropAndDragView.bounds cornerRadius:10];
@@ -366,12 +366,17 @@ UIDropInteractionDelegate
 
 // 向当前已经存在的拖拽事件中添加一个新的 UIDragItem
 - (NSArray<UIDragItem *> *)dragInteraction:(UIDragInteraction *)interaction itemsForAddingToSession:(id<UIDragSession>)session withTouchAtPoint:(CGPoint)point {
+    
+    NSLog(@"dragInteraction:%@ itemsForAddingToSession:%@ withTouchAtPoint:%@",interaction,session,@(point));
+    
     return nil;
 }
 
 // 当 lift 动画准备执行的时候会调用该方法，可以在这个方法里面对拖动的 item 添加动画
 - (void)dragInteraction:(UIDragInteraction *)interaction willAnimateLiftWithAnimator:(id<UIDragAnimating>)animator session:(id<UIDragSession>)session {
-    NSLog(@"willAnimateLiftWithAnimator:session:");
+    
+    NSLog(@"dragInteraction:%@ willAnimateLiftWithAnimator:%@ session:%@",interaction,animator,session);
+    
     [animator addCompletion:^(UIViewAnimatingPosition finalPosition) {
         if (finalPosition == UIViewAnimatingPositionEnd) {
             _dropAndDragView.alpha = 0.6;
@@ -381,7 +386,9 @@ UIDropInteractionDelegate
 
 // 当取消动画准备执行的时候会调用这个方法
 - (void)dragInteraction:(UIDragInteraction *)interaction item:(UIDragItem *)item willAnimateCancelWithAnimator:(id<UIDragAnimating>)animator {
-    NSLog(@"item:willAnimateCancelWithAnimator:");
+    
+    NSLog(@"dragInteraction:%@ item:%@ willAnimateCancelWithAnimator:%@",interaction,item,animator);
+    
     [animator addAnimations:^{
         _dropAndDragView.alpha = 1;
     }];
@@ -389,7 +396,8 @@ UIDropInteractionDelegate
 
 // 当用户完成一次拖拽操作，并且所有相关的动画都执行完毕的时候会调用这个方法，这时候被拖动的item 应该恢复正常的展示外观
 - (void)dragInteraction:(UIDragInteraction *)interaction session:(id<UIDragSession>)session didEndWithOperation:(UIDropOperation)operation {
-    NSLog(@"session:didEndWithOperation:");
+    
+    NSLog(@"dragInteraction:%@ session:%@ didEndWithOperation:%@",interaction,session,operation);
     
     [UIView animateWithDuration:0.25 animations:^{
         _dropAndDragView.alpha = 1;
@@ -399,7 +407,8 @@ UIDropInteractionDelegate
 }
 
 - (nullable UITargetedDragPreview *)dragInteraction:(UIDragInteraction *)interaction previewForCancellingItem:(UIDragItem *)item withDefault:(UITargetedDragPreview *)defaultPreview {
-    NSLog(@"previewForCancellingItem");
+    
+    NSLog(@"dragInteraction:%@ previewForCancellingItem:%@ withDefault:%@",interaction,item,defaultPreview);
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, interaction.view.bounds.size.width, interaction.view.bounds.size.height)];
     imageView.image = _dropAndDragView.image;
@@ -415,16 +424,21 @@ UIDropInteractionDelegate
 #pragma mark - -- UIDropInteractionDelegate Start --
 
 - (BOOL)dropInteraction:(UIDropInteraction *)interaction canHandleSession:(id<UIDropSession>)session {
+    
+    NSLog(@"dropInteraction:%@ canHandleSession:%@",interaction,session);
+    
     // 可以加载image的控件都可以
     return [session canLoadObjectsOfClass:[UIImage class]];
     
 }
 
 - (void)dropInteraction:(UIDropInteraction *)interaction sessionDidEnter:(id<UIDropSession>)session {
-    NSLog(@"sessionDidEnter");
+    NSLog(@"dropInteraction:%@ sessionDidEnter:%@",interaction,session);
 }
 
 - (UIDropProposal *)dropInteraction:(UIDropInteraction *)interaction sessionDidUpdate:(id<UIDropSession>)session {
+    
+    NSLog(@"dropInteraction:%@ sessionDidUpdate:%@",interaction,session);
     
     // 如果 session.localDragSession 为nil，说明这一操作源自另外一个app，
     UIDropOperation dropOperation = session.localDragSession ? UIDropOperationMove : UIDropOperationCopy;
@@ -434,7 +448,9 @@ UIDropInteractionDelegate
 }
 
 - (void)dropInteraction:(UIDropInteraction *)interaction performDrop:(id<UIDropSession>)session {
-    NSLog(@"performDrop");
+    
+    NSLog(@"dropInteraction:%@ performDrop:%@",interaction,session);
+    
     // 同样的，在这个方法内部也要判断是否源自本app
     if (session.localDragSession) {
         //        CGPoint dropPoint = [session locationInView:interaction.view];
@@ -446,7 +462,9 @@ UIDropInteractionDelegate
 }
 
 - (UITargetedDragPreview *)dropInteraction:(UIDropInteraction *)interaction previewForDroppingItem:(UIDragItem *)item withDefault:(UITargetedDragPreview *)defaultPreview {
-    NSLog(@"previewForDroppingItem");
+    
+    NSLog(@"dropInteraction:%@ previewForDroppingItem:%@ withDefault:%@",interaction,item,defaultPreview);
+    
     if (item.localObject) {
         CGPoint dropPoint = defaultPreview.view.center;
         UIDragPreviewTarget *previewTarget = [[UIDragPreviewTarget alloc] initWithContainer:_dropAndDragView center:dropPoint];
@@ -458,6 +476,8 @@ UIDropInteractionDelegate
 
 // 产生本地动画
 - (void)dropInteraction:(UIDropInteraction *)interaction item:(UIDragItem *)item willAnimateDropWithAnimator:(id<UIDragAnimating>)animator {
+    
+    NSLog(@"dropInteraction:%@ item:%@ willAnimateDropWithAnimator:%@",interaction,item,animator);
     
     [animator addAnimations:^{
         _dropAndDragView.alpha = 0;
