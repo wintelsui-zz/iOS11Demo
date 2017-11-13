@@ -11,6 +11,9 @@
 #import <Lottie/Lottie.h>
 #import "BFPaperButton.h"
 
+#define SwitchShowDragLog 1
+#define SwitchShowDropLog 1
+
 @interface SimpleViewDragAndDropViewController ()
 <
 UITextDragDelegate,
@@ -297,7 +300,9 @@ UIDropInteractionDelegate
  如果返回 dragRequest.suggestedItems 则使用默认的预览视图，不会调用 dragPreviewForLiftingItem 自定义预览视图
  */
 - (NSArray<UIDragItem *> *)textDraggableView:(UIView<UITextDraggable> *)textDraggableView itemsForDrag:(id<UITextDragRequest>)dragRequest{
-    NSLog(@"textDraggableView:%@,itemsForDrag:%@",textDraggableView,dragRequest);
+    if (SwitchShowDragLog) {
+        NSLog(@"textDraggableView:%@,itemsForDrag:%@",textDraggableView,dragRequest);
+    }
     if (textDraggableView == _myTextView) {
         NSString *string = @"";
         if (textDraggableView == _myTextView) {
@@ -322,7 +327,9 @@ UIDropInteractionDelegate
  不实现该方法：使用默认UITargetedDragPreview
  */
 - (nullable UITargetedDragPreview *)textDraggableView:(UIView<UITextDraggable> *)textDraggableView dragPreviewForLiftingItem:(UIDragItem *)item session:(id<UIDragSession>)session{
-    NSLog(@"textDraggableView:%@,dragPreviewForLiftingItem:",textDraggableView);
+    if (SwitchShowDragLog) {
+        NSLog(@"textDraggableView:%@,dragPreviewForLiftingItem:",textDraggableView);
+    }
     
     UIDragPreviewParameters* params = [UIDragPreviewParameters new];
     params.backgroundColor = [UIColor clearColor];
@@ -337,8 +344,9 @@ UIDropInteractionDelegate
  当拖拽开始后，Item 离开，我们可以给当前视图添加一些动画
  */
 - (void)textDraggableView:(UIView<UITextDraggable> *)textDraggableView willAnimateLiftWithAnimator:(id<UIDragAnimating>)animator session:(id<UIDragSession>)session{
-    NSLog(@"textDraggableView:%@,willAnimateLiftWithAnimator:",textDraggableView);
-    
+    if (SwitchShowDragLog) {
+        NSLog(@"textDraggableView:%@,willAnimateLiftWithAnimator:",textDraggableView);
+    }
 }
 
 /**
@@ -346,8 +354,12 @@ UIDropInteractionDelegate
  实际开始拖动后回调
  */
 - (void)textDraggableView:(UIView<UITextDraggable> *)textDraggableView dragSessionWillBegin:(id<UIDragSession>)session{
-    NSLog(@"textDraggableView:%@,dragSessionWillBegin:",textDraggableView);
+    if (SwitchShowDragLog) {
+        NSLog(@"textDraggableView:%@,dragSessionWillBegin:",textDraggableView);
+        
+    }
     
+    textDraggableView.alpha = 0.5;
 }
 
 /**
@@ -355,24 +367,58 @@ UIDropInteractionDelegate
  拖拽结束
  */
 - (void)textDraggableView:(UIView<UITextDraggable> *)textDraggableView dragSessionDidEnd:(id<UIDragSession>)session withOperation:(UIDropOperation)operation{
-    NSLog(@"textDraggableView:%@,dragSessionDidEnd:",textDraggableView);
+    if (SwitchShowDragLog) {
+        NSLog(@"textDraggableView:%@,dragSessionDidEnd:",textDraggableView);
+        
+    }
     
+    textDraggableView.alpha = 1.0;
 }
 
 #pragma mark - -- UITextDragDelegate End --
 
 #pragma mark - -- UITextDropDelegate Start --
 
+/**
+ 方法一
+ 当拖拽内容到支持拖放控件区域内时，回调该方法，判断是否允许拖放，以及如果可以拖放，那么拖放后是否支持编辑
+ */
 - (UITextDropEditability)textDroppableView:(UIView<UITextDroppable> *)textDroppableView willBecomeEditableForDrop:(id<UITextDropRequest>)drop{
-    NSLog(@"textDraggableView:%@,willBecomeEditableForDrop:",textDroppableView);
+    if (SwitchShowDropLog) {
+        NSLog(@"textDraggableView:%@,willBecomeEditableForDrop:",textDroppableView);
+        
+    }
     //UITextDropEditabilityNo：不可编辑模式，不允许拖拽内容到控件
     //UITextDropEditabilityTemporary：不可编辑模式拖拽内容到控件后仍为不可编辑模式
     //UITextDropEditabilityYes：不可编辑模式拖拽内容到控件后变可编辑模式
     return UITextDropEditabilityYes;
 }
 
+/**
+ 方法二
+ 当拖拽内容到支持拖放控件区域内时，如果willBecomeEditableForDrop方法返回允许，则回调该方法
+ */
+- (void)textDroppableView:(UIView<UITextDroppable> *)textDroppableView dropSessionDidEnter:(id<UIDropSession>)session{
+    if (SwitchShowDropLog) {
+        NSLog(@"textDroppableView:%@,dropSessionDidEnter:",textDroppableView);
+        
+    }
+    //当内容被拖拽到支持拖放控件上方时（进入拖放控件frame），回调该方法
+}
+
+/**
+ 方法三
+ 返回了拖放的操作类型
+ UIDropOperationCancel  取消 将不允许拖放
+ UIDropOperationForbidden ？仍会被取消拖放
+ UIDropOperationCopy 复制数据
+ UIDropOperationMove 移动数据，需要UIDropSession allowsMoveOperation
+ */
 - (UITextDropProposal*)textDroppableView:(UIView<UITextDroppable> *)textDroppableView proposalForDrop:(id<UITextDropRequest>)drop{
-//    NSLog(@"textDraggableView:%@,proposalForDrop:",textDroppableView);
+    if (SwitchShowDropLog) {
+//        NSLog(@"textDraggableView:%@,proposalForDrop:",textDroppableView);
+        
+    }
     //*****该方法在拖拽过程中会多次且频繁的回调，所以尽量尽量做最少的工作。*****
     /**
      * -当拖动进入文本控件时，
@@ -385,37 +431,67 @@ UIDropInteractionDelegate
     return [[UITextDropProposal alloc] initWithDropOperation:UIDropOperationCopy];
 }
 
-- (void)textDroppableView:(UIView<UITextDroppable> *)textDroppableView willPerformDrop:(id<UITextDropRequest>)drop{
-    NSLog(@"textDraggableView:%@,willPerformDrop:",textDroppableView);
-    
-}
-
-
-- (nullable UITargetedDragPreview *)textDroppableView:(UIView<UITextDroppable> *)textDroppableView previewForDroppingAllItemsWithDefault:(UITargetedDragPreview *)defaultPreview{
-    NSLog(@"textDroppableView:%@,previewForDroppingAllItemsWithDefault:",textDroppableView);
-    //自定义预览
-    [defaultPreview.view setBackgroundColor:RGB(192, 57, 43)];
-    return defaultPreview;
-}
-
-- (void)textDroppableView:(UIView<UITextDroppable> *)textDroppableView dropSessionDidEnter:(id<UIDropSession>)session{
-    NSLog(@"textDroppableView:%@,dropSessionDidEnter:",textDroppableView);
-    //当内容被拖拽到支持拖放控件上方时（进入拖放控件frame），回调该方法
-}
-
+/**
+ 方法四
+ 当内容被拖拽至拖放区域后时，不停地回调此方法
+ */
 - (void)textDroppableView:(UIView<UITextDroppable> *)textDroppableView dropSessionDidUpdate:(id<UIDropSession>)session{
-    //NSLog(@"textDroppableView:%@,dropSessionDidUpdate:",textDroppableView);
+    if (SwitchShowDropLog) {
+//        NSLog(@"textDroppableView:%@,dropSessionDidUpdate:",textDroppableView);
+        
+    }
     //*****该方法在拖拽过程中会多次且频繁的回调，所以尽量尽量做最少的工作。*****
     //当内容被拖拽时，不停地回调此方法
 }
 
+/**
+ 方法四
+ 在拖放区域松手后，准备将内容添加到拖放区域时，回调该方法
+ */
+- (void)textDroppableView:(UIView<UITextDroppable> *)textDroppableView willPerformDrop:(id<UITextDropRequest>)drop{
+    if (SwitchShowDropLog) {
+        NSLog(@"textDraggableView:%@,willPerformDrop:",textDroppableView);
+        
+    }
+    
+}
+
+/**
+ 方法五
+ 拖放成功，为视图提供一个预览视图，可以直接使用默认预览
+ */
+- (nullable UITargetedDragPreview *)textDroppableView:(UIView<UITextDroppable> *)textDroppableView previewForDroppingAllItemsWithDefault:(UITargetedDragPreview *)defaultPreview{
+    if (SwitchShowDropLog) {
+        NSLog(@"textDroppableView:%@,previewForDroppingAllItemsWithDefault:",textDroppableView);
+        
+    }
+    //自定义预览
+    [defaultPreview.view setBackgroundColor:RGB(192, 57, 43)];
+    
+    return defaultPreview;
+}
+
+/**
+ 
+ 当拖拽内容离开支持拖放控件区域内时，并未拖放至此时，则回调该方法
+ */
 - (void)textDroppableView:(UIView<UITextDroppable> *)textDroppableView dropSessionDidExit:(id<UIDropSession>)session{
-    NSLog(@"textDroppableView:%@,dropSessionDidExit:",textDroppableView);
+    if (SwitchShowDropLog) {
+        NSLog(@"textDroppableView:%@,dropSessionDidExit:",textDroppableView);
+        
+    }
     //当内容被拖拽时，拖拽离开可放控件时回调此方法
 }
 
+/**
+ 
+ 拖放结束，拖放成功，或者取消了拖放，最后都会回调该方法
+ */
 - (void)textDroppableView:(UIView<UITextDroppable> *)textDroppableView dropSessionDidEnd:(id<UIDropSession>)session{
-    NSLog(@"textDroppableView:%@,dropSessionDidEnd:",textDroppableView);
+    if (SwitchShowDropLog) {
+        NSLog(@"textDroppableView:%@,dropSessionDidEnd:",textDroppableView);
+        
+    }
     //拖放结束时调用
 }
 
