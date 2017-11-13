@@ -136,17 +136,30 @@
 		<string>ARKitViewController</string>
 	</dict>
 	<key>SimpleViewDragAndDrop</key>
+	<dict>
+		<key>key</key>
+		<string>SimpleViewDragAndDrop</string>
+		<key>name</key>
+		<string>SimpleView DragAndDrop</string>
+		<key>class</key>
+		<string>SimpleViewDragAndDropViewController</string>
+		<key>storyboard</key>
+		<string>SimpleViewDragAndDrop</string>
+		<key>storyboardid</key>
+		<string>SimpleViewDragAndDropViewController</string>
+	</dict>
+    <key>TableViewDragAndDrop</key>
     <dict>
         <key>key</key>
-        <string>SimpleViewDragAndDrop</string>
+        <string>TableViewDragAndDrop</string>
         <key>name</key>
-        <string>SimpleView DragAndDrop</string>
+        <string>TableView DragAndDrop</string>
         <key>class</key>
-        <string>SimpleViewDragAndDropViewController</string>
+        <string>TableViewDragAndDropViewController</string>
         <key>storyboard</key>
-        <string>SimpleViewDragAndDrop</string>
+        <string>TableViewDragAndDrop</string>
         <key>storyboardid</key>
-        <string>SimpleViewDragAndDropViewController</string>
+        <string>TableViewDragAndDropViewController</string>
     </dict>
 </dict>
 </plist>

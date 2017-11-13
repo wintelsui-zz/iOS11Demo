@@ -864,5 +864,18 @@ UIDropInteractionDelegate
     _myTextView.textDragDelegate = nil;
     _myTextView.textDropDelegate = nil;
     
+    
+//    _dropView.interactions
 }
+
+
+//- (void)clearinteractionsForView:(UIView *)view{
+//    NSArray *interactions = view.interactions;
+//    if (interactions) {
+//        for (id   in interactions) {
+//            <#statements#>
+//        }
+//    }
+//}
+
 @end

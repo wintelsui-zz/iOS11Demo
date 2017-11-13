@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2B3EC6F41F9900FB002FC16B /* DeviceCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EC6F31F9900FB002FC16B /* DeviceCheckViewController.m */; };
+		2B45F4501FB9E48500DA26E7 /* TableViewDragAndDropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B45F44F1FB9E48500DA26E7 /* TableViewDragAndDropViewController.m */; };
+		2B45F4521FB9E49B00DA26E7 /* TableViewDragAndDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B45F4511FB9E49B00DA26E7 /* TableViewDragAndDrop.storyboard */; };
+		2B45F4561FB9F0B300DA26E7 /* TableViewDragAndDropCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B45F4551FB9F0B300DA26E7 /* TableViewDragAndDropCell.m */; };
 		2B61852D1F9B45AE003E8EFD /* FileProviderExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B61852C1F9B45AE003E8EFD /* FileProviderExtension.m */; };
 		2B6185301F9B45AE003E8EFD /* FileProviderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B61852F1F9B45AE003E8EFD /* FileProviderItem.m */; };
 		2B6185331F9B45AE003E8EFD /* FileProviderEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6185321F9B45AE003E8EFD /* FileProviderEnumerator.m */; };
@@ -139,6 +142,11 @@
 /* Begin PBXFileReference section */
 		2B3EC6F21F9900FB002FC16B /* DeviceCheckViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceCheckViewController.h; sourceTree = "<group>"; };
 		2B3EC6F31F9900FB002FC16B /* DeviceCheckViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceCheckViewController.m; sourceTree = "<group>"; };
+		2B45F44E1FB9E48500DA26E7 /* TableViewDragAndDropViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewDragAndDropViewController.h; sourceTree = "<group>"; };
+		2B45F44F1FB9E48500DA26E7 /* TableViewDragAndDropViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewDragAndDropViewController.m; sourceTree = "<group>"; };
+		2B45F4511FB9E49B00DA26E7 /* TableViewDragAndDrop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableViewDragAndDrop.storyboard; sourceTree = "<group>"; };
+		2B45F4541FB9F0B300DA26E7 /* TableViewDragAndDropCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewDragAndDropCell.h; sourceTree = "<group>"; };
+		2B45F4551FB9F0B300DA26E7 /* TableViewDragAndDropCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewDragAndDropCell.m; sourceTree = "<group>"; };
 		2B6185291F9B45AE003E8EFD /* FileProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FileProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B61852B1F9B45AE003E8EFD /* FileProviderExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileProviderExtension.h; sourceTree = "<group>"; };
 		2B61852C1F9B45AE003E8EFD /* FileProviderExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileProviderExtension.m; sourceTree = "<group>"; };
@@ -332,6 +340,26 @@
 			path = DeviceCheck;
 			sourceTree = "<group>";
 		};
+		2B45F4531FB9E4A400DA26E7 /* TableViewDragAndDrop */ = {
+			isa = PBXGroup;
+			children = (
+				2B45F44E1FB9E48500DA26E7 /* TableViewDragAndDropViewController.h */,
+				2B45F44F1FB9E48500DA26E7 /* TableViewDragAndDropViewController.m */,
+				2B45F4511FB9E49B00DA26E7 /* TableViewDragAndDrop.storyboard */,
+				2B45F4571FB9F0BC00DA26E7 /* View */,
+			);
+			path = TableViewDragAndDrop;
+			sourceTree = "<group>";
+		};
+		2B45F4571FB9F0BC00DA26E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B45F4541FB9F0B300DA26E7 /* TableViewDragAndDropCell.h */,
+				2B45F4551FB9F0B300DA26E7 /* TableViewDragAndDropCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2B61852A1F9B45AE003E8EFD /* FileProvider */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +404,7 @@
 				2B6185541F9B4676003E8EFD /* DragAndDropViewController.h */,
 				2B6185551F9B4676003E8EFD /* DragAndDropViewController.m */,
 				FC1C7C931FB0609600FB5B36 /* SimpleViewDragAndDrop */,
+				2B45F4531FB9E4A400DA26E7 /* TableViewDragAndDrop */,
 			);
 			path = DragAndDrop;
 			sourceTree = "<group>";
@@ -1012,6 +1041,7 @@
 				FCA9B0081F7BA34600438D01 /* LaunchScreen.storyboard in Resources */,
 				FCAF1D821FA705FB00550BF7 /* CreateDefaultTXT.txt in Resources */,
 				FCBFA41D1FB3070C003241C5 /* AnimationCheck.json in Resources */,
+				2B45F4521FB9E49B00DA26E7 /* TableViewDragAndDrop.storyboard in Resources */,
 				FCA9B0051F7BA34600438D01 /* Assets.xcassets in Resources */,
 				FCBFA4231FB3070C003241C5 /* AnimationTriangle_loading.json in Resources */,
 				FC4565211FB54323004808EC /* Aragaki_3.jpg in Resources */,
@@ -1122,8 +1152,10 @@
 				FCBAF6A81F95DAC3002A6B5C /* IdentityLookupViewController.m in Sources */,
 				2B6185671F9CECE8003E8EFD /* iOS11ActionsListModels.m in Sources */,
 				FC8B32681F8F43A50018C530 /* WTDeviceInfo.m in Sources */,
+				2B45F4561FB9F0B300DA26E7 /* TableViewDragAndDropCell.m in Sources */,
 				FC1D5D4D1F9D9566004238AC /* UIViewController+Expansion.m in Sources */,
 				FC816AA01F987C120032F680 /* iOS11DemoPublicString.m in Sources */,
+				2B45F4501FB9E48500DA26E7 /* TableViewDragAndDropViewController.m in Sources */,
 				FCAF1D851FA70CCB00550BF7 /* DocumentBrowserViewController.m in Sources */,
 				2B61855A1F9B4693003E8EFD /* CoreNFCViewController.m in Sources */,
 				2B6185521F9B4651003E8EFD /* FileProviderViewController.m in Sources */,
