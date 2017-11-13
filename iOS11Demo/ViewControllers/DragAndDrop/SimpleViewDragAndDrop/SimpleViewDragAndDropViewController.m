@@ -290,11 +290,37 @@ UIDropInteractionDelegate
 
 #pragma mark - -- UITextDragDelegate Start --
 
+/**
+ 第一个方法:
+ 可供拖拽的 items，
+ 如果返回 nil，则不会进行任何拖拽行为，以及之后的代理方法
+ 如果返回 dragRequest.suggestedItems 则使用默认的预览视图，不会调用 dragPreviewForLiftingItem 自定义预览视图
+ */
 - (NSArray<UIDragItem *> *)textDraggableView:(UIView<UITextDraggable> *)textDraggableView itemsForDrag:(id<UITextDragRequest>)dragRequest{
-    NSLog(@"textDraggableView:%@,itemsForDrag:",textDraggableView);
+    NSLog(@"textDraggableView:%@,itemsForDrag:%@",textDraggableView,dragRequest);
+    if (textDraggableView == _myTextView) {
+        NSString *string = @"";
+        if (textDraggableView == _myTextView) {
+            string = _myTextView.text;
+        }else if (textDraggableView == _myTextField){
+            string = _myTextField.text;
+        }
+        
+        NSItemProvider *provider = [[NSItemProvider alloc] initWithObject:string];
+        UIDragItem *dragItem = [[UIDragItem alloc] initWithItemProvider:provider];
+        dragItem.localObject = string;
+        
+        return @[dragItem];
+    }
     return dragRequest.suggestedItems;
 }
 
+/**
+ 方法二
+ 为 Item 提供一个预览视图
+ 返回 nil：该 item 没有预览效果，什么也看不到，会以为自己没有拖拽
+ 不实现该方法：使用默认UITargetedDragPreview
+ */
 - (nullable UITargetedDragPreview *)textDraggableView:(UIView<UITextDraggable> *)textDraggableView dragPreviewForLiftingItem:(UIDragItem *)item session:(id<UIDragSession>)session{
     NSLog(@"textDraggableView:%@,dragPreviewForLiftingItem:",textDraggableView);
     
@@ -306,16 +332,31 @@ UIDropInteractionDelegate
     return preview;
 }
 
+/**
+ 方法三
+ 当拖拽开始后，Item 离开，我们可以给当前视图添加一些动画
+ */
 - (void)textDraggableView:(UIView<UITextDraggable> *)textDraggableView willAnimateLiftWithAnimator:(id<UIDragAnimating>)animator session:(id<UIDragSession>)session{
     NSLog(@"textDraggableView:%@,willAnimateLiftWithAnimator:",textDraggableView);
+    
 }
 
+/**
+ 方法四
+ 实际开始拖动后回调
+ */
 - (void)textDraggableView:(UIView<UITextDraggable> *)textDraggableView dragSessionWillBegin:(id<UIDragSession>)session{
     NSLog(@"textDraggableView:%@,dragSessionWillBegin:",textDraggableView);
+    
 }
 
+/**
+ 方法五
+ 拖拽结束
+ */
 - (void)textDraggableView:(UIView<UITextDraggable> *)textDraggableView dragSessionDidEnd:(id<UIDragSession>)session withOperation:(UIDropOperation)operation{
     NSLog(@"textDraggableView:%@,dragSessionDidEnd:",textDraggableView);
+    
 }
 
 #pragma mark - -- UITextDragDelegate End --
@@ -545,7 +586,9 @@ UIDropInteractionDelegate
     _actionDropIndex++;
     NSLog(@"\n拖放方法：%ld dropInteraction:%@ canHandleSession:%@",(long)_actionDropIndex,interaction.view,session);
     
-    if (interaction.view == _dropView) {
+    if (interaction.view == _dropView
+        || interaction.view == _dropAndDragView
+        || interaction.view == _dropAndDragView2) {
         return [session canLoadObjectsOfClass:[UIImage class]];
     }
     // 可以加载image的控件都可以
@@ -603,7 +646,15 @@ UIDropInteractionDelegate
              dispatch_async(dispatch_get_main_queue(), ^{
                  UIImage *image = (UIImage *)object;
                  if (image) {
-                     _dropAndDragView.image = image;
+                     if (interaction.view == _dropView){
+                         _dropAndDragView.image = image;
+                     }else{
+                         id view = interaction.view;
+                         if ([view isKindOfClass:[UIImageView class]]) {
+                             UIImageView *imageView = (UIImageView *)view;
+                             imageView.image = image;
+                         }
+                     }
                  }
              });
          }];
