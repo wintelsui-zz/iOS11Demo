@@ -10,6 +10,8 @@
 
 #import "TableViewDragAndDropCell.h"
 
+#import "ImageDataModels.h"
+
 @interface TableViewDragAndDropViewController ()
 <
 UITableViewDataSource,
@@ -55,11 +57,16 @@ UITableViewDropDelegate
     _arrayImages = [[NSMutableArray alloc] init];
     for (NSInteger i = 1; i < 13; i++){
         NSString *imageName = [NSString stringWithFormat:@"Aragaki_%ld.jpg",(long)i];
-        [_arrayImages addObject:imageName];
+        
+        ImageDataModels *imageData = [ImageDataModels modelObjectWithName:imageName source:ImageDataSourceTypeInApp];
+        if (imageData) {
+            [_arrayImages addObject:imageData];
+        }
     }
     
     _tableview.dragDelegate = self;
     _tableview.dropDelegate = self;
+    _tableview.dragInteractionEnabled = YES;
 }
 
 #pragma mark - UITableViewDelegate start
@@ -85,40 +92,47 @@ UITableViewDropDelegate
     if (cell == nil) {
         cell = [[TableViewDragAndDropCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    NSString *imageName = [_arrayImages objectAtIndex:indexPath.row];
-    UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:imageName ofType:@""]];
-    [cell.myImageView setImage:image];
+    ImageDataModels *imageData = [_arrayImages objectAtIndex:indexPath.row];
+    [cell.myImageView setImage:[imageData image]];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
 }
 
 #pragma mark - UITableViewDelegate end
 
 #pragma mark - UITableViewDragDelegate start
 
+/**
+ 第一个方法
+ 支持拖拽的控件，可拖拽的UIDragItem
+ 返回 nil，不允许拖拽
+ */
 - (NSArray<UIDragItem *> *)tableView:(UITableView *)tableView itemsForBeginningDragSession:(id<UIDragSession>)session atIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"tableView:%@ itemsForBeginningDragSession:%@ atIndexPath:%@",tableView,session,indexPath);
+    
+    ImageDataModels *imageData = [_arrayImages objectAtIndex:indexPath.row];
+    if (imageData) {
+        NSItemProvider *itemProvider = [[NSItemProvider alloc] initWithObject:imageData];
+        
+        UIDragItem *item = [[UIDragItem alloc] initWithItemProvider:itemProvider];
+        
+        return @[item];
+    }
     return nil;
 }
 
 //@optional
 
-// Called to request items to add to an existing drag session in response to the add item gesture.
-// You can use the provided point (in the table view's coordinate space) to do additional hit testing if desired.
-// If not implemented, or if an empty array is returned, no items will be added to the drag and the gesture
-// will be handled normally.
-- (NSArray<UIDragItem *> *)tableView:(UITableView *)tableView itemsForAddingToDragSession:(id<UIDragSession>)session atIndexPath:(NSIndexPath *)indexPath point:(CGPoint)point{
-    return nil;
-}
-
 // Allows customization of the preview used for the row when it is lifted or if the drag cancels.
 // If not implemented or if nil is returned, the entire cell will be used for the preview.
 - (nullable UIDragPreviewParameters *)tableView:(UITableView *)tableView dragPreviewParametersForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return nil;
+    
+    UIDragPreviewParameters *parameters = [[UIDragPreviewParameters alloc] init];
+    
+    CGRect rect = CGRectMake(0, 0, tableView.bounds.size.width, tableView.rowHeight);
+    parameters.visiblePath = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:15];
+    return parameters;
 }
 
 // Called after the lift animation has completed to signal the start of a drag session.
@@ -143,6 +157,21 @@ UITableViewDropDelegate
     return YES;
 }
 
+/**
+ 向当前拖拽事件中追加UIDragItem
+ */
+- (NSArray<UIDragItem *> *)tableView:(UITableView *)tableView itemsForAddingToDragSession:(id<UIDragSession>)session atIndexPath:(NSIndexPath *)indexPath point:(CGPoint)point{
+    
+    ImageDataModels *imageData = [_arrayImages objectAtIndex:indexPath.row];
+    if (imageData) {
+        NSItemProvider *itemProvider = [[NSItemProvider alloc] initWithObject:imageData];
+        
+        UIDragItem *item = [[UIDragItem alloc] initWithItemProvider:itemProvider];
+        
+        return @[item];
+    }
+    return nil;
+}
 
 #pragma mark - UITableViewDragDelegate end
 
