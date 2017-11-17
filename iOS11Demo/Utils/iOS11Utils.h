@@ -11,6 +11,7 @@
 
 #import "WTDeviceInfo.h"
 #import "iOS11DemoDefines.h"
+#import "JSONFighting.h"
 
 #import "UIViewController+Expansion.h"
 

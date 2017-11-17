@@ -35,6 +35,7 @@
 		FC1C7C921FB0609000FB5B36 /* SimpleViewDragAndDropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1C7C911FB0609000FB5B36 /* SimpleViewDragAndDropViewController.m */; };
 		FC1C7C951FB060B400FB5B36 /* SimpleViewDragAndDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC1C7C941FB060B400FB5B36 /* SimpleViewDragAndDrop.storyboard */; };
 		FC1D5D4D1F9D9566004238AC /* UIViewController+Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1D5D4C1F9D9566004238AC /* UIViewController+Expansion.m */; };
+		FC2CC8711FBECA06007DE9D5 /* JSONFighting.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2CC8701FBECA06007DE9D5 /* JSONFighting.m */; };
 		FC2DF7161FA0395C00A9FCFA /* ARKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2DF7151FA0395C00A9FCFA /* ARKitViewController.m */; };
 		FC2DF71C1FA0673B00A9FCFA /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2DF71B1FA0672E00A9FCFA /* ARKit.framework */; };
 		FC2DF71D1FA0674000A9FCFA /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2DF71A1FA0672800A9FCFA /* SceneKit.framework */; };
@@ -205,6 +206,8 @@
 		FC1D5D4C1F9D9566004238AC /* UIViewController+Expansion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Expansion.m"; sourceTree = "<group>"; };
 		FC1D5D531F9DC2C4004238AC /* CoreNFC.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CoreNFC.md; sourceTree = "<group>"; };
 		FC1F1BF01FA1E1F9005A6F3B /* CoreML.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CoreML.md; sourceTree = "<group>"; };
+		FC2CC86F1FBECA06007DE9D5 /* JSONFighting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONFighting.h; sourceTree = "<group>"; };
+		FC2CC8701FBECA06007DE9D5 /* JSONFighting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONFighting.m; sourceTree = "<group>"; };
 		FC2DF7141FA0395C00A9FCFA /* ARKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARKitViewController.h; sourceTree = "<group>"; };
 		FC2DF7151FA0395C00A9FCFA /* ARKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARKitViewController.m; sourceTree = "<group>"; };
 		FC2DF71A1FA0672800A9FCFA /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
@@ -520,6 +523,7 @@
 			children = (
 				FC0DC1131F8B7986003BC858 /* iOS11DemoDefines.h */,
 				FC8B32691F8F440C0018C530 /* iOS11Utils.h */,
+				FC2CC86E1FBECA06007DE9D5 /* JSONFighting */,
 				FC8B32651F8F43A50018C530 /* WTDeviceInfo */,
 			);
 			path = Utils;
@@ -551,6 +555,15 @@
 				FC1D5D4C1F9D9566004238AC /* UIViewController+Expansion.m */,
 			);
 			path = Categorys;
+			sourceTree = "<group>";
+		};
+		FC2CC86E1FBECA06007DE9D5 /* JSONFighting */ = {
+			isa = PBXGroup;
+			children = (
+				FC2CC86F1FBECA06007DE9D5 /* JSONFighting.h */,
+				FC2CC8701FBECA06007DE9D5 /* JSONFighting.m */,
+			);
+			path = JSONFighting;
 			sourceTree = "<group>";
 		};
 		FC2DF7171FA0396100A9FCFA /* ARKit */ = {
@@ -1168,6 +1181,7 @@
 				FC8B32681F8F43A50018C530 /* WTDeviceInfo.m in Sources */,
 				2B45F4561FB9F0B300DA26E7 /* TableViewDragAndDropCell.m in Sources */,
 				FC1D5D4D1F9D9566004238AC /* UIViewController+Expansion.m in Sources */,
+				FC2CC8711FBECA06007DE9D5 /* JSONFighting.m in Sources */,
 				FC816AA01F987C120032F680 /* iOS11DemoPublicString.m in Sources */,
 				2B45F4501FB9E48500DA26E7 /* TableViewDragAndDropViewController.m in Sources */,
 				FCAF1D851FA70CCB00550BF7 /* DocumentBrowserViewController.m in Sources */,
