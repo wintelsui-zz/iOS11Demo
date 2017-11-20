@@ -1,5 +1,5 @@
 //
-//  UIViewController+Expansion.h
+//  UIViewController+Extension.h
 //  iOS11Demo
 //
 //  Created by wintel on 2017/10/23.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MBProgressHUD.h"
 
-@interface UIViewController (Expansion)
+@interface UIViewController (Extension)
 
 
 /**

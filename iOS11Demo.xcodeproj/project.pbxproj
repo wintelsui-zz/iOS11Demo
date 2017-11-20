@@ -34,7 +34,7 @@
 		FC1C7C891FB050A600FB5B36 /* iOS11DemoActionsAndVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1C7C881FB050A600FB5B36 /* iOS11DemoActionsAndVCManager.m */; };
 		FC1C7C921FB0609000FB5B36 /* SimpleViewDragAndDropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1C7C911FB0609000FB5B36 /* SimpleViewDragAndDropViewController.m */; };
 		FC1C7C951FB060B400FB5B36 /* SimpleViewDragAndDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC1C7C941FB060B400FB5B36 /* SimpleViewDragAndDrop.storyboard */; };
-		FC1D5D4D1F9D9566004238AC /* UIViewController+Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1D5D4C1F9D9566004238AC /* UIViewController+Expansion.m */; };
+		FC1D5D4D1F9D9566004238AC /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1D5D4C1F9D9566004238AC /* UIViewController+Extension.m */; };
 		FC2CC8711FBECA06007DE9D5 /* JSONFighting.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2CC8701FBECA06007DE9D5 /* JSONFighting.m */; };
 		FC2DF7161FA0395C00A9FCFA /* ARKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2DF7151FA0395C00A9FCFA /* ARKitViewController.m */; };
 		FC2DF71C1FA0673B00A9FCFA /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2DF71B1FA0672E00A9FCFA /* ARKit.framework */; };
@@ -82,6 +82,8 @@
 		FCBFA4221FB3070C003241C5 /* AnimationScan.json in Resources */ = {isa = PBXBuildFile; fileRef = FCBFA41A1FB3070C003241C5 /* AnimationScan.json */; };
 		FCBFA4231FB3070C003241C5 /* AnimationTriangle_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = FCBFA41B1FB3070C003241C5 /* AnimationTriangle_loading.json */; };
 		FCD25A611FA330D400CA6704 /* iOS11DemoIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD25A601FA330D400CA6704 /* iOS11DemoIcons.xcassets */; };
+		FCDCAADE1FC2DD07007191B4 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDCAADD1FC2DD07007191B4 /* UIColor+Extension.m */; };
+		FCDCAAE11FC2E296007191B4 /* icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCDCAAE01FC2E296007191B4 /* icons.xcassets */; };
 		FCF4B3D21F94B5730047B72A /* PDFWatermarkPage.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF4B3D11F94B5730047B72A /* PDFWatermarkPage.m */; };
 		FCFBEAC91FA07B6C0025AD96 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFBEAC81FA07B5F0025AD96 /* QuartzCore.framework */; };
 		FCFBEACB1FA07CE70025AD96 /* media.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFBEACA1FA07CE70025AD96 /* media.scnassets */; };
@@ -202,8 +204,8 @@
 		FC1C7C901FB0609000FB5B36 /* SimpleViewDragAndDropViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleViewDragAndDropViewController.h; sourceTree = "<group>"; };
 		FC1C7C911FB0609000FB5B36 /* SimpleViewDragAndDropViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleViewDragAndDropViewController.m; sourceTree = "<group>"; };
 		FC1C7C941FB060B400FB5B36 /* SimpleViewDragAndDrop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleViewDragAndDrop.storyboard; sourceTree = "<group>"; };
-		FC1D5D4B1F9D9566004238AC /* UIViewController+Expansion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Expansion.h"; sourceTree = "<group>"; };
-		FC1D5D4C1F9D9566004238AC /* UIViewController+Expansion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Expansion.m"; sourceTree = "<group>"; };
+		FC1D5D4B1F9D9566004238AC /* UIViewController+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
+		FC1D5D4C1F9D9566004238AC /* UIViewController+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
 		FC1D5D531F9DC2C4004238AC /* CoreNFC.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CoreNFC.md; sourceTree = "<group>"; };
 		FC1F1BF01FA1E1F9005A6F3B /* CoreML.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CoreML.md; sourceTree = "<group>"; };
 		FC2CC86F1FBECA06007DE9D5 /* JSONFighting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONFighting.h; sourceTree = "<group>"; };
@@ -279,6 +281,10 @@
 		FCBFA41A1FB3070C003241C5 /* AnimationScan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimationScan.json; sourceTree = "<group>"; };
 		FCBFA41B1FB3070C003241C5 /* AnimationTriangle_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimationTriangle_loading.json; sourceTree = "<group>"; };
 		FCD25A601FA330D400CA6704 /* iOS11DemoIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iOS11DemoIcons.xcassets; sourceTree = "<group>"; };
+		FCDCAADC1FC2DD07007191B4 /* UIColor+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		FCDCAADD1FC2DD07007191B4 /* UIColor+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		FCDCAADF1FC2DDA3007191B4 /* iOS11DemoCategorys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS11DemoCategorys.h; sourceTree = "<group>"; };
+		FCDCAAE01FC2E296007191B4 /* icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = icons.xcassets; sourceTree = "<group>"; };
 		FCF4B3D01F94B5730047B72A /* PDFWatermarkPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFWatermarkPage.h; sourceTree = "<group>"; };
 		FCF4B3D11F94B5730047B72A /* PDFWatermarkPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFWatermarkPage.m; sourceTree = "<group>"; };
 		FCFBEAC81FA07B5F0025AD96 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -511,6 +517,7 @@
 				FC1C7C851FB04CAB00FB5B36 /* viewControllersList.plist */,
 				FCBCD5361F999B380063BF75 /* DeviceCheck.html */,
 				FC0DC1081F8B5A6D003BC858 /* Sample.pdf */,
+				FCDCAAE01FC2E296007191B4 /* icons.xcassets */,
 				FCFBEACA1FA07CE70025AD96 /* media.scnassets */,
 				FCD25A601FA330D400CA6704 /* iOS11DemoIcons.xcassets */,
 				FCAF1D811FA705FB00550BF7 /* CreateDefaultTXT.txt */,
@@ -551,8 +558,11 @@
 		FC1D5D4A1F9D950B004238AC /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
-				FC1D5D4B1F9D9566004238AC /* UIViewController+Expansion.h */,
-				FC1D5D4C1F9D9566004238AC /* UIViewController+Expansion.m */,
+				FCDCAADF1FC2DDA3007191B4 /* iOS11DemoCategorys.h */,
+				FC1D5D4B1F9D9566004238AC /* UIViewController+Extension.h */,
+				FC1D5D4C1F9D9566004238AC /* UIViewController+Extension.m */,
+				FCDCAADC1FC2DD07007191B4 /* UIColor+Extension.h */,
+				FCDCAADD1FC2DD07007191B4 /* UIColor+Extension.m */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
@@ -1068,6 +1078,7 @@
 				FCAF1D821FA705FB00550BF7 /* CreateDefaultTXT.txt in Resources */,
 				FCBFA41D1FB3070C003241C5 /* AnimationCheck.json in Resources */,
 				2B45F4521FB9E49B00DA26E7 /* TableViewDragAndDrop.storyboard in Resources */,
+				FCDCAAE11FC2E296007191B4 /* icons.xcassets in Resources */,
 				FCA9B0051F7BA34600438D01 /* Assets.xcassets in Resources */,
 				FCBFA4231FB3070C003241C5 /* AnimationTriangle_loading.json in Resources */,
 				FC4565211FB54323004808EC /* Aragaki_3.jpg in Resources */,
@@ -1180,8 +1191,9 @@
 				2B6185671F9CECE8003E8EFD /* iOS11ActionsListModels.m in Sources */,
 				FC8B32681F8F43A50018C530 /* WTDeviceInfo.m in Sources */,
 				2B45F4561FB9F0B300DA26E7 /* TableViewDragAndDropCell.m in Sources */,
-				FC1D5D4D1F9D9566004238AC /* UIViewController+Expansion.m in Sources */,
+				FC1D5D4D1F9D9566004238AC /* UIViewController+Extension.m in Sources */,
 				FC2CC8711FBECA06007DE9D5 /* JSONFighting.m in Sources */,
+				FCDCAADE1FC2DD07007191B4 /* UIColor+Extension.m in Sources */,
 				FC816AA01F987C120032F680 /* iOS11DemoPublicString.m in Sources */,
 				2B45F4501FB9E48500DA26E7 /* TableViewDragAndDropViewController.m in Sources */,
 				FCAF1D851FA70CCB00550BF7 /* DocumentBrowserViewController.m in Sources */,

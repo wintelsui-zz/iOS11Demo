@@ -102,6 +102,69 @@ UITableViewDropDelegate
     return cell;
 }
 
+#pragma mark - -- 新的 Swipe 侧滑 --
+/** 尾部侧滑，右遍侧滑菜单 */
+-(UISwipeActionsConfiguration *)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSLog(@"tableView:%@ trailingSwipeActionsConfigurationForRowAtIndexPath:%@",tableView,indexPath);
+    
+    UIContextualAction *deleteRowAction01 = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"删除01" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        
+        [_arrayImages removeObjectAtIndex:indexPath.row];
+        
+        completionHandler(YES);
+    }];
+    
+    UIContextualAction *deleteRowAction02 = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleNormal title:@"右滑02" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        cell.backgroundColor = [UIColor randomColor];
+        
+        completionHandler(YES);
+    }];
+    
+    if (indexPath.row % 2 == 0) {
+        //无法使用 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal 显示原图
+        deleteRowAction01.image = [UIImage imageNamed:@"icon_bianping-yuanicon-5"];
+        deleteRowAction02.image = [UIImage imageNamed:@"icon_bianping-yuanicon-6"];
+    }
+    
+    UISwipeActionsConfiguration *trailingSwipeRowConfiguration = [UISwipeActionsConfiguration configurationWithActions:@[deleteRowAction01,deleteRowAction02]];
+    return trailingSwipeRowConfiguration;
+}
+
+/** 头部侧滑，左遍侧滑菜单 */
+- (UISwipeActionsConfiguration *)tableView:(UITableView *)tableView leadingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSLog(@"tableView:%@ leadingSwipeActionsConfigurationForRowAtIndexPath:%@",tableView,indexPath);
+    
+    UIContextualAction *leadingSwipeRowAction01 = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleNormal title:@"左滑01" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        cell.backgroundColor = [UIColor randomColor];
+        
+        completionHandler(YES);
+    }];
+    leadingSwipeRowAction01.backgroundColor = [UIColor randomColor];
+    
+    UIContextualAction *leadingSwipeRowAction02 = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleNormal title:@"左滑02" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        cell.backgroundColor = [UIColor randomColor];
+        
+        completionHandler(YES);
+    }];
+    leadingSwipeRowAction02.backgroundColor = [UIColor randomColor];
+    
+    if (indexPath.row % 2 == 0) {
+        leadingSwipeRowAction01.image = [UIImage imageNamed:@"icon_bianping-yuanicon-7"];
+        leadingSwipeRowAction02.image = [UIImage imageNamed:@"icon_bianping-yuanicon-8"];
+    }
+    
+    UISwipeActionsConfiguration *leadingSwipeRowConfiguration = [UISwipeActionsConfiguration configurationWithActions:@[leadingSwipeRowAction01,leadingSwipeRowAction02]];
+    return leadingSwipeRowConfiguration;
+}
+
 #pragma mark - UITableViewDelegate end
 
 #pragma mark - UITableViewDragDelegate start

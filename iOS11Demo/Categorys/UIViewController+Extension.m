@@ -1,12 +1,12 @@
 //
-//  UIViewController+Expansion.m
+//  UIViewController+Extension.m
 //  iOS11Demo
 //
 //  Created by wintel on 2017/10/23.
 //  Copyright © 2017年 wintel. All rights reserved.
 //
 
-#import "UIViewController+Expansion.h"
+#import "UIViewController+Extension.h"
 
 @implementation UIViewController (Expansion)
 
