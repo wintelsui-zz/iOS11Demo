@@ -161,5 +161,18 @@
         <key>storyboardid</key>
         <string>TableViewDragAndDropViewController</string>
     </dict>
+    <key>CollectionViewDragAndDrop</key>
+    <dict>
+        <key>key</key>
+        <string>CollectionViewDragAndDrop</string>
+        <key>name</key>
+        <string>CollectionView DragAndDrop</string>
+        <key>class</key>
+        <string>CollectionViewDragAndDropViewController</string>
+        <key>storyboard</key>
+        <string>CollectionViewDragAndDrop</string>
+        <key>storyboardid</key>
+        <string>CollectionViewDragAndDropViewController</string>
+    </dict>
 </dict>
 </plist>

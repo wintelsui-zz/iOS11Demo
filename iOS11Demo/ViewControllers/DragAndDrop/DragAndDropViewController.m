@@ -11,7 +11,7 @@
 
 static NSString * const actionSimple = @"SimpleViewDragAndDrop";
 static NSString * const actionTable = @"TableViewDragAndDrop";
-static NSString * const actionCollection = @"SimpleViewDragAndDrop";
+static NSString * const actionCollection = @"CollectionViewDragAndDrop";
 
 @interface DragAndDropViewController ()
 <
@@ -32,7 +32,7 @@ UITableViewDelegate
     [super viewDidLoad];
     self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAlways;
     
-    _actions = @[actionSimple,actionTable];
+    _actions = @[actionSimple,actionTable,actionCollection];
 }
 
 

@@ -54,6 +54,9 @@
 		FC816AA01F987C120032F680 /* iOS11DemoPublicString.m in Sources */ = {isa = PBXBuildFile; fileRef = FC816A9F1F987C120032F680 /* iOS11DemoPublicString.m */; };
 		FC816AA11F987CCC0032F680 /* iOS11DemoPublicString.m in Sources */ = {isa = PBXBuildFile; fileRef = FC816A9F1F987C120032F680 /* iOS11DemoPublicString.m */; };
 		FC8B32681F8F43A50018C530 /* WTDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8B32671F8F43A50018C530 /* WTDeviceInfo.m */; };
+		FC9D35A21FC4166A0001C7DB /* CollectionViewDragAndDropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9D35A11FC4166A0001C7DB /* CollectionViewDragAndDropViewController.m */; };
+		FC9D35A51FC4169C0001C7DB /* CollectionViewDragAndDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9D35A41FC4169C0001C7DB /* CollectionViewDragAndDrop.storyboard */; };
+		FC9D35A81FC418EE0001C7DB /* CollectionViewDragAndDropCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9D35A71FC418EE0001C7DB /* CollectionViewDragAndDropCell.m */; };
 		FCA9AFFD1F7BA34600438D01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA9AFFC1F7BA34600438D01 /* AppDelegate.m */; };
 		FCA9B0001F7BA34600438D01 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA9AFFF1F7BA34600438D01 /* ViewController.m */; };
 		FCA9B0031F7BA34600438D01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA9B0011F7BA34600438D01 /* Main.storyboard */; };
@@ -234,6 +237,11 @@
 		FC8B32661F8F43A50018C530 /* WTDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDeviceInfo.h; sourceTree = "<group>"; };
 		FC8B32671F8F43A50018C530 /* WTDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTDeviceInfo.m; sourceTree = "<group>"; };
 		FC8B32691F8F440C0018C530 /* iOS11Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS11Utils.h; sourceTree = "<group>"; };
+		FC9D35A01FC4166A0001C7DB /* CollectionViewDragAndDropViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewDragAndDropViewController.h; sourceTree = "<group>"; };
+		FC9D35A11FC4166A0001C7DB /* CollectionViewDragAndDropViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDragAndDropViewController.m; sourceTree = "<group>"; };
+		FC9D35A41FC4169C0001C7DB /* CollectionViewDragAndDrop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewDragAndDrop.storyboard; sourceTree = "<group>"; };
+		FC9D35A61FC418EE0001C7DB /* CollectionViewDragAndDropCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewDragAndDropCell.h; sourceTree = "<group>"; };
+		FC9D35A71FC418EE0001C7DB /* CollectionViewDragAndDropCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDragAndDropCell.m; sourceTree = "<group>"; };
 		FCA73E871FB03E6400C01030 /* iOS11Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS11Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		FCA9AFF81F7BA34600438D01 /* iOS11Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS11Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA9AFFB1F7BA34600438D01 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -357,20 +365,20 @@
 			children = (
 				2B45F44E1FB9E48500DA26E7 /* TableViewDragAndDropViewController.h */,
 				2B45F44F1FB9E48500DA26E7 /* TableViewDragAndDropViewController.m */,
-				2B45F4511FB9E49B00DA26E7 /* TableViewDragAndDrop.storyboard */,
-				2B45F4571FB9F0BC00DA26E7 /* View */,
+				2B45F4571FB9F0BC00DA26E7 /* Views */,
 				FC018FDC1FBD94F40053B9A1 /* Models */,
 			);
 			path = TableViewDragAndDrop;
 			sourceTree = "<group>";
 		};
-		2B45F4571FB9F0BC00DA26E7 /* View */ = {
+		2B45F4571FB9F0BC00DA26E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2B45F4511FB9E49B00DA26E7 /* TableViewDragAndDrop.storyboard */,
 				2B45F4541FB9F0B300DA26E7 /* TableViewDragAndDropCell.h */,
 				2B45F4551FB9F0B300DA26E7 /* TableViewDragAndDropCell.m */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		2B61852A1F9B45AE003E8EFD /* FileProvider */ = {
@@ -418,6 +426,7 @@
 				2B6185551F9B4676003E8EFD /* DragAndDropViewController.m */,
 				FC1C7C931FB0609600FB5B36 /* SimpleViewDragAndDrop */,
 				2B45F4531FB9E4A400DA26E7 /* TableViewDragAndDrop */,
+				FC9D35A31FC4166E0001C7DB /* CollectionViewDragAndDrop */,
 			);
 			path = DragAndDrop;
 			sourceTree = "<group>";
@@ -642,6 +651,26 @@
 				FC8B32671F8F43A50018C530 /* WTDeviceInfo.m */,
 			);
 			path = WTDeviceInfo;
+			sourceTree = "<group>";
+		};
+		FC9D35A31FC4166E0001C7DB /* CollectionViewDragAndDrop */ = {
+			isa = PBXGroup;
+			children = (
+				FC9D35A01FC4166A0001C7DB /* CollectionViewDragAndDropViewController.h */,
+				FC9D35A11FC4166A0001C7DB /* CollectionViewDragAndDropViewController.m */,
+				FC9D35A91FC419000001C7DB /* Views */,
+			);
+			path = CollectionViewDragAndDrop;
+			sourceTree = "<group>";
+		};
+		FC9D35A91FC419000001C7DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC9D35A61FC418EE0001C7DB /* CollectionViewDragAndDropCell.h */,
+				FC9D35A71FC418EE0001C7DB /* CollectionViewDragAndDropCell.m */,
+				FC9D35A41FC4169C0001C7DB /* CollectionViewDragAndDrop.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FCA73E861FB03D1D00C01030 /* Document */ = {
@@ -1058,6 +1087,7 @@
 				FC45651D1FB54323004808EC /* Aragaki_10.jpg in Resources */,
 				FCBFA4221FB3070C003241C5 /* AnimationScan.json in Resources */,
 				FCBFA41C1FB3070C003241C5 /* AnimationCavoi.json in Resources */,
+				FC9D35A51FC4169C0001C7DB /* CollectionViewDragAndDrop.storyboard in Resources */,
 				FC4565271FB54323004808EC /* Aragaki_9.jpg in Resources */,
 				FC4565221FB54323004808EC /* Aragaki_4.jpg in Resources */,
 				FC1C7C861FB04CAB00FB5B36 /* viewControllersList.plist in Resources */,
@@ -1210,9 +1240,11 @@
 				FC00B4831FA30D6F0004FE02 /* WTSuspensionBall.m in Sources */,
 				FC1C7C921FB0609000FB5B36 /* SimpleViewDragAndDropViewController.m in Sources */,
 				2B3EC6F41F9900FB002FC16B /* DeviceCheckViewController.m in Sources */,
+				FC9D35A81FC418EE0001C7DB /* CollectionViewDragAndDropCell.m in Sources */,
 				FCF4B3D21F94B5730047B72A /* PDFWatermarkPage.m in Sources */,
 				FC1C7C891FB050A600FB5B36 /* iOS11DemoActionsAndVCManager.m in Sources */,
 				FCBCD5341F9992490063BF75 /* WTWebViewController.m in Sources */,
+				FC9D35A21FC4166A0001C7DB /* CollectionViewDragAndDropViewController.m in Sources */,
 				FCA9AFFD1F7BA34600438D01 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
