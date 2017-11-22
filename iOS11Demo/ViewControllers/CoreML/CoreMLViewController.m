@@ -8,6 +8,8 @@
 
 #import "CoreMLViewController.h"
 
+#import "iOS11Demo-Bridging-Header.h"
+
 @interface CoreMLViewController ()
 
 @end
