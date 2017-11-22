@@ -10,4 +10,8 @@
 
 @interface PDFKitViewController : UIViewController
 
+@property (nonatomic, retain) NSURL *openUrl;
+
+- (void)loadPDF;
+
 @end

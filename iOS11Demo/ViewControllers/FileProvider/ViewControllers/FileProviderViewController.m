@@ -53,6 +53,7 @@ UIDocumentPickerDelegate
     });
     [self.view addSubview:_documentBrowserButton];
     [_documentBrowserButton addTarget:self action:@selector(documentBrowserButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [_documentBrowserButton setHidden:YES];
     
     _documentPickerButton = ({
         BFPaperButton *btn = [[BFPaperButton alloc] initWithFrame:CGRectMake(20, 20, 280, 43) raised:NO];
@@ -72,6 +73,7 @@ UIDocumentPickerDelegate
         make.right.mas_equalTo(-20);
         make.height.mas_equalTo(44);
     }];
+    
     
     [_documentPickerButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(-20 - IPHONEX_HEIGHT_SAFE_BOTTOM_VERTICAL);
@@ -116,6 +118,14 @@ UIDocumentPickerDelegate
 - (void)documentPicker:(UIDocumentPickerViewController *)controller didPickDocumentsAtURLs:(NSArray <NSURL *>*)urls{
     //选择文件
     NSLog(@"urls:%@",urls);
+    if (urls == nil || [urls count] == 0) {
+        return;
+    }
+    DocumentViewController *documentViewController = [[DocumentViewController alloc] init];
+    documentViewController.document = [[Document alloc] initWithFileURL:[urls firstObject]];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:documentViewController];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)documentPickerWasCancelled:(UIDocumentPickerViewController *)controller{

@@ -35,6 +35,14 @@ PDFDocumentDelegate
 
 @implementation PDFKitViewController
 
+- (instancetype)init{
+    if (self = [super init]) {
+        NSString *pdfPath = [[NSBundle mainBundle] pathForResource:@"Sample" ofType:@"pdf"];
+        _openUrl = [NSURL fileURLWithPath:pdfPath];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     __weak typeof(self)weakself = self;
@@ -210,9 +218,8 @@ PDFDocumentDelegate
 }
 
 - (void)loadPDF{
-    NSString *pdfPath = [[NSBundle mainBundle] pathForResource:@"Sample" ofType:@"pdf"];
-    if (pdfPath) {
-        PDFDocument *pdfDoc = [[PDFDocument alloc] initWithURL:[NSURL fileURLWithPath:pdfPath]];
+    if (_openUrl) {
+        PDFDocument *pdfDoc = [[PDFDocument alloc] initWithURL:_openUrl];
         if (pdfDoc) {
             pdfDoc.delegate = self;
             [_pdfView setDocument:pdfDoc];

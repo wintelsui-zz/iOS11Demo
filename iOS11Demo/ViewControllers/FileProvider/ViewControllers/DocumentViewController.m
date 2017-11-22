@@ -8,9 +8,12 @@
 
 #import "DocumentViewController.h"
 
+#import "PDFKitViewController.h"
+
 @interface DocumentViewController()
 {
     UITextView *_documentNameText;
+    PDFKitViewController *_pdfViewController;
 }
 
 @end
@@ -56,18 +59,21 @@
     [super viewWillAppear:animated];
     
     // Access the document
+    __weak typeof(self)weakself = self;
     [self.document openWithCompletionHandler:^(BOOL success) {
         if (success) {
             NSString *documentName = self.document.fileURL.lastPathComponent;
             if (documentName) {
-                self.title = documentName;
+                weakself.title = documentName;
                 NSArray *arrayName = [documentName componentsSeparatedByString:@"."];
                 if (arrayName && [arrayName count] > 1) {
                     //有后缀名
                     NSString *type = [arrayName lastObject];
-                    if ([type isEqualToString:@"txt"]) {
+                    if ([[type lowercaseString] isEqualToString:@"txt"]) {
                         NSString *documantStr = [NSString stringWithContentsOfURL:self.document.fileURL encoding:NSUTF8StringEncoding error:nil];
                         _documentNameText.text = documantStr;
+                    }else if ([[type lowercaseString] isEqualToString:@"pdf"]) {
+                        [[weakself PDFViewController] loadPDF];
                     }
                 }else{
                     //无后缀名
@@ -82,6 +88,34 @@
 
 - (void)saveDocument{
     [_documentNameText resignFirstResponder];
+}
+
+- (PDFKitViewController *)PDFViewController{
+    if (_pdfViewController == nil) {
+        iOS11ActionsListModels *actionInfo = [iOS11DemoAppVCsList objectForKey:@"PDFKit"];
+        NSString *className = actionInfo.className;
+        
+        UIStoryboard *storyboard = [self storyboardByMyName:actionInfo.storyboard];
+        UIViewController *page;
+        if (storyboard && actionInfo.storyboardid) {
+            page = [storyboard instantiateViewControllerWithIdentifier:actionInfo.storyboardid];
+        }
+        if (!page) {
+            page = [[NSClassFromString(className) alloc] init];
+        }
+        _pdfViewController = (PDFKitViewController *)page;
+        
+        if (_pdfViewController) {
+            [self addChildViewController:_pdfViewController];
+            [self.view addSubview:_pdfViewController.view];
+            _pdfViewController.openUrl = self.document.fileURL;
+            
+            [_pdfViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.left.bottom.right.mas_equalTo(0.0f);
+            }];
+        }
+    }
+    return _pdfViewController;
 }
 
 - (void)dismissDocumentViewController {
