@@ -143,10 +143,6 @@
 		FC0DC1091F8B5D15003BC858 /* iOS11Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS11Demo-Prefix.pch"; sourceTree = "<group>"; };
 		FC0DC10B1F8B65FE003BC858 /* actionsList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = actionsList.plist; sourceTree = "<group>"; };
 		FC0DC1131F8B7986003BC858 /* iOS11DemoDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS11DemoDefines.h; sourceTree = "<group>"; };
-		FC120DB01FA1E2480012E457 /* ARKit.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ARKit.md; sourceTree = "<group>"; };
-		FC120DB11FA1E26E0012E457 /* DragAndDrop.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DragAndDrop.md; sourceTree = "<group>"; };
-		FC120DB21FA1E2890012E457 /* DeviceCheck.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DeviceCheck.md; sourceTree = "<group>"; };
-		FC120DB31FA1E3210012E457 /* IdentityLookup.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = IdentityLookup.md; sourceTree = "<group>"; };
 		FC15D14A1F95F3B70003D308 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		FC15D14B1F95F3B70003D308 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		FC15D14F1F95F42C0003D308 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -160,8 +156,6 @@
 		FC1C7C941FB060B400FB5B36 /* SimpleViewDragAndDrop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleViewDragAndDrop.storyboard; sourceTree = "<group>"; };
 		FC1D5D4B1F9D9566004238AC /* UIViewController+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
 		FC1D5D4C1F9D9566004238AC /* UIViewController+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
-		FC1D5D531F9DC2C4004238AC /* CoreNFC.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CoreNFC.md; sourceTree = "<group>"; };
-		FC1F1BF01FA1E1F9005A6F3B /* CoreML.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CoreML.md; sourceTree = "<group>"; };
 		FC2CC86F1FBECA06007DE9D5 /* JSONFighting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONFighting.h; sourceTree = "<group>"; };
 		FC2CC8701FBECA06007DE9D5 /* JSONFighting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONFighting.m; sourceTree = "<group>"; };
 		FC2DF7141FA0395C00A9FCFA /* ARKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARKitViewController.h; sourceTree = "<group>"; };
@@ -182,7 +176,6 @@
 		FC45651A1FB54323004808EC /* Aragaki_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_8.jpg; sourceTree = "<group>"; };
 		FC45651B1FB54323004808EC /* Aragaki_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_9.jpg; sourceTree = "<group>"; };
 		FC70F1751F9EE20E00BCD66E /* FileProvider.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FileProvider.md; sourceTree = "<group>"; };
-		FC70F17B1F9F371E00BCD66E /* AutoFill.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AutoFill.md; sourceTree = "<group>"; };
 		FC816A9E1F987C120032F680 /* iOS11DemoPublicString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS11DemoPublicString.h; sourceTree = "<group>"; };
 		FC816A9F1F987C120032F680 /* iOS11DemoPublicString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS11DemoPublicString.m; sourceTree = "<group>"; };
 		FC8B32661F8F43A50018C530 /* WTDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDeviceInfo.h; sourceTree = "<group>"; };
@@ -275,7 +268,6 @@
 		2B3EC6F51F9900FF002FC16B /* DeviceCheck */ = {
 			isa = PBXGroup;
 			children = (
-				FC120DB21FA1E2890012E457 /* DeviceCheck.md */,
 				2B3EC6F21F9900FB002FC16B /* DeviceCheckViewController.h */,
 				2B3EC6F31F9900FB002FC16B /* DeviceCheckViewController.m */,
 			);
@@ -316,7 +308,6 @@
 		2B6185571F9B467A003E8EFD /* DragAndDrop */ = {
 			isa = PBXGroup;
 			children = (
-				FC120DB11FA1E26E0012E457 /* DragAndDrop.md */,
 				2B6185541F9B4676003E8EFD /* DragAndDropViewController.h */,
 				2B6185551F9B4676003E8EFD /* DragAndDropViewController.m */,
 				FC1C7C931FB0609600FB5B36 /* SimpleViewDragAndDrop */,
@@ -329,7 +320,6 @@
 		2B61855B1F9B4696003E8EFD /* CoreNFC */ = {
 			isa = PBXGroup;
 			children = (
-				FC1D5D531F9DC2C4004238AC /* CoreNFC.md */,
 				2B6185581F9B4693003E8EFD /* CoreNFCViewController.h */,
 				2B6185591F9B4693003E8EFD /* CoreNFCViewController.m */,
 			);
@@ -339,7 +329,6 @@
 		2B61855F1F9B46C6003E8EFD /* AutoFill */ = {
 			isa = PBXGroup;
 			children = (
-				FC70F17B1F9F371E00BCD66E /* AutoFill.md */,
 				2B61855C1F9B46C2003E8EFD /* AutoFillViewController.h */,
 				2B61855D1F9B46C2003E8EFD /* AutoFillViewController.m */,
 			);
@@ -349,7 +338,6 @@
 		2B6185641F9B4705003E8EFD /* CoreML */ = {
 			isa = PBXGroup;
 			children = (
-				FC1F1BF01FA1E1F9005A6F3B /* CoreML.md */,
 				2B6185611F9B4700003E8EFD /* CoreMLViewController.h */,
 				2B6185621F9B4700003E8EFD /* CoreMLViewController.m */,
 				FC2637FC1FC6AFE200935B82 /* Utils */,
@@ -505,7 +493,6 @@
 		FC2DF7171FA0396100A9FCFA /* ARKit */ = {
 			isa = PBXGroup;
 			children = (
-				FC120DB01FA1E2480012E457 /* ARKit.md */,
 				FC2DF7141FA0395C00A9FCFA /* ARKitViewController.h */,
 				FC2DF7151FA0395C00A9FCFA /* ARKitViewController.m */,
 			);
@@ -699,7 +686,6 @@
 		FCBAF6A51F95DA91002A6B5C /* IdentityLookup */ = {
 			isa = PBXGroup;
 			children = (
-				FC120DB31FA1E3210012E457 /* IdentityLookup.md */,
 				FCBAF6A61F95DAC3002A6B5C /* IdentityLookupViewController.h */,
 				FCBAF6A71F95DAC3002A6B5C /* IdentityLookupViewController.m */,
 			);
