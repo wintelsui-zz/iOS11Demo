@@ -8,7 +8,7 @@
 
 #import "UIViewController+Extension.h"
 
-@implementation UIViewController (Expansion)
+@implementation UIViewController (Extension)
 
 - (void)showSimpleAlertTitle:(NSString *)title
                         body:(NSString *)body

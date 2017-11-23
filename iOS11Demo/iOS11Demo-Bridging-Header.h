@@ -3,3 +3,4 @@
 //
 
 #import "GoogLeNetPlaces.h"
+#import "UIImage+Extension.h"

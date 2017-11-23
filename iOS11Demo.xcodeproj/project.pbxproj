@@ -18,7 +18,6 @@
 		2B6185631F9B4700003E8EFD /* CoreMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6185621F9B4700003E8EFD /* CoreMLViewController.m */; };
 		2B6185671F9CECE8003E8EFD /* iOS11ActionsListModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6185661F9CECE7003E8EFD /* iOS11ActionsListModels.m */; };
 		2B853CF31FC5C884001B35E0 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2B853CF21FC5C883001B35E0 /* GoogLeNetPlaces.mlmodel */; };
-		2B853CF61FC5CD2D001B35E0 /* GoogLeNetPlacesMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B853CF51FC5CD2D001B35E0 /* GoogLeNetPlacesMethod.swift */; };
 		CD40060A4AF4EE7E02EE00F9 /* Pods_iOS11Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7C45A4266247DB54463335 /* Pods_iOS11Demo.framework */; };
 		FC00B4831FA30D6F0004FE02 /* WTSuspensionBall.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00B4821FA30D6F0004FE02 /* WTSuspensionBall.m */; };
 		FC018FDB1FBD94EB0053B9A1 /* ImageDataModels.m in Sources */ = {isa = PBXBuildFile; fileRef = FC018FDA1FBD94EB0053B9A1 /* ImageDataModels.m */; };
@@ -52,6 +51,8 @@
 		FC9D35A21FC4166A0001C7DB /* CollectionViewDragAndDropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9D35A11FC4166A0001C7DB /* CollectionViewDragAndDropViewController.m */; };
 		FC9D35A51FC4169C0001C7DB /* CollectionViewDragAndDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9D35A41FC4169C0001C7DB /* CollectionViewDragAndDrop.storyboard */; };
 		FC9D35A81FC418EE0001C7DB /* CollectionViewDragAndDropCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9D35A71FC418EE0001C7DB /* CollectionViewDragAndDropCell.m */; };
+		FCA3AA451FC6711300DD982B /* GoogLeNetPlacesMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA3AA441FC6711300DD982B /* GoogLeNetPlacesMethod.m */; };
+		FCA3AA481FC6735200DD982B /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA3AA471FC6735200DD982B /* UIImage+Extension.m */; };
 		FCA9AFFD1F7BA34600438D01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA9AFFC1F7BA34600438D01 /* AppDelegate.m */; };
 		FCA9B0001F7BA34600438D01 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA9AFFF1F7BA34600438D01 /* ViewController.m */; };
 		FCA9B0031F7BA34600438D01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA9B0011F7BA34600438D01 /* Main.storyboard */; };
@@ -130,7 +131,6 @@
 		2B6185651F9CECE7003E8EFD /* iOS11ActionsListModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOS11ActionsListModels.h; sourceTree = "<group>"; };
 		2B6185661F9CECE7003E8EFD /* iOS11ActionsListModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOS11ActionsListModels.m; sourceTree = "<group>"; };
 		2B853CF21FC5C883001B35E0 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
-		2B853CF51FC5CD2D001B35E0 /* GoogLeNetPlacesMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogLeNetPlacesMethod.swift; sourceTree = "<group>"; };
 		2B853CF71FC5D1FC001B35E0 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 		5D71A56EF115987BDC48D2AE /* Pods-iOS11Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS11Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS11Demo/Pods-iOS11Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		6B7C45A4266247DB54463335 /* Pods_iOS11Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS11Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +193,11 @@
 		FC9D35A41FC4169C0001C7DB /* CollectionViewDragAndDrop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewDragAndDrop.storyboard; sourceTree = "<group>"; };
 		FC9D35A61FC418EE0001C7DB /* CollectionViewDragAndDropCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewDragAndDropCell.h; sourceTree = "<group>"; };
 		FC9D35A71FC418EE0001C7DB /* CollectionViewDragAndDropCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDragAndDropCell.m; sourceTree = "<group>"; };
+		FCA3AA421FC670E300DD982B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		FCA3AA431FC6711300DD982B /* GoogLeNetPlacesMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogLeNetPlacesMethod.h; sourceTree = "<group>"; };
+		FCA3AA441FC6711300DD982B /* GoogLeNetPlacesMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogLeNetPlacesMethod.m; sourceTree = "<group>"; };
+		FCA3AA461FC6735200DD982B /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		FCA3AA471FC6735200DD982B /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		FCA73E871FB03E6400C01030 /* iOS11Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS11Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		FCA9AFF81F7BA34600438D01 /* iOS11Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS11Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA9AFFB1F7BA34600438D01 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -347,7 +352,7 @@
 				FC1F1BF01FA1E1F9005A6F3B /* CoreML.md */,
 				2B6185611F9B4700003E8EFD /* CoreMLViewController.h */,
 				2B6185621F9B4700003E8EFD /* CoreMLViewController.m */,
-				2B853CF51FC5CD2D001B35E0 /* GoogLeNetPlacesMethod.swift */,
+				FC2637FC1FC6AFE200935B82 /* Utils */,
 				2B853CF41FC5C892001B35E0 /* MLModel */,
 			);
 			path = CoreML;
@@ -380,6 +385,7 @@
 		98685DECEFA0D94170570249 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCA3AA421FC670E300DD982B /* CoreVideo.framework */,
 				2B853CF71FC5D1FC001B35E0 /* CoreML.framework */,
 				FCFBEAC81FA07B5F0025AD96 /* QuartzCore.framework */,
 				FC2DF71B1FA0672E00A9FCFA /* ARKit.framework */,
@@ -420,11 +426,10 @@
 		FC0DC1071F8B5A5B003BC858 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FC45650F1FB54323004808EC /* Aragaki */,
-				FCBFA4131FB3070C003241C5 /* LottieAnimation */,
-				FCA73E861FB03D1D00C01030 /* Document */,
 				FC0DC10B1F8B65FE003BC858 /* actionsList.plist */,
 				FC1C7C851FB04CAB00FB5B36 /* viewControllersList.plist */,
+				FC45650F1FB54323004808EC /* Aragaki */,
+				FCBFA4131FB3070C003241C5 /* LottieAnimation */,
 				FCBCD5361F999B380063BF75 /* DeviceCheck.html */,
 				FC0DC1081F8B5A6D003BC858 /* Sample.pdf */,
 				FCDCAAE01FC2E296007191B4 /* icons.xcassets */,
@@ -473,8 +478,19 @@
 				FC1D5D4C1F9D9566004238AC /* UIViewController+Extension.m */,
 				FCDCAADC1FC2DD07007191B4 /* UIColor+Extension.h */,
 				FCDCAADD1FC2DD07007191B4 /* UIColor+Extension.m */,
+				FCA3AA461FC6735200DD982B /* UIImage+Extension.h */,
+				FCA3AA471FC6735200DD982B /* UIImage+Extension.m */,
 			);
 			path = Categorys;
+			sourceTree = "<group>";
+		};
+		FC2637FC1FC6AFE200935B82 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FCA3AA431FC6711300DD982B /* GoogLeNetPlacesMethod.h */,
+				FCA3AA441FC6711300DD982B /* GoogLeNetPlacesMethod.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		FC2CC86E1FBECA06007DE9D5 /* JSONFighting */ = {
@@ -572,13 +588,6 @@
 				FC9D35A41FC4169C0001C7DB /* CollectionViewDragAndDrop.storyboard */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		FCA73E861FB03D1D00C01030 /* Document */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Document;
 			sourceTree = "<group>";
 		};
 		FCA9AFEF1F7BA34600438D01 = {
@@ -957,8 +966,8 @@
 				2B45F4501FB9E48500DA26E7 /* TableViewDragAndDropViewController.m in Sources */,
 				2B853CF31FC5C884001B35E0 /* GoogLeNetPlaces.mlmodel in Sources */,
 				FCAF1D851FA70CCB00550BF7 /* DocumentBrowserViewController.m in Sources */,
-				2B853CF61FC5CD2D001B35E0 /* GoogLeNetPlacesMethod.swift in Sources */,
 				2B61855A1F9B4693003E8EFD /* CoreNFCViewController.m in Sources */,
+				FCA3AA481FC6735200DD982B /* UIImage+Extension.m in Sources */,
 				2B6185521F9B4651003E8EFD /* FileProviderViewController.m in Sources */,
 				FCAF1D7D1FA6F33400550BF7 /* Document.m in Sources */,
 				2B6185631F9B4700003E8EFD /* CoreMLViewController.m in Sources */,
@@ -973,6 +982,7 @@
 				2B3EC6F41F9900FB002FC16B /* DeviceCheckViewController.m in Sources */,
 				FC9D35A81FC418EE0001C7DB /* CollectionViewDragAndDropCell.m in Sources */,
 				FCF4B3D21F94B5730047B72A /* PDFWatermarkPage.m in Sources */,
+				FCA3AA451FC6711300DD982B /* GoogLeNetPlacesMethod.m in Sources */,
 				FC1C7C891FB050A600FB5B36 /* iOS11DemoActionsAndVCManager.m in Sources */,
 				FCBCD5341F9992490063BF75 /* WTWebViewController.m in Sources */,
 				FC9D35A21FC4166A0001C7DB /* CollectionViewDragAndDropViewController.m in Sources */,

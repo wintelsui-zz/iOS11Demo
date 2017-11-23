@@ -9,7 +9,7 @@
 //: - 6:[Auto Fill](https://developer.apple.com/videos/play/wwdc2017/206/) - 从 iCloud Keychain 中获取密码，自动填充的功能现在开放给第三方开发者。UITextInputTraits 的 textContentType 中添加了 username 和 password，对适合的 text view 或者 text field 的 content type 进行配置，可以在要求输入用户名密码时获取键盘上方的自动填充，帮助用户快速登录。
 //: - 7:[FileProvider 和 FileProviderUI](https://developer.apple.com/documentation/fileprovider) - 提供一套类似 Files app 的界面，让你可以获取用户设备上或者云端的文件。
 //: - 8:ARKit - 。
-//: - 9:[Core ML](https://developer.apple.com/machine-learning/) - 。
+//: - 9:[Core ML](https://developer.apple.com/machine-learning/) - Machine Learning。
 //: ---
 //: - XCode 9
 //: - 1:NameColor  - 在 xcassets 里添加颜色,使用\[UIColor colorNamed:@"ColorMyPink"\]读取。（AVAILABLE\_IOS(11\_0);）

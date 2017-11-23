@@ -8,9 +8,18 @@
 
 #import "CoreMLViewController.h"
 
+#import <MobileCoreServices/MobileCoreServices.h>
+#import "GoogLeNetPlacesMethod.h"
+
 #import "iOS11Demo-Bridging-Header.h"
 
 @interface CoreMLViewController ()
+<
+UINavigationControllerDelegate,
+UIImagePickerControllerDelegate
+>
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
 @end
 
@@ -21,19 +30,60 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)showImagePicker{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        
+        UIImagePickerController * imagePickerVC = [[UIImagePickerController alloc] init];
+        imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        imagePickerVC.mediaTypes = @[(NSString *)kUTTypeImage];
+        imagePickerVC.delegate = self;
+        imagePickerVC.allowsEditing = NO;
+        [self presentViewController:imagePickerVC animated:YES completion:nil];
+        
+    }
+}
+
+#pragma mark - -- UIImagePickerController Delegate Start --
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    [picker dismissViewControllerAnimated:YES completion:^{
+        [_infoLabel setText:@""];
+        UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+        if (image) {
+            [_imageView setImage:image];
+        }
+    }];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - -- UIImagePickerController Delegate End --
+
+- (IBAction)chooseButtonPressed:(id)sender {
+    [self showImagePicker];
+}
+- (IBAction)beginCoreMLPressed:(id)sender {
+    UIImage *image = _imageView.image;
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        if (image) {
+            NSString *info = [GoogLeNetPlacesMethod thinkOfImage:image];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (info) {
+                    [_infoLabel setText:[NSString stringWithFormat:@"CoreML识别为：%@",info]];
+                }else{
+                    [_infoLabel setText:@"CoreML没有识别出来！"];
+                }
+            });
+        }
+    });
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
