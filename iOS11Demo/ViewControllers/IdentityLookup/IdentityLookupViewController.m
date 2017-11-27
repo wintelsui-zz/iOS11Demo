@@ -8,6 +8,7 @@
 
 #import "IdentityLookupViewController.h"
 #import <ContactsUI/ContactsUI.h>
+#import <CallKit/CallKit.h>
 
 @interface IdentityLookupViewController ()
 <CNContactPickerDelegate>
@@ -46,6 +47,54 @@
         [self loadNumber];
     }
 }
+
+
+- (IBAction)resetCallDirectoryExtensionPressed:(id)sender {
+    /**
+     CXCallDirectoryManager.h
+     
+     typedef NS_ENUM(NSInteger, CXCallDirectoryEnabledStatus) {
+     CXCallDirectoryEnabledStatusUnknown = 0,
+     CXCallDirectoryEnabledStatusDisabled = 1,
+     CXCallDirectoryEnabledStatusEnabled = 2,
+     } API_AVAILABLE(ios(10.0));
+     
+     CX_CLASS_AVAILABLE(ios(10.0))
+     @interface CXCallDirectoryManager : NSObject
+     
+     @property (readonly, class) CXCallDirectoryManager *sharedInstance;
+     
+     - (void)reloadExtensionWithIdentifier:(NSString *)identifier completionHandler:(nullable void (^)(NSError *_Nullable error))completion;
+     - (void)getEnabledStatusForExtensionWithIdentifier:(NSString *)identifier completionHandler:(void (^)(CXCallDirectoryEnabledStatus enabledStatus, NSError *_Nullable error))completion;
+     
+     @end
+     */
+    
+    //判断是否有权限或者开关被打开
+    __weak typeof(self)weakself = self;
+    [[CXCallDirectoryManager sharedInstance] getEnabledStatusForExtensionWithIdentifier:@"orz.wintelsui.test.iOS11Demo.CallDirectoryExtension" completionHandler:^(CXCallDirectoryEnabledStatus enabledStatus, NSError * _Nullable error) {
+        if (enabledStatus == CXCallDirectoryEnabledStatusEnabled) {
+            //开关被打开
+            [[CXCallDirectoryManager sharedInstance] reloadExtensionWithIdentifier:@"orz.wintelsui.test.iOS11Demo.CallDirectoryExtension" completionHandler:^(NSError * _Nullable error) {
+                if (error) {
+                    
+                }
+            }];
+        }else if (enabledStatus == CXCallDirectoryEnabledStatusDisabled) {
+            //开关被关闭
+            [weakself showSimpleAlertTitle:@"开关被关闭" body:@"请去手机设置里打开" cancel:@"确定"];
+        }else if (enabledStatus == CXCallDirectoryEnabledStatusUnknown) {
+            //开关未知，请去手机设置里设置一次
+            [weakself showSimpleAlertTitle:@"开关未知" body:@"请去手机设置里设置一次" cancel:@"确定"];
+        }
+    }];
+    
+}
+
+
+
+
+#pragma mark - -- 以下为费代码，因为能从通讯录里选出来的绝对不会是陌生号码，O(∩_∩)O哈哈~ --
 
 - (IBAction)contactPickerPressed:(id)sender {
     CNContactStore * contactStore = [[CNContactStore alloc]init];

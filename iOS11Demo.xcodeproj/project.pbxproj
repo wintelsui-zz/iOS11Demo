@@ -45,6 +45,8 @@
 		FC4565251FB54323004808EC /* Aragaki_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC4565191FB54323004808EC /* Aragaki_7.jpg */; };
 		FC4565261FB54323004808EC /* Aragaki_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC45651A1FB54323004808EC /* Aragaki_8.jpg */; };
 		FC4565271FB54323004808EC /* Aragaki_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC45651B1FB54323004808EC /* Aragaki_9.jpg */; };
+		FC787E021FCC081B00E533E1 /* CallDirectoryHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FC787E011FCC081B00E533E1 /* CallDirectoryHandler.m */; };
+		FC787E061FCC081B00E533E1 /* CallDirectoryExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FC787DFE1FCC081B00E533E1 /* CallDirectoryExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FC816AA01F987C120032F680 /* iOS11DemoPublicString.m in Sources */ = {isa = PBXBuildFile; fileRef = FC816A9F1F987C120032F680 /* iOS11DemoPublicString.m */; };
 		FC816AA11F987CCC0032F680 /* iOS11DemoPublicString.m in Sources */ = {isa = PBXBuildFile; fileRef = FC816A9F1F987C120032F680 /* iOS11DemoPublicString.m */; };
 		FC8B32681F8F43A50018C530 /* WTDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8B32671F8F43A50018C530 /* WTDeviceInfo.m */; };
@@ -87,6 +89,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FC787E041FCC081B00E533E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCA9AFF01F7BA34600438D01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC787DFD1FCC081B00E533E1;
+			remoteInfo = CallDirectoryExtension;
+		};
 		FCBAF6991F95B313002A6B5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FCA9AFF01F7BA34600438D01 /* Project object */;
@@ -103,6 +112,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				FC787E061FCC081B00E533E1 /* CallDirectoryExtension.appex in Embed App Extensions */,
 				FCBAF69B1F95B313002A6B5C /* MessageFilterE.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -176,6 +186,11 @@
 		FC45651A1FB54323004808EC /* Aragaki_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_8.jpg; sourceTree = "<group>"; };
 		FC45651B1FB54323004808EC /* Aragaki_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aragaki_9.jpg; sourceTree = "<group>"; };
 		FC70F1751F9EE20E00BCD66E /* FileProvider.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FileProvider.md; sourceTree = "<group>"; };
+		FC787DFE1FCC081B00E533E1 /* CallDirectoryExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CallDirectoryExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC787E001FCC081B00E533E1 /* CallDirectoryHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallDirectoryHandler.h; sourceTree = "<group>"; };
+		FC787E011FCC081B00E533E1 /* CallDirectoryHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallDirectoryHandler.m; sourceTree = "<group>"; };
+		FC787E031FCC081B00E533E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC787E0A1FCC082600E533E1 /* CallDirectoryExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallDirectoryExtension.entitlements; sourceTree = "<group>"; };
 		FC816A9E1F987C120032F680 /* iOS11DemoPublicString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS11DemoPublicString.h; sourceTree = "<group>"; };
 		FC816A9F1F987C120032F680 /* iOS11DemoPublicString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS11DemoPublicString.m; sourceTree = "<group>"; };
 		FC8B32661F8F43A50018C530 /* WTDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDeviceInfo.h; sourceTree = "<group>"; };
@@ -243,6 +258,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FC787DFB1FCC081B00E533E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FCA9AFF51F7BA34600438D01 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -518,6 +540,17 @@
 			path = Aragaki;
 			sourceTree = "<group>";
 		};
+		FC787DFF1FCC081B00E533E1 /* CallDirectoryExtension */ = {
+			isa = PBXGroup;
+			children = (
+				FC787E0A1FCC082600E533E1 /* CallDirectoryExtension.entitlements */,
+				FC787E001FCC081B00E533E1 /* CallDirectoryHandler.h */,
+				FC787E011FCC081B00E533E1 /* CallDirectoryHandler.m */,
+				FC787E031FCC081B00E533E1 /* Info.plist */,
+			);
+			path = CallDirectoryExtension;
+			sourceTree = "<group>";
+		};
 		FC7E5AB91F8CCE96004262E7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,6 +617,7 @@
 				FC30FF4D1F90A1AE00D6EEE7 /* iOS11Demo.md */,
 				FCA9AFFA1F7BA34600438D01 /* iOS11Demo */,
 				FCBAF6941F95B313002A6B5C /* MessageFilterE */,
+				FC787DFF1FCC081B00E533E1 /* CallDirectoryExtension */,
 				FCA9AFF91F7BA34600438D01 /* Products */,
 				E3105428F966312CCD8332AB /* Pods */,
 				98685DECEFA0D94170570249 /* Frameworks */,
@@ -595,6 +629,7 @@
 			children = (
 				FCA9AFF81F7BA34600438D01 /* iOS11Demo.app */,
 				FCBAF6931F95B313002A6B5C /* MessageFilterE.appex */,
+				FC787DFE1FCC081B00E533E1 /* CallDirectoryExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -736,6 +771,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FC787DFD1FCC081B00E533E1 /* CallDirectoryExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC787E091FCC081B00E533E1 /* Build configuration list for PBXNativeTarget "CallDirectoryExtension" */;
+			buildPhases = (
+				FC787DFA1FCC081B00E533E1 /* Sources */,
+				FC787DFB1FCC081B00E533E1 /* Frameworks */,
+				FC787DFC1FCC081B00E533E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CallDirectoryExtension;
+			productName = CallDirectoryExtension;
+			productReference = FC787DFE1FCC081B00E533E1 /* CallDirectoryExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FCA9AFF71F7BA34600438D01 /* iOS11Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCA9B0241F7BA34700438D01 /* Build configuration list for PBXNativeTarget "iOS11Demo" */;
@@ -752,6 +804,7 @@
 			);
 			dependencies = (
 				FCBAF69A1F95B313002A6B5C /* PBXTargetDependency */,
+				FC787E051FCC081B00E533E1 /* PBXTargetDependency */,
 			);
 			name = iOS11Demo;
 			productName = iOS11Demo;
@@ -784,6 +837,15 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = wintel;
 				TargetAttributes = {
+					FC787DFD1FCC081B00E533E1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					FCA9AFF71F7BA34600438D01 = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0910;
@@ -830,11 +892,19 @@
 			targets = (
 				FCA9AFF71F7BA34600438D01 /* iOS11Demo */,
 				FCBAF6921F95B313002A6B5C /* MessageFilterE */,
+				FC787DFD1FCC081B00E533E1 /* CallDirectoryExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FC787DFC1FCC081B00E533E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FCA9AFF61F7BA34600438D01 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -935,6 +1005,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FC787DFA1FCC081B00E533E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC787E021FCC081B00E533E1 /* CallDirectoryHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FCA9AFF41F7BA34600438D01 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -988,6 +1066,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FC787E051FCC081B00E533E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC787DFD1FCC081B00E533E1 /* CallDirectoryExtension */;
+			targetProxy = FC787E041FCC081B00E533E1 /* PBXContainerItemProxy */;
+		};
 		FCBAF69A1F95B313002A6B5C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FCBAF6921F95B313002A6B5C /* MessageFilterE */;
@@ -1026,6 +1109,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FC787E071FCC081B00E533E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = CallDirectoryExtension/CallDirectoryExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ER82ALNC99;
+				INFOPLIST_FILE = CallDirectoryExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = orz.wintelsui.test.iOS11Demo.CallDirectoryExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC787E081FCC081B00E533E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = CallDirectoryExtension/CallDirectoryExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ER82ALNC99;
+				INFOPLIST_FILE = CallDirectoryExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = orz.wintelsui.test.iOS11Demo.CallDirectoryExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FCA9B0221F7BA34700438D01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1214,6 +1331,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FC787E091FCC081B00E533E1 /* Build configuration list for PBXNativeTarget "CallDirectoryExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC787E071FCC081B00E533E1 /* Debug */,
+				FC787E081FCC081B00E533E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FCA9AFF31F7BA34600438D01 /* Build configuration list for PBXProject "iOS11Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

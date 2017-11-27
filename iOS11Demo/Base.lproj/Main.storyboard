@@ -104,16 +104,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndi-mr-xVb">
+                                <rect key="frame" x="20" y="345" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Gge-Re-870"/>
+                                </constraints>
+                                <state key="normal" title="Reset CallDirectory Extension"/>
+                                <connections>
+                                    <action selector="resetCallDirectoryExtensionPressed:" destination="dF7-q6-WmL" eventType="touchUpInside" id="HsK-1e-oML"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4PQ-vB-RGf" firstAttribute="leading" secondItem="hZZ-p1-GKq" secondAttribute="trailing" id="4L5-BU-e95"/>
                             <constraint firstItem="4PQ-vB-RGf" firstAttribute="top" secondItem="hZZ-p1-GKq" secondAttribute="top" id="4Sr-fm-fg5"/>
+                            <constraint firstItem="Ndi-mr-xVb" firstAttribute="leading" secondItem="Qu9-G2-Lt7" secondAttribute="leading" constant="20" id="96n-La-SJ2"/>
+                            <constraint firstItem="Ndi-mr-xVb" firstAttribute="top" secondItem="EI6-NL-VS8" secondAttribute="bottom" constant="10" id="Dd0-IF-BMh"/>
                             <constraint firstItem="Qu9-G2-Lt7" firstAttribute="trailing" secondItem="4PQ-vB-RGf" secondAttribute="trailing" constant="20" id="GzV-iT-4bh"/>
                             <constraint firstItem="z78-r1-Im6" firstAttribute="leading" secondItem="Qu9-G2-Lt7" secondAttribute="leading" constant="44" id="IIY-VA-RsL"/>
                             <constraint firstItem="Lti-G3-OcI" firstAttribute="leading" secondItem="Qu9-G2-Lt7" secondAttribute="leading" constant="40" id="Krf-Lm-nts"/>
                             <constraint firstItem="z78-r1-Im6" firstAttribute="top" secondItem="Lti-G3-OcI" secondAttribute="bottom" constant="44" id="NkG-kG-Cbs"/>
                             <constraint firstItem="4PQ-vB-RGf" firstAttribute="height" secondItem="hZZ-p1-GKq" secondAttribute="height" id="OUo-IX-LtA"/>
+                            <constraint firstItem="Qu9-G2-Lt7" firstAttribute="trailing" secondItem="Ndi-mr-xVb" secondAttribute="trailing" constant="20" id="R2I-yI-t7o"/>
                             <constraint firstItem="EI6-NL-VS8" firstAttribute="leading" secondItem="Qu9-G2-Lt7" secondAttribute="leading" constant="20" id="SNP-RA-O5N"/>
                             <constraint firstItem="Qu9-G2-Lt7" firstAttribute="trailing" secondItem="rKQ-Gm-5uk" secondAttribute="trailing" constant="20" id="Y6J-pW-7sW"/>
                             <constraint firstItem="hZZ-p1-GKq" firstAttribute="leading" secondItem="Qu9-G2-Lt7" secondAttribute="leading" constant="20" id="cia-Jc-8c8"/>

@@ -35,17 +35,14 @@ PDFDocumentDelegate
 
 @implementation PDFKitViewController
 
-- (instancetype)init{
-    if (self = [super init]) {
-        NSString *pdfPath = [[NSBundle mainBundle] pathForResource:@"Sample" ofType:@"pdf"];
-        _openUrl = [NSURL fileURLWithPath:pdfPath];
-    }
-    return self;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     __weak typeof(self)weakself = self;
+    if (_openUrl == nil) {
+        NSString *pdfPath = [[NSBundle mainBundle] pathForResource:@"Sample" ofType:@"pdf"];
+        _openUrl = [NSURL fileURLWithPath:pdfPath];
+    }
     _waterMark = NO;
     
     _actionView = [[UIView alloc] init];
@@ -172,8 +169,6 @@ PDFDocumentDelegate
         make.width.mas_equalTo(70);
     }];
     
-    
-    
     [_firstButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(_modeLabel.mas_bottom).mas_offset(10);
         make.left.mas_equalTo(10);
@@ -237,15 +232,5 @@ PDFDocumentDelegate
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
