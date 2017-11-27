@@ -15,6 +15,16 @@
 //: ---
 //: - CallDirectory Extension iOS11后新增增量更新代码，而在 iOS10中，每次数据更新都是全量重新导入系统
 //: ---
+//: -
+getMessageFilterExtension()
+//: ![img{:width=100}](MessageFilterExtension.png)
+//: -
+//: ---
+//: -
+getCallDirectoryExtension()
+//: ![img{:width=100 height=400}](CallDirectoryExtension.png)
+//: -
+//: ---
 //:
 //: [下一页](@next)
 
