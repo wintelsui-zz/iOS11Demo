@@ -17,12 +17,12 @@
 //: ---
 //: -
 getMessageFilterExtension()
-//: ![img{:width=100}](MessageFilterExtension.png)
+//: ![MessageFilter—Extension -w500](MessageFilterExtension.png)
 //: -
 //: ---
 //: -
 getCallDirectoryExtension()
-//: ![img{:width=100 height=400}](CallDirectoryExtension.png)
+//: ![CallDirectory-Extension -w500](CallDirectoryExtension.png)
 //: -
 //: ---
 //:

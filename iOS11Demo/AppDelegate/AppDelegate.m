@@ -35,15 +35,19 @@
 
 - (void)test{
     NSString *body = @"NSLinguisticTagger 在语言学功能上来讲是一把名副其实的瑞士军刀，它可以讲自然语言的字符串标记为单词、确定词性和词根、划分出人名地名和组织名称、告诉你字符串使用的语言和语系。对于我们大多数人来说，这其中蕴含着意义远超过我们所知道的，但或许也只是我们没有合适的机会使用而已。但是，几乎所有使用某种方式来处理自然语言的应用如果能够用上 NSLinguisticTagger ，或许就会润色不少，没准会催生一批新特性呢。";
-    
+//    NSString *body = @"The natural language processing APIs in Foundation use machine learning to deeply understand text using features such as language identification, tokenization, lemmatization, part of speech, and named entity recognition.";
+    {
+        NSLinguisticTagger *tagger = [[NSLinguisticTagger alloc] initWithTagSchemes:@[NSLinguisticTagSchemeLanguage] options:0];
+        tagger.string = body;
+        NSLog(@"dominantLanguage : %@", tagger.dominantLanguage);
+    }
     NSLinguisticTaggerOptions options = NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation | NSLinguisticTaggerJoinNames;
-    NSLinguisticTagger *tagger = [[NSLinguisticTagger alloc] initWithTagSchemes: [NSLinguisticTagger availableTagSchemesForLanguage:@"zh_CN"] options:options];
+    NSLinguisticTagger *tagger = [[NSLinguisticTagger alloc] initWithTagSchemes: [NSLinguisticTagger availableTagSchemesForLanguage:@"en"] options:options];
     tagger.string = body;
     [tagger enumerateTagsInRange:NSMakeRange(0, [body length]) scheme:NSLinguisticTagSchemeNameTypeOrLexicalClass options:options usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
         NSString *token = [body substringWithRange:tokenRange];
         NSLog(@"%@: %@", token, tag);
     }];
-    
     NSLog(@"2:\n%@",[self stringTokenizerWithWord:body]);
 }
 

@@ -23,6 +23,7 @@
 		FC018FDB1FBD94EB0053B9A1 /* ImageDataModels.m in Sources */ = {isa = PBXBuildFile; fileRef = FC018FDA1FBD94EB0053B9A1 /* ImageDataModels.m */; };
 		FC0DC10A1F8B64BC003BC858 /* Sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC0DC1081F8B5A6D003BC858 /* Sample.pdf */; };
 		FC0DC10C1F8B65FE003BC858 /* actionsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC0DC10B1F8B65FE003BC858 /* actionsList.plist */; };
+		FC116AAA1FCD6B2A005E9DDC /* someTestCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC116AA91FCD6B2A005E9DDC /* someTestCode.swift */; };
 		FC15D14E1F95F42C0003D308 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC15D1501F95F42C0003D308 /* Localizable.strings */; };
 		FC1C7C861FB04CAB00FB5B36 /* viewControllersList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC1C7C851FB04CAB00FB5B36 /* viewControllersList.plist */; };
 		FC1C7C891FB050A600FB5B36 /* iOS11DemoActionsAndVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1C7C881FB050A600FB5B36 /* iOS11DemoActionsAndVCManager.m */; };
@@ -153,6 +154,7 @@
 		FC0DC1091F8B5D15003BC858 /* iOS11Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS11Demo-Prefix.pch"; sourceTree = "<group>"; };
 		FC0DC10B1F8B65FE003BC858 /* actionsList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = actionsList.plist; sourceTree = "<group>"; };
 		FC0DC1131F8B7986003BC858 /* iOS11DemoDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS11DemoDefines.h; sourceTree = "<group>"; };
+		FC116AA91FCD6B2A005E9DDC /* someTestCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = someTestCode.swift; sourceTree = "<group>"; };
 		FC15D14A1F95F3B70003D308 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		FC15D14B1F95F3B70003D308 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		FC15D14F1F95F42C0003D308 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 				FC8B32691F8F440C0018C530 /* iOS11Utils.h */,
 				FC2CC86E1FBECA06007DE9D5 /* JSONFighting */,
 				FC8B32651F8F43A50018C530 /* WTDeviceInfo */,
+				FC116AA91FCD6B2A005E9DDC /* someTestCode.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1039,6 +1042,7 @@
 				FCA9B0001F7BA34600438D01 /* ViewController.m in Sources */,
 				FCA9B00B1F7BA34600438D01 /* main.m in Sources */,
 				FCA9B0451F7BBB9700438D01 /* PDFKitViewController.m in Sources */,
+				FC116AAA1FCD6B2A005E9DDC /* someTestCode.swift in Sources */,
 				2B61855E1F9B46C2003E8EFD /* AutoFillViewController.m in Sources */,
 				2B6185561F9B4676003E8EFD /* DragAndDropViewController.m in Sources */,
 				FC00B4831FA30D6F0004FE02 /* WTSuspensionBall.m in Sources */,
