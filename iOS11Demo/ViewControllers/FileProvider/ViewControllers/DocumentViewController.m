@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.navigationController.navigationBar.prefersLargeTitles = YES;
+    self.navigationController.navigationBar.prefersLargeTitles = NO;
     self.title = @"TXT Reader&Editor";
     
     self.view.backgroundColor = [UIColor whiteColor];

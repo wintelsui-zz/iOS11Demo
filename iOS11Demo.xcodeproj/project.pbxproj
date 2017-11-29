@@ -55,6 +55,10 @@
 		FC9D35A51FC4169C0001C7DB /* CollectionViewDragAndDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9D35A41FC4169C0001C7DB /* CollectionViewDragAndDrop.storyboard */; };
 		FC9D35A81FC418EE0001C7DB /* CollectionViewDragAndDropCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9D35A71FC418EE0001C7DB /* CollectionViewDragAndDropCell.m */; };
 		FC9ECF061FCE621F00B3D423 /* GoogLeNetPlacesOnVisionMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9ECF051FCE621F00B3D423 /* GoogLeNetPlacesOnVisionMethod.m */; };
+		FC9ECF091FCEA81300B3D423 /* VisionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9ECF081FCEA81300B3D423 /* VisionViewController.m */; };
+		FC9ECF0C1FCEA84400B3D423 /* VisionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9ECF0B1FCEA84400B3D423 /* VisionStoryboard.storyboard */; };
+		FC9ECF0F1FCEB15300B3D423 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9ECF0E1FCEB15200B3D423 /* BaseViewController.m */; };
+		FC9ECF131FCEB28C00B3D423 /* UIImageFormDrawCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9ECF111FCEB28B00B3D423 /* UIImageFormDrawCanvas.m */; };
 		FCA3AA451FC6711300DD982B /* GoogLeNetPlacesMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA3AA441FC6711300DD982B /* GoogLeNetPlacesMethod.m */; };
 		FCA3AA481FC6735200DD982B /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA3AA471FC6735200DD982B /* UIImage+Extension.m */; };
 		FCA9AFFD1F7BA34600438D01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA9AFFC1F7BA34600438D01 /* AppDelegate.m */; };
@@ -69,6 +73,7 @@
 		FCAF1D801FA6F5EF00550BF7 /* DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF1D7F1FA6F5EF00550BF7 /* DocumentViewController.m */; };
 		FCAF1D821FA705FB00550BF7 /* CreateDefaultTXT.txt in Resources */ = {isa = PBXBuildFile; fileRef = FCAF1D811FA705FB00550BF7 /* CreateDefaultTXT.txt */; };
 		FCAF1D851FA70CCB00550BF7 /* DocumentBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF1D841FA70CCB00550BF7 /* DocumentBrowserViewController.m */; };
+		FCB9632C1FCEB5990041DF4E /* PublicClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB9632B1FCEB5990041DF4E /* PublicClass.m */; };
 		FCBAF6971F95B313002A6B5C /* MessageFilterExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBAF6961F95B313002A6B5C /* MessageFilterExtension.m */; };
 		FCBAF69B1F95B313002A6B5C /* MessageFilterE.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FCBAF6931F95B313002A6B5C /* MessageFilterE.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FCBAF6A81F95DAC3002A6B5C /* IdentityLookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBAF6A71F95DAC3002A6B5C /* IdentityLookupViewController.m */; };
@@ -206,6 +211,13 @@
 		FC9D35A71FC418EE0001C7DB /* CollectionViewDragAndDropCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDragAndDropCell.m; sourceTree = "<group>"; };
 		FC9ECF041FCE621F00B3D423 /* GoogLeNetPlacesOnVisionMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogLeNetPlacesOnVisionMethod.h; sourceTree = "<group>"; };
 		FC9ECF051FCE621F00B3D423 /* GoogLeNetPlacesOnVisionMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogLeNetPlacesOnVisionMethod.m; sourceTree = "<group>"; };
+		FC9ECF071FCEA81300B3D423 /* VisionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VisionViewController.h; sourceTree = "<group>"; };
+		FC9ECF081FCEA81300B3D423 /* VisionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisionViewController.m; sourceTree = "<group>"; };
+		FC9ECF0B1FCEA84400B3D423 /* VisionStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VisionStoryboard.storyboard; sourceTree = "<group>"; };
+		FC9ECF0D1FCEB15200B3D423 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		FC9ECF0E1FCEB15200B3D423 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		FC9ECF111FCEB28B00B3D423 /* UIImageFormDrawCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageFormDrawCanvas.m; sourceTree = "<group>"; };
+		FC9ECF121FCEB28B00B3D423 /* UIImageFormDrawCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageFormDrawCanvas.h; sourceTree = "<group>"; };
 		FCA3AA421FC670E300DD982B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		FCA3AA431FC6711300DD982B /* GoogLeNetPlacesMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogLeNetPlacesMethod.h; sourceTree = "<group>"; };
 		FCA3AA441FC6711300DD982B /* GoogLeNetPlacesMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogLeNetPlacesMethod.m; sourceTree = "<group>"; };
@@ -232,6 +244,8 @@
 		FCAF1D811FA705FB00550BF7 /* CreateDefaultTXT.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CreateDefaultTXT.txt; sourceTree = "<group>"; };
 		FCAF1D831FA70CCB00550BF7 /* DocumentBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocumentBrowserViewController.h; sourceTree = "<group>"; };
 		FCAF1D841FA70CCB00550BF7 /* DocumentBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocumentBrowserViewController.m; sourceTree = "<group>"; };
+		FCB9632A1FCEB5980041DF4E /* PublicClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicClass.h; sourceTree = "<group>"; };
+		FCB9632B1FCEB5990041DF4E /* PublicClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicClass.m; sourceTree = "<group>"; };
 		FCBAF6931F95B313002A6B5C /* MessageFilterE.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessageFilterE.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCBAF6951F95B313002A6B5C /* MessageFilterExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageFilterExtension.h; sourceTree = "<group>"; };
 		FCBAF6961F95B313002A6B5C /* MessageFilterExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageFilterExtension.m; sourceTree = "<group>"; };
@@ -369,6 +383,7 @@
 				2B6185621F9B4700003E8EFD /* CoreMLViewController.m */,
 				FC2637FC1FC6AFE200935B82 /* Utils */,
 				2B853CF41FC5C892001B35E0 /* MLModel */,
+				FC9ECF0A1FCEA81900B3D423 /* Vision */,
 			);
 			path = CoreML;
 			sourceTree = "<group>";
@@ -441,8 +456,6 @@
 		FC0DC1071F8B5A5B003BC858 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FC0DC10B1F8B65FE003BC858 /* actionsList.plist */,
-				FC1C7C851FB04CAB00FB5B36 /* viewControllersList.plist */,
 				FC45650F1FB54323004808EC /* Aragaki */,
 				FCBFA4131FB3070C003241C5 /* LottieAnimation */,
 				FCBCD5361F999B380063BF75 /* DeviceCheck.html */,
@@ -460,6 +473,9 @@
 			children = (
 				FC0DC1131F8B7986003BC858 /* iOS11DemoDefines.h */,
 				FC8B32691F8F440C0018C530 /* iOS11Utils.h */,
+				FCB9632A1FCEB5980041DF4E /* PublicClass.h */,
+				FCB9632B1FCEB5990041DF4E /* PublicClass.m */,
+				FC9ECF141FCEB29400B3D423 /* UIImageFormDrawCanvas */,
 				FC2CC86E1FBECA06007DE9D5 /* JSONFighting */,
 				FC8B32651F8F43A50018C530 /* WTDeviceInfo */,
 				FC116AA91FCD6B2A005E9DDC /* someTestCode.swift */,
@@ -576,6 +592,7 @@
 			children = (
 				FC816A9E1F987C120032F680 /* iOS11DemoPublicString.h */,
 				FC816A9F1F987C120032F680 /* iOS11DemoPublicString.m */,
+				FC9ECF101FCEB15700B3D423 /* Base */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -618,6 +635,34 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		FC9ECF0A1FCEA81900B3D423 /* Vision */ = {
+			isa = PBXGroup;
+			children = (
+				FC9ECF071FCEA81300B3D423 /* VisionViewController.h */,
+				FC9ECF081FCEA81300B3D423 /* VisionViewController.m */,
+				FC9ECF0B1FCEA84400B3D423 /* VisionStoryboard.storyboard */,
+			);
+			path = Vision;
+			sourceTree = "<group>";
+		};
+		FC9ECF101FCEB15700B3D423 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FC9ECF0D1FCEB15200B3D423 /* BaseViewController.h */,
+				FC9ECF0E1FCEB15200B3D423 /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FC9ECF141FCEB29400B3D423 /* UIImageFormDrawCanvas */ = {
+			isa = PBXGroup;
+			children = (
+				FC9ECF121FCEB28B00B3D423 /* UIImageFormDrawCanvas.h */,
+				FC9ECF111FCEB28B00B3D423 /* UIImageFormDrawCanvas.m */,
+			);
+			path = UIImageFormDrawCanvas;
+			sourceTree = "<group>";
+		};
 		FCA9AFEF1F7BA34600438D01 = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +691,8 @@
 			isa = PBXGroup;
 			children = (
 				FCBAF6AA1F95E200002A6B5C /* iOS11Demo.entitlements */,
+				FC0DC10B1F8B65FE003BC858 /* actionsList.plist */,
+				FC1C7C851FB04CAB00FB5B36 /* viewControllersList.plist */,
 				FC0DC1071F8B5A5B003BC858 /* Resources */,
 				FC1D5D4A1F9D950B004238AC /* Categorys */,
 				FC816A9D1F987B390032F680 /* Common */,
@@ -936,6 +983,7 @@
 				FCBFA41E1FB3070C003241C5 /* AnimationDownload.json in Resources */,
 				FC0DC10A1F8B64BC003BC858 /* Sample.pdf in Resources */,
 				FCFBEACB1FA07CE70025AD96 /* media.scnassets in Resources */,
+				FC9ECF0C1FCEA84400B3D423 /* VisionStoryboard.storyboard in Resources */,
 				FC4565201FB54323004808EC /* Aragaki_2.jpg in Resources */,
 				FCBFA4201FB3070C003241C5 /* AnimationPulse_loader.json in Resources */,
 				FCA9B0081F7BA34600438D01 /* LaunchScreen.storyboard in Resources */,
@@ -1035,6 +1083,7 @@
 				FC2CC8711FBECA06007DE9D5 /* JSONFighting.m in Sources */,
 				FCDCAADE1FC2DD07007191B4 /* UIColor+Extension.m in Sources */,
 				FC816AA01F987C120032F680 /* iOS11DemoPublicString.m in Sources */,
+				FC9ECF091FCEA81300B3D423 /* VisionViewController.m in Sources */,
 				2B45F4501FB9E48500DA26E7 /* TableViewDragAndDropViewController.m in Sources */,
 				2B853CF31FC5C884001B35E0 /* GoogLeNetPlaces.mlmodel in Sources */,
 				FCAF1D851FA70CCB00550BF7 /* DocumentBrowserViewController.m in Sources */,
@@ -1043,10 +1092,13 @@
 				2B6185521F9B4651003E8EFD /* FileProviderViewController.m in Sources */,
 				FCAF1D7D1FA6F33400550BF7 /* Document.m in Sources */,
 				2B6185631F9B4700003E8EFD /* CoreMLViewController.m in Sources */,
+				FC9ECF0F1FCEB15300B3D423 /* BaseViewController.m in Sources */,
 				FCAF1D801FA6F5EF00550BF7 /* DocumentViewController.m in Sources */,
+				FCB9632C1FCEB5990041DF4E /* PublicClass.m in Sources */,
 				FCA9B0001F7BA34600438D01 /* ViewController.m in Sources */,
 				FCA9B00B1F7BA34600438D01 /* main.m in Sources */,
 				FCA9B0451F7BBB9700438D01 /* PDFKitViewController.m in Sources */,
+				FC9ECF131FCEB28C00B3D423 /* UIImageFormDrawCanvas.m in Sources */,
 				FC116AAA1FCD6B2A005E9DDC /* someTestCode.swift in Sources */,
 				2B61855E1F9B46C2003E8EFD /* AutoFillViewController.m in Sources */,
 				FC9ECF061FCE621F00B3D423 /* GoogLeNetPlacesOnVisionMethod.m in Sources */,

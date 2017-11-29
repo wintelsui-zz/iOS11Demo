@@ -12,6 +12,8 @@
 #import "WTDeviceInfo.h"
 #import "iOS11DemoDefines.h"
 #import "JSONFighting.h"
+#import "UIImageFormDrawCanvas.h"
+#import "PublicClass.h"
 
 #import "iOS11DemoCategorys.h"
 

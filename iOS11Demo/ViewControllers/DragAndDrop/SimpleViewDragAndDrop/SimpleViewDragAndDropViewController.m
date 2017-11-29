@@ -72,7 +72,7 @@ UIDropInteractionDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.prefersLargeTitles = YES;
+    self.navigationController.navigationBar.prefersLargeTitles = NO;
     
     _actionDragIndex = 0;
     _actionDropIndex = 0;

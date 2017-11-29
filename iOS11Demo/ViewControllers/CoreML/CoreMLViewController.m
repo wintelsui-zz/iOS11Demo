@@ -14,6 +14,8 @@
 
 #import "iOS11Demo-Bridging-Header.h"
 
+#define SWITCH_Vision 1
+
 @interface CoreMLViewController ()
 <
 UINavigationControllerDelegate,
@@ -30,6 +32,13 @@ UIImagePickerControllerDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if (SWITCH_Vision) {
+        [self setNavRightButtonWithImageName:nil title:@"Vision" normalColor:[UIColor blackColor]];
+    }
+}
+
+- (void)pressedRightButton{
+    [self openVisionPage];
 }
 
 - (void)showImagePicker{
@@ -100,6 +109,27 @@ UIImagePickerControllerDelegate
     });
 }
 
+
+
+
+- (void)openVisionPage{
+    iOS11ActionsListModels *actionInfo = [iOS11DemoAppVCsList objectForKey:@"VisionCode"];
+    if (actionInfo) {
+        NSString *className = actionInfo.className;
+        NSString *pageName = actionInfo.name;
+        
+        UIStoryboard *storyboard = [self storyboardByMyName:actionInfo.storyboard];
+        UIViewController *page;
+        if (storyboard && actionInfo.storyboardid) {
+            page = [storyboard instantiateViewControllerWithIdentifier:actionInfo.storyboardid];
+        }
+        if (!page) {
+            page = [[NSClassFromString(className) alloc] init];
+        }
+        page.title = pageName;
+        [self.navigationController pushViewController:page animated:YES];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

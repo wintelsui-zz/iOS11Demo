@@ -49,6 +49,14 @@
 #define IPHONEX_SAFE_AREA_SPACE_BOTTOM_VERTICAL     (IPHONE_X ? 34 : 0)    // iPhone X 安全区竖屏时 底部空间
 #define IPHONEX_SAFE_AREA_SPACE_RIGHT_VERTICAL      (0)                    // iPhone X 安全区竖屏时 右侧空间
 
+
+
+
+#define DeviceLocalIsEnLanguageDisPlay [WTDeviceInfo getLocalIsEnLanguageDisPlay]
+
+#define appGetCFBundleVersion [WTDeviceInfo appCFBundleVersion]
+#define appGetCFBundleShortVersionString [WTDeviceInfo appCFBundleShortVersionString]
+
 @interface WTDeviceInfo : NSObject
 
 
@@ -58,5 +66,11 @@
  @return 机器设备码（iPhone9,2）
  */
 + (NSString *)devicMachineCode;
+
+
++ (NSString *)getLocalDisPlayLanguagesEnOrZh;
++ (BOOL)getLocalIsEnLanguageDisPlay;
++ (NSString *)appCFBundleVersion;
++ (NSString *)appCFBundleShortVersionString;
 
 @end

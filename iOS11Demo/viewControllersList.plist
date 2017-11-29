@@ -174,5 +174,18 @@
         <key>storyboardid</key>
         <string>CollectionViewDragAndDropViewController</string>
     </dict>
+    <key>VisionCode</key>
+    <dict>
+        <key>key</key>
+        <string>VisionCode</string>
+        <key>name</key>
+        <string>Vision Code</string>
+        <key>class</key>
+        <string>VisionViewController</string>
+        <key>storyboard</key>
+        <string>VisionStoryboard</string>
+        <key>storyboardid</key>
+        <string>VisionViewController</string>
+    </dict>
 </dict>
 </plist>

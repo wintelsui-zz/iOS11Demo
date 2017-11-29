@@ -30,7 +30,6 @@ UITableViewDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAlways;
     
     _actions = @[actionSimple,actionTable,actionCollection];
 }
