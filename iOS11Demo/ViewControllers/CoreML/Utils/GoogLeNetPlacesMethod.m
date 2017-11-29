@@ -8,6 +8,8 @@
 
 #import "GoogLeNetPlacesMethod.h"
 
+#import <CoreML/CoreML.h>
+
 #import "GoogLeNetPlaces.h"
 #import "UIImage+Extension.h"
 

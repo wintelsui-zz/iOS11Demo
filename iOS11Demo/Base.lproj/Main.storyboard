@@ -250,9 +250,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aol-ce-tQJ">
-                                <rect key="frame" x="20" y="449.5" width="335" height="88"/>
+                                <rect key="frame" x="20" y="449.5" width="335" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="mk2-k7-PYL"/>
+                                    <constraint firstAttribute="height" constant="50" id="mk2-k7-PYL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -268,16 +268,39 @@
                                     <action selector="beginCoreMLPressed:" destination="dFg-bt-URo" eventType="touchUpInside" id="Db9-Am-SAX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhq-WD-5lN">
+                                <rect key="frame" x="0.0" y="509.5" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5jk-Sg-dxH"/>
+                                </constraints>
+                                <state key="normal" title="点击 开始Core ML&amp;Vision 识别"/>
+                                <connections>
+                                    <action selector="CoreMLXVisionPressed:" destination="dFg-bt-URo" eventType="touchUpInside" id="b3i-CZ-PXt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGT-hX-8GY">
+                                <rect key="frame" x="20" y="563.5" width="335" height="103.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gvw-Ck-Q28" firstAttribute="top" secondItem="jVI-SD-gXv" secondAttribute="bottom" constant="20" id="0uo-4a-Ze9"/>
+                            <constraint firstItem="yhq-WD-5lN" firstAttribute="trailing" secondItem="goX-H9-sML" secondAttribute="trailing" id="4aa-cK-ijW"/>
                             <constraint firstItem="L8m-X6-Qq9" firstAttribute="leading" secondItem="goX-H9-sML" secondAttribute="leading" id="6uy-6D-9M4"/>
+                            <constraint firstItem="yhq-WD-5lN" firstAttribute="top" secondItem="aol-ce-tQJ" secondAttribute="bottom" constant="10" id="HMQ-kB-rID"/>
                             <constraint firstItem="goX-H9-sML" firstAttribute="trailing" secondItem="jVI-SD-gXv" secondAttribute="trailing" constant="20" id="HNJ-15-AFx"/>
+                            <constraint firstItem="yhq-WD-5lN" firstAttribute="leading" secondItem="goX-H9-sML" secondAttribute="leading" id="JZz-og-zCC"/>
+                            <constraint firstItem="goX-H9-sML" firstAttribute="trailing" secondItem="sGT-hX-8GY" secondAttribute="trailing" constant="20" id="Mi0-NT-YnZ"/>
                             <constraint firstItem="aol-ce-tQJ" firstAttribute="top" secondItem="gvw-Ck-Q28" secondAttribute="bottom" constant="20" id="Owu-TN-aoH"/>
+                            <constraint firstItem="sGT-hX-8GY" firstAttribute="bottom" secondItem="goX-H9-sML" secondAttribute="bottom" id="S5s-Jj-S4B"/>
                             <constraint firstItem="goX-H9-sML" firstAttribute="trailing" secondItem="L8m-X6-Qq9" secondAttribute="trailing" id="TSe-HE-Km1"/>
                             <constraint firstItem="goX-H9-sML" firstAttribute="trailing" secondItem="gvw-Ck-Q28" secondAttribute="trailing" id="WHl-kc-4Ml"/>
                             <constraint firstItem="jVI-SD-gXv" firstAttribute="top" secondItem="L8m-X6-Qq9" secondAttribute="bottom" constant="20" id="fDg-5l-W2N"/>
+                            <constraint firstItem="sGT-hX-8GY" firstAttribute="top" secondItem="yhq-WD-5lN" secondAttribute="bottom" constant="10" id="gGa-Ah-8mz"/>
+                            <constraint firstItem="sGT-hX-8GY" firstAttribute="leading" secondItem="goX-H9-sML" secondAttribute="leading" constant="20" id="i3a-4w-BnM"/>
                             <constraint firstItem="aol-ce-tQJ" firstAttribute="leading" secondItem="goX-H9-sML" secondAttribute="leading" constant="20" id="jxo-xo-rBh"/>
                             <constraint firstItem="goX-H9-sML" firstAttribute="trailing" secondItem="aol-ce-tQJ" secondAttribute="trailing" constant="20" id="kxE-mC-AmS"/>
                             <constraint firstItem="jVI-SD-gXv" firstAttribute="leading" secondItem="goX-H9-sML" secondAttribute="leading" constant="20" id="m9E-Rt-VWV"/>
@@ -290,6 +313,7 @@
                     <connections>
                         <outlet property="imageView" destination="L8m-X6-Qq9" id="qGf-Rw-qPl"/>
                         <outlet property="infoLabel" destination="aol-ce-tQJ" id="Hab-b4-QVO"/>
+                        <outlet property="infoVisionLabel" destination="sGT-hX-8GY" id="UgE-x5-Hzn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9h-ht-dcI" userLabel="First Responder" sceneMemberID="firstResponder"/>

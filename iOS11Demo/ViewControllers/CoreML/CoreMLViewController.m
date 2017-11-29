@@ -10,6 +10,7 @@
 
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "GoogLeNetPlacesMethod.h"
+#import "GoogLeNetPlacesOnVisionMethod.h"
 
 #import "iOS11Demo-Bridging-Header.h"
 
@@ -20,6 +21,7 @@ UIImagePickerControllerDelegate
 >
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *infoVisionLabel;
 
 @end
 
@@ -48,6 +50,7 @@ UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     [picker dismissViewControllerAnimated:YES completion:^{
         [_infoLabel setText:@""];
+        [_infoVisionLabel setText:@""];
         UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
         if (image) {
             [_imageView setImage:image];
@@ -79,6 +82,24 @@ UIImagePickerControllerDelegate
         }
     });
 }
+- (IBAction)CoreMLXVisionPressed:(id)sender {
+    UIImage *image = _imageView.image;
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        if (image) {
+            [GoogLeNetPlacesOnVisionMethod thinkOfImage:image completion:^(NSString *info) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (info) {
+                        [_infoVisionLabel setText:[NSString stringWithFormat:@"CoreML&Vision识别为：%@",info]];
+                    }else{
+                        [_infoVisionLabel setText:@"CoreML&Vision没有识别出来！"];
+                    }
+                });
+                
+            }];
+        }
+    });
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

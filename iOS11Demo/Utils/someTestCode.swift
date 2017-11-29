@@ -8,7 +8,7 @@
 
 import Foundation
 
-func languageTest(sentence: String) -> String {
+func languageTest(Sentence sentence: String) -> String {
 //    let tagger = NSLinguisticTagger(tagSchemes:[NSLinguisticTagScheme.language],options:0)
     return "UnKnow"
 }

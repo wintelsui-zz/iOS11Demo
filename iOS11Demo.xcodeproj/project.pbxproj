@@ -54,6 +54,7 @@
 		FC9D35A21FC4166A0001C7DB /* CollectionViewDragAndDropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9D35A11FC4166A0001C7DB /* CollectionViewDragAndDropViewController.m */; };
 		FC9D35A51FC4169C0001C7DB /* CollectionViewDragAndDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9D35A41FC4169C0001C7DB /* CollectionViewDragAndDrop.storyboard */; };
 		FC9D35A81FC418EE0001C7DB /* CollectionViewDragAndDropCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9D35A71FC418EE0001C7DB /* CollectionViewDragAndDropCell.m */; };
+		FC9ECF061FCE621F00B3D423 /* GoogLeNetPlacesOnVisionMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9ECF051FCE621F00B3D423 /* GoogLeNetPlacesOnVisionMethod.m */; };
 		FCA3AA451FC6711300DD982B /* GoogLeNetPlacesMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA3AA441FC6711300DD982B /* GoogLeNetPlacesMethod.m */; };
 		FCA3AA481FC6735200DD982B /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA3AA471FC6735200DD982B /* UIImage+Extension.m */; };
 		FCA9AFFD1F7BA34600438D01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA9AFFC1F7BA34600438D01 /* AppDelegate.m */; };
@@ -203,6 +204,8 @@
 		FC9D35A41FC4169C0001C7DB /* CollectionViewDragAndDrop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewDragAndDrop.storyboard; sourceTree = "<group>"; };
 		FC9D35A61FC418EE0001C7DB /* CollectionViewDragAndDropCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewDragAndDropCell.h; sourceTree = "<group>"; };
 		FC9D35A71FC418EE0001C7DB /* CollectionViewDragAndDropCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDragAndDropCell.m; sourceTree = "<group>"; };
+		FC9ECF041FCE621F00B3D423 /* GoogLeNetPlacesOnVisionMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogLeNetPlacesOnVisionMethod.h; sourceTree = "<group>"; };
+		FC9ECF051FCE621F00B3D423 /* GoogLeNetPlacesOnVisionMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogLeNetPlacesOnVisionMethod.m; sourceTree = "<group>"; };
 		FCA3AA421FC670E300DD982B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		FCA3AA431FC6711300DD982B /* GoogLeNetPlacesMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogLeNetPlacesMethod.h; sourceTree = "<group>"; };
 		FCA3AA441FC6711300DD982B /* GoogLeNetPlacesMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogLeNetPlacesMethod.m; sourceTree = "<group>"; };
@@ -502,6 +505,8 @@
 			children = (
 				FCA3AA431FC6711300DD982B /* GoogLeNetPlacesMethod.h */,
 				FCA3AA441FC6711300DD982B /* GoogLeNetPlacesMethod.m */,
+				FC9ECF041FCE621F00B3D423 /* GoogLeNetPlacesOnVisionMethod.h */,
+				FC9ECF051FCE621F00B3D423 /* GoogLeNetPlacesOnVisionMethod.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1044,6 +1049,7 @@
 				FCA9B0451F7BBB9700438D01 /* PDFKitViewController.m in Sources */,
 				FC116AAA1FCD6B2A005E9DDC /* someTestCode.swift in Sources */,
 				2B61855E1F9B46C2003E8EFD /* AutoFillViewController.m in Sources */,
+				FC9ECF061FCE621F00B3D423 /* GoogLeNetPlacesOnVisionMethod.m in Sources */,
 				2B6185561F9B4676003E8EFD /* DragAndDropViewController.m in Sources */,
 				FC00B4831FA30D6F0004FE02 /* WTSuspensionBall.m in Sources */,
 				FC1C7C921FB0609000FB5B36 /* SimpleViewDragAndDropViewController.m in Sources */,

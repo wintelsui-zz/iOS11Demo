@@ -3,6 +3,8 @@
 //:  # CoreML
 //: - 苹果的Machine Learning框架
 //: ---
+//: ![img](coreML.png)
+//: ---
 //:  ## 应用实例
 //: ![img](whatcanwedo.png)
 WhatCanWeDoImage()
