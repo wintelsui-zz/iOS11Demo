@@ -14,7 +14,7 @@
 
 #import "iOS11Demo-Bridging-Header.h"
 
-#define SWITCH_Vision 1
+#define SWITCH_Vision 0
 
 @interface CoreMLViewController ()
 <

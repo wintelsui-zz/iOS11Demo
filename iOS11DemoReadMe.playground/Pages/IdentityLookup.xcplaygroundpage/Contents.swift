@@ -1,7 +1,7 @@
 //: [上一页](@previous)
 //:
 //:   # IdentityLookup
-//: - 使用 IdentityLookup app extension 来拦截系统 SMS 和 MMS 的信息
+//: - 使用 Message Filter Extension 来拦截系统 SMS 和 MMS 的信息
 //: ---
 //: - 使用IdentityLookup来进行未知短信过滤，过滤并不能阻挡未知信息，只会讲信息过滤到系统指定的文件夹中。
 //: - 该功能需要实现 “Message Filter Extension”。
