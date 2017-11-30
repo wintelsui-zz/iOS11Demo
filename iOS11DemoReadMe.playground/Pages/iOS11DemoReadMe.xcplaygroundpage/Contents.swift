@@ -18,5 +18,7 @@
 import UIKit
 var color = UIColor(named:"ColorMyPink")
 //: ---
-//:
+//: - [Go Demo Github](https://github.com/wintelsui/iOS11Demo)
+//: ---
+//: -
 //: [下一页](@next)
