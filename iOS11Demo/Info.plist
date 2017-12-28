@@ -49,6 +49,8 @@
 	<true/>
 	<key>LSSupportsOpeningDocumentsInPlace</key>
 	<true/>
+	<key>NFCReaderUsageDescription</key>
+	<string>请求 NFC</string>
 	<key>NSCameraUsageDescription</key>
 	<string>请求相机选权限</string>
 	<key>NSContactsUsageDescription</key>

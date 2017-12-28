@@ -109,6 +109,9 @@ UITableViewDataSource
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSInteger row = indexPath.row;
+    NFCNDEFPayload *payload = [_payloads objectAtIndex:row];
+    NSString *string = [self NFCNDEFPayloadDescription:payload];
 }
 #pragma mark - UITableViewDelegate end
 
